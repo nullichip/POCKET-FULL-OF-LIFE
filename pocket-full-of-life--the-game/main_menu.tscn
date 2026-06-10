@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://bygafsmwolmju"]
+[gd_scene load_steps=14 format=3 uid="uid://bygafsmwolmju"]
 
 [ext_resource type="Script" uid="uid://cdohp4brhudjh" path="res://main_menu.gd" id="1_nlkkf"]
 [ext_resource type="Texture2D" uid="uid://brypp2pywy7t1" path="res://Assets/Passion Opening.png" id="2_dy7ct"]
+[ext_resource type="Shader" uid="uid://cdn1vkc0y4cro" path="res://main_menu.gdshader" id="3_0k4wn"]
 [ext_resource type="Texture2D" uid="uid://irdhawh6gye3" path="res://Assets/Passion Opening-Fire.png" id="3_0o4t1"]
 [ext_resource type="Texture2D" uid="uid://ylvw4tuj4urw" path="res://Assets/Play Btn.png" id="3_8qtwp"]
 [ext_resource type="Texture2D" uid="uid://cvr8enfjylcru" path="res://Game Title.png" id="3_qe12f"]
@@ -9,6 +10,19 @@
 [ext_resource type="Texture2D" uid="uid://d1re23c7xxe2g" path="res://Assets/Restart Btn.png" id="4_dy7ct"]
 [ext_resource type="Texture2D" uid="uid://c7q1e5rvlqwj3" path="res://Assets/Chapter Btn.png" id="5_0o4t1"]
 [ext_resource type="Texture2D" uid="uid://dmfp5r0h1nxgc" path="res://Assets/Setting Btn.png" id="6_0k4wn"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_j5v2v"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_iotk1"]
+height = 538
+noise = SubResource("FastNoiseLite_j5v2v")
+seamless = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_w44g7"]
+shader = ExtResource("3_0k4wn")
+shader_parameter/noise_tex = SubResource("NoiseTexture2D_iotk1")
+shader_parameter/speed = 1.0
+shader_parameter/strength = 0.1
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -25,28 +39,17 @@ scale = Vector2(0.9177259, 0.917726)
 texture = ExtResource("2_dy7ct")
 
 [node name="Fire" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_w44g7")
 layout_mode = 0
-offset_left = -124.0
-offset_top = -60.0
-offset_right = 1156.0
-offset_bottom = 648.0
+offset_left = -636.0
+offset_top = -416.0
+offset_right = 1285.0
+offset_bottom = 713.0
 texture = ExtResource("3_0o4t1")
 
 [node name="PassionOpeningHand" type="Sprite2D" parent="."]
-position = Vector2(534, 295)
+position = Vector2(553, 295)
 texture = ExtResource("4_0k4wn")
-
-[node name="GlitchOverlay" type="ColorRect" parent="."]
-visible = false
-layout_mode = 0
-offset_left = -21.0
-offset_right = 1155.0
-offset_bottom = 651.0
-mouse_filter = 2
-color = Color(0, 0, 0, 1)
-
-[node name="GlitchTimer" type="Timer" parent="."]
-autostart = true
 
 [node name="GameTitle" type="TextureRect" parent="."]
 layout_mode = 1
@@ -126,5 +129,16 @@ pivot_offset = Vector2(38.5, 35)
 texture_normal = ExtResource("6_0k4wn")
 ignore_texture_size = true
 stretch_mode = 0
+
+[node name="GlitchOverlay" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -21.0
+offset_right = 1155.0
+offset_bottom = 651.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="GlitchTimer" type="Timer" parent="."]
+autostart = true
 
 [connection signal="timeout" from="GlitchTimer" to="." method="_on_glitch_timer_timeout"]
