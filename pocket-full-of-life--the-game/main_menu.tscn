@@ -1,0 +1,130 @@
+[gd_scene load_steps=10 format=3 uid="uid://bygafsmwolmju"]
+
+[ext_resource type="Script" uid="uid://cdohp4brhudjh" path="res://main_menu.gd" id="1_nlkkf"]
+[ext_resource type="Texture2D" uid="uid://brypp2pywy7t1" path="res://Assets/Passion Opening.png" id="2_dy7ct"]
+[ext_resource type="Texture2D" uid="uid://irdhawh6gye3" path="res://Assets/Passion Opening-Fire.png" id="3_0o4t1"]
+[ext_resource type="Texture2D" uid="uid://ylvw4tuj4urw" path="res://Assets/Play Btn.png" id="3_8qtwp"]
+[ext_resource type="Texture2D" uid="uid://cvr8enfjylcru" path="res://Game Title.png" id="3_qe12f"]
+[ext_resource type="Texture2D" uid="uid://bgfa8rvolx2gs" path="res://Assets/Passion Opening-Hand.png" id="4_0k4wn"]
+[ext_resource type="Texture2D" uid="uid://d1re23c7xxe2g" path="res://Assets/Restart Btn.png" id="4_dy7ct"]
+[ext_resource type="Texture2D" uid="uid://c7q1e5rvlqwj3" path="res://Assets/Chapter Btn.png" id="5_0o4t1"]
+[ext_resource type="Texture2D" uid="uid://dmfp5r0h1nxgc" path="res://Assets/Setting Btn.png" id="6_0k4wn"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nlkkf")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(564, 325)
+scale = Vector2(0.9177259, 0.917726)
+texture = ExtResource("2_dy7ct")
+
+[node name="Fire" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -124.0
+offset_top = -60.0
+offset_right = 1156.0
+offset_bottom = 648.0
+texture = ExtResource("3_0o4t1")
+
+[node name="PassionOpeningHand" type="Sprite2D" parent="."]
+position = Vector2(534, 295)
+texture = ExtResource("4_0k4wn")
+
+[node name="GlitchOverlay" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -21.0
+offset_right = 1155.0
+offset_bottom = 651.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="GlitchTimer" type="Timer" parent="."]
+autostart = true
+
+[node name="GameTitle" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.062000003
+anchor_top = 0.054
+anchor_right = 0.455
+anchor_bottom = 0.395
+offset_left = -0.4240036
+offset_top = -3.9920006
+offset_right = 0.2944336
+offset_bottom = 0.020370483
+rotation = 0.008726646
+texture = ExtResource("3_qe12f")
+expand_mode = 1
+
+[node name="RestartButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.07700001
+anchor_top = 0.72800004
+anchor_right = 0.41000003
+anchor_bottom = 0.86100006
+offset_left = 0.29599
+offset_top = 1.2559814
+offset_right = 0.67996216
+offset_bottom = -3.9280396
+pivot_offset = Vector2(174, 40.5)
+texture_normal = ExtResource("4_dy7ct")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ChapterButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.083000004
+anchor_top = 0.58000004
+anchor_right = 0.41000003
+anchor_bottom = 0.71000004
+offset_left = -7.616005
+offset_top = 0.15997314
+offset_right = -0.32003784
+offset_bottom = -3.080017
+pivot_offset = Vector2(174, 40.5)
+texture_normal = ExtResource("5_0o4t1")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="PlayButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.078
+anchor_top = 0.43800002
+anchor_right = 0.411
+anchor_bottom = 0.563
+offset_left = 0.14399719
+offset_top = 0.17599487
+offset_right = 0.5279846
+offset_bottom = 0.17599487
+pivot_offset = Vector2(174, 40.5)
+texture_normal = ExtResource("3_8qtwp")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SettingButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.076000005
+anchor_top = 0.864
+anchor_right = 0.143
+anchor_bottom = 0.975
+offset_left = 0.44799805
+offset_top = 0.12799072
+offset_right = 0.2639923
+offset_bottom = -1.7999878
+pivot_offset = Vector2(38.5, 35)
+texture_normal = ExtResource("6_0k4wn")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="timeout" from="GlitchTimer" to="." method="_on_glitch_timer_timeout"]
