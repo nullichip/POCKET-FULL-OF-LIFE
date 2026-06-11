@@ -12,7 +12,10 @@ var time_passed = 0.0
 var base_scale = Vector2(1.0, 1.0)
 var base_positions = {}
 
+
 func _ready() -> void:
+	$PlayButton.pressed.connect(_on_play_pressed)
+		
 	for btn in menu_buttons:
 		btn.mouse_entered.connect(animate_button.bind(btn, 1.03))
 		btn.mouse_exited.connect(animate_button.bind(btn, 1.0))
@@ -53,3 +56,6 @@ func _process(delta: float) -> void:
 	#the 1.0 is how FAST the fire will sway, the 4.0 is how FAR it will sway
 	fire.position.x = base_positions[fire].x + sin(time_passed * 0.05) * 9.0
 	fire.modulate.a = randf_range(0.3, 1.1)
+	
+func _on_play_pressed() -> void:
+	TransitionScreen.transition_to_scene("") #TODO: ADD GAME SCENE HERE
