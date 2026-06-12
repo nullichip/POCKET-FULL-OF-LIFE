@@ -15,6 +15,8 @@ var base_positions = {}
 
 func _ready() -> void:
 	$PlayButton.pressed.connect(_on_play_pressed)
+	$ChapterButton.pressed.connect(_on_chapter_pressed)
+	$RestartButton.pressed.connect(_on_restart_pressed)
 		
 	for btn in menu_buttons:
 		btn.mouse_entered.connect(animate_button.bind(btn, 1.03))
@@ -58,4 +60,10 @@ func _process(delta: float) -> void:
 	fire.modulate.a = randf_range(0.3, 1.1)
 	
 func _on_play_pressed() -> void:
+	TransitionScreen.transition_to_scene("") #TODO: ADD GAME SCENE HERE
+
+func _on_chapter_pressed() -> void:
+	TransitionScreen.transition_to_scene("") #TODO: ADD GAME SCENE HERE
+
+func _on_restart_pressed() -> void:
 	TransitionScreen.transition_to_scene("") #TODO: ADD GAME SCENE HERE
