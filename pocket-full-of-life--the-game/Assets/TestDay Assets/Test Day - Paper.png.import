@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmfp5r0h1nxgc"
-path="res://.godot/imported/Setting Btn.png-73aaa134ef99815a0f9831175a31bc93.ctex"
+uid="uid://cvu2b5ycxcqbp"
+path="res://.godot/imported/Test Day - Paper.png-8d3d9e19f7a3bc625b65e380f50a6874.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Setting Btn.png"
-dest_files=["res://.godot/imported/Setting Btn.png-73aaa134ef99815a0f9831175a31bc93.ctex"]
+source_file="res://Assets/TestDay Assets/Test Day - Paper.png"
+dest_files=["res://.godot/imported/Test Day - Paper.png-8d3d9e19f7a3bc625b65e380f50a6874.ctex"]
 
 [params]
 

@@ -12,7 +12,6 @@ var time_passed = 0.0
 var base_scale = Vector2(1.0, 1.0)
 var base_positions = {}
 
-
 func _ready() -> void:
 	$PlayButton.pressed.connect(_on_play_pressed)
 	$ChapterButton.pressed.connect(_on_chapter_pressed)
@@ -55,7 +54,7 @@ func _process(delta: float) -> void:
 			game_title.scale.y = base_scale.y
 			
 	time_passed += delta
-	#the 1.0 is how FAST the fire will sway, the 4.0 is how FAR it will sway
+	#first value is how FAST the fire will sway, the second value is how FAR it will sway
 	fire.position.x = base_positions[fire].x + sin(time_passed * 0.05) * 9.0
 	fire.modulate.a = randf_range(0.3, 1.1)
 	

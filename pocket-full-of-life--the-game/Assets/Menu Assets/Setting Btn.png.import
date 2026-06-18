@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgfa8rvolx2gs"
-path="res://.godot/imported/Passion Opening-Hand.png-4a3981b1e1c80917d6dc3e019d9e4b70.ctex"
+uid="uid://dmfp5r0h1nxgc"
+path="res://.godot/imported/Setting Btn.png-18fc777872f1f937b6d4b7ec5e186aa7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Passion Opening-Hand.png"
-dest_files=["res://.godot/imported/Passion Opening-Hand.png-4a3981b1e1c80917d6dc3e019d9e4b70.ctex"]
+source_file="res://Assets/Menu Assets/Setting Btn.png"
+dest_files=["res://.godot/imported/Setting Btn.png-18fc777872f1f937b6d4b7ec5e186aa7.ctex"]
 
 [params]
 

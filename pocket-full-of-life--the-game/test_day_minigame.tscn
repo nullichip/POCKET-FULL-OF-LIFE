@@ -1,0 +1,321 @@
+[gd_scene load_steps=20 format=3 uid="uid://bjwul8vlr0xj1"]
+
+[ext_resource type="Script" uid="uid://dmpg1ev8cf3ps" path="res://test_day_minigame.gd" id="1_6q6ad"]
+[ext_resource type="Texture2D" uid="uid://bc04ak5t4irnt" path="res://Assets/TestDay Assets/Test Day - Classroom.png" id="1_texd0"]
+[ext_resource type="Texture2D" uid="uid://bk7qdh03fcbk1" path="res://Assets/TestDay Assets/Test Day - Desks.png" id="2_rfg72"]
+[ext_resource type="Texture2D" uid="uid://2itjc1o7kj8a" path="res://Assets/TestDay Assets/Test Day - Entity Bodies.png" id="3_44gh3"]
+[ext_resource type="Texture2D" uid="uid://difdhi52ix5qv" path="res://Assets/TestDay Assets/Test Day - Entity Heads.png" id="4_6q6ad"]
+[ext_resource type="Texture2D" uid="uid://gtw5bt4tfahb" path="res://Assets/TestDay Assets/Test Day - Hands.png" id="5_okkf8"]
+[ext_resource type="Texture2D" uid="uid://cvu2b5ycxcqbp" path="res://Assets/TestDay Assets/Test Day - Paper.png" id="6_4yxxb"]
+[ext_resource type="Texture2D" uid="uid://bsfs42x2f3kyc" path="res://Assets/TestDay Assets/Test Day - Thumbs.png" id="7_m7mey"]
+[ext_resource type="FontFile" uid="uid://bqfyq14v2xtfb" path="res://Assets/TestDay Assets/AlmendraDisplay-Regular.ttf" id="8_4yxxb"]
+[ext_resource type="Texture2D" uid="uid://hmft7vyxqoh3" path="res://Assets/TestDay Assets/Test Day - Window Light.png" id="8_u82s6"]
+[ext_resource type="Shader" uid="uid://c2qg1bhtkikni" path="res://test_day_minigame.gdshader" id="9_okkf8"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_4yxxb"]
+light_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_m7mey"]
+light_mode = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4yxxb"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 0.52156866)
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_4yxxb"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_m7mey"]
+shader = ExtResource("9_okkf8")
+shader_parameter/noise_tex = SubResource("NoiseTexture2D_4yxxb")
+shader_parameter/speed = 0.2
+shader_parameter/intensity = 0.1
+
+[sub_resource type="Animation" id="Animation_okkf8"]
+resource_name = "paper_drop"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Paper:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2.8833334, 3.8666666, 6.13),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(185.45453, 34), Vector2(185.45453, 34), Vector2(398.18176, 73), Vector2(398.18176, 73), Vector2(544.1817, 539)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Paper:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2.8833334, 3.8666666, 6.13),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(495, -76), Vector2(494, -20), Vector2(404, 155), Vector2(404, 155), Vector2(319, 146)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Paper:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1, 2.8833334, 3.8666666, 6.13),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 1), Vector2(1, 1), Vector2(1, 1), Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Paper:pivot_offset")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1, 2.8833334, 3.8666666, 8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(92.72699, 17), Vector2(92.727, 17), Vector2(199.091, 36.5), Vector2(199.091, 36.5), Vector2(272.091, 261.5)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Paper/AnswerInput:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(3.8666666, 6.133333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.27450982)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Paper/AnswerInput:mouse_filter")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Paper/QuestionText:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(6.133333, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(0.003921569, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_4yxxb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Paper:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(185.45453, 34)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Paper:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(494, -20)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Paper:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Paper:pivot_offset")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(282.862, 260)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Paper/AnswerInput:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Paper/AnswerInput:mouse_filter")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Paper/QuestionText:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_m7mey"]
+_data = {
+&"RESET": SubResource("Animation_4yxxb"),
+&"paper_drop": SubResource("Animation_okkf8")
+}
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_6q6ad")
+
+[node name="Classroom" type="Sprite2D" parent="."]
+position = Vector2(576, 321.25)
+scale = Vector2(0.9124999, 0.92302257)
+texture = ExtResource("1_texd0")
+
+[node name="Desks" type="Sprite2D" parent="."]
+position = Vector2(573, 327.00003)
+scale = Vector2(0.91101694, 0.91101694)
+texture = ExtResource("2_rfg72")
+
+[node name="EntityBodies" type="Sprite2D" parent="."]
+position = Vector2(569, 335.00003)
+scale = Vector2(0.91949135, 0.9194914)
+texture = ExtResource("3_44gh3")
+
+[node name="EntityHeads" type="Sprite2D" parent="."]
+position = Vector2(574.49994, 343.00003)
+scale = Vector2(0.9210936, 0.986582)
+texture = ExtResource("4_6q6ad")
+
+[node name="Hands" type="Sprite2D" parent="."]
+position = Vector2(592, 331.99997)
+scale = Vector2(1.0112994, 1.0112995)
+texture = ExtResource("5_okkf8")
+
+[node name="Paper" type="TextureButton" parent="."]
+offset_left = 494.0
+offset_top = -20.0
+offset_right = 679.4545
+offset_bottom = 14.0
+pivot_offset = Vector2(282.862, 260)
+texture_normal = ExtResource("6_4yxxb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="QuestionText" type="Label" parent="Paper"]
+modulate = Color(1, 1, 1, 0)
+material = SubResource("CanvasItemMaterial_4yxxb")
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.156
+anchor_right = 0.84300005
+anchor_bottom = 0.61800003
+offset_left = 0.06910133
+offset_right = -0.01763916
+offset_bottom = -0.012001038
+theme_override_colors/font_color = Color(0, 0, 0, 0.4392157)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.6039216)
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("8_4yxxb")
+theme_override_font_sizes/font_size = 15
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="AnswerInput" type="LineEdit" parent="Paper"]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(0.3372549, 0.2901961, 0.20784314, 1)
+material = SubResource("CanvasItemMaterial_m7mey")
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.254
+anchor_top = 0.43400002
+anchor_right = 0.77900004
+anchor_bottom = 0.527
+offset_left = -0.22216797
+offset_top = 0.07398987
+offset_right = 0.08239746
+offset_bottom = -0.053009033
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 0.105882354)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_constants/caret_width = 1
+theme_override_fonts/font = ExtResource("8_4yxxb")
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxFlat_4yxxb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_4yxxb")
+alignment = 1
+backspace_deletes_composite_character_enabled = true
+caret_blink = true
+
+[node name="Thumbs" type="Sprite2D" parent="."]
+position = Vector2(591.8214, 332.99997)
+scale = Vector2(1.0080916, 1.0052463)
+texture = ExtResource("7_m7mey")
+
+[node name="WindowLight" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.2)
+material = SubResource("ShaderMaterial_m7mey")
+position = Vector2(609.00006, 321.5)
+scale = Vector2(0.97773445, 0.9533898)
+texture = ExtResource("8_u82s6")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_m7mey")
+}
+speed_scale = 4.0
+
+[connection signal="pressed" from="Paper" to="." method="_on_paper_pressed"]
+[connection signal="text_submitted" from="Paper/AnswerInput" to="." method="_on_answer_input_text_submitted"]

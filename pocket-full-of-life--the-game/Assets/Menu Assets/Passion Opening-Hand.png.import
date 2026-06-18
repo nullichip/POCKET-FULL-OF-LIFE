@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://irdhawh6gye3"
-path="res://.godot/imported/Passion Opening-Fire.png-574f7e96d723a0af8af7a04193f72d40.ctex"
+uid="uid://bgfa8rvolx2gs"
+path="res://.godot/imported/Passion Opening-Hand.png-450a126719cf395878531811fe02a5dd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Passion Opening-Fire.png"
-dest_files=["res://.godot/imported/Passion Opening-Fire.png-574f7e96d723a0af8af7a04193f72d40.ctex"]
+source_file="res://Assets/Menu Assets/Passion Opening-Hand.png"
+dest_files=["res://.godot/imported/Passion Opening-Hand.png-450a126719cf395878531811fe02a5dd.ctex"]
 
 [params]
 

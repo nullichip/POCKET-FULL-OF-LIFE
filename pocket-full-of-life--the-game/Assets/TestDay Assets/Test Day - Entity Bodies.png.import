@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://brypp2pywy7t1"
-path="res://.godot/imported/Passion Opening.png-7edb695824df7f2701e5e384a6cfca76.ctex"
+uid="uid://2itjc1o7kj8a"
+path="res://.godot/imported/Test Day - Entity Bodies.png-0190af1e3a0c7cdde8e80d27d2d981a6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Passion Opening.png"
-dest_files=["res://.godot/imported/Passion Opening.png-7edb695824df7f2701e5e384a6cfca76.ctex"]
+source_file="res://Assets/TestDay Assets/Test Day - Entity Bodies.png"
+dest_files=["res://.godot/imported/Test Day - Entity Bodies.png-0190af1e3a0c7cdde8e80d27d2d981a6.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ylvw4tuj4urw"
-path="res://.godot/imported/Play Btn.png-c7306fb9c9dba8279b7ff18a2bbb2491.ctex"
+uid="uid://gtw5bt4tfahb"
+path="res://.godot/imported/Test Day - Hands.png-e11157570d7e75b483ee57939bd30aa5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Play Btn.png"
-dest_files=["res://.godot/imported/Play Btn.png-c7306fb9c9dba8279b7ff18a2bbb2491.ctex"]
+source_file="res://Assets/TestDay Assets/Test Day - Hands.png"
+dest_files=["res://.godot/imported/Test Day - Hands.png-e11157570d7e75b483ee57939bd30aa5.ctex"]
 
 [params]
 
