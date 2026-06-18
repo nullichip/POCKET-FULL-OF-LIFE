@@ -299,12 +299,25 @@ alignment = 1
 backspace_deletes_composite_character_enabled = true
 caret_blink = true
 
+[node name="ExitButton" type="TextureButton" parent="Paper"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.312
+anchor_top = 0.68500006
+anchor_right = 0.711
+anchor_bottom = 0.82000005
+offset_left = 0.21533203
+offset_top = -0.21502686
+offset_right = 0.08685303
+offset_bottom = 0.019958496
+
 [node name="Thumbs" type="Sprite2D" parent="."]
 position = Vector2(591.8214, 332.99997)
 scale = Vector2(1.0080916, 1.0052463)
 texture = ExtResource("7_m7mey")
 
 [node name="WindowLight" type="Sprite2D" parent="."]
+visible = false
 modulate = Color(1, 1, 1, 0.2)
 material = SubResource("ShaderMaterial_m7mey")
 position = Vector2(609.00006, 321.5)

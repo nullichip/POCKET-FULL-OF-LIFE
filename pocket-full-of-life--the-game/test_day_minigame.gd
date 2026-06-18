@@ -126,8 +126,7 @@ func finish_test() -> void:
 	$Paper/AnswerInput.clear()
 	
 	$Paper/QuestionText.add_theme_font_size_override("font_size", 40)
-	$Paper/QuestionText.add_theme_constant_override("bold", 2)
 	$Paper/QuestionText.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 
 	$Paper/QuestionText.text = 'You reached the end of the test module.\nSCORE:' + str(score) + "/" + str(max_questions)
-	
+	$Paper/ExitButton.visible = true
