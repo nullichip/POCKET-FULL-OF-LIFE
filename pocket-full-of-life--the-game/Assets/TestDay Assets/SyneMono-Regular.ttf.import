@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://bqfyq14v2xtfb"
-path="res://.godot/imported/AlmendraDisplay-Regular.ttf-2d008332a8ba75039f0d35e945a86307.fontdata"
+uid="uid://yux64xgu8geh"
+path="res://.godot/imported/SyneMono-Regular.ttf-8a975e49786512877a1bd9930b0ba877.fontdata"
 
 [deps]
 
-source_file="res://Assets/TestDay Assets/AlmendraDisplay-Regular.ttf"
-dest_files=["res://.godot/imported/AlmendraDisplay-Regular.ttf-2d008332a8ba75039f0d35e945a86307.fontdata"]
+source_file="res://Assets/TestDay Assets/SyneMono-Regular.ttf"
+dest_files=["res://.godot/imported/SyneMono-Regular.ttf-8a975e49786512877a1bd9930b0ba877.fontdata"]
 
 [params]
 

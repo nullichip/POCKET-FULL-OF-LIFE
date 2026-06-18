@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bjwul8vlr0xj1"]
+[gd_scene load_steps=22 format=3 uid="uid://bjwul8vlr0xj1"]
 
 [ext_resource type="Script" uid="uid://dmpg1ev8cf3ps" path="res://test_day_minigame.gd" id="1_6q6ad"]
 [ext_resource type="Texture2D" uid="uid://bc04ak5t4irnt" path="res://Assets/TestDay Assets/Test Day - Classroom.png" id="1_texd0"]
@@ -8,20 +8,41 @@
 [ext_resource type="Texture2D" uid="uid://gtw5bt4tfahb" path="res://Assets/TestDay Assets/Test Day - Hands.png" id="5_okkf8"]
 [ext_resource type="Texture2D" uid="uid://cvu2b5ycxcqbp" path="res://Assets/TestDay Assets/Test Day - Paper.png" id="6_4yxxb"]
 [ext_resource type="Texture2D" uid="uid://bsfs42x2f3kyc" path="res://Assets/TestDay Assets/Test Day - Thumbs.png" id="7_m7mey"]
-[ext_resource type="FontFile" uid="uid://bqfyq14v2xtfb" path="res://Assets/TestDay Assets/AlmendraDisplay-Regular.ttf" id="8_4yxxb"]
+[ext_resource type="FontFile" uid="uid://brpjxuh12plfd" path="res://Assets/TestDay Assets/Gelasio-VariableFont_wght.ttf" id="8_m7mey"]
 [ext_resource type="Texture2D" uid="uid://hmft7vyxqoh3" path="res://Assets/TestDay Assets/Test Day - Window Light.png" id="8_u82s6"]
+[ext_resource type="FontFile" uid="uid://b7f4af4w3ffwe" path="res://Assets/TestDay Assets/IndieFlower-Regular.ttf" id="9_m7mey"]
 [ext_resource type="Shader" uid="uid://c2qg1bhtkikni" path="res://test_day_minigame.gdshader" id="9_okkf8"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_4yxxb"]
 light_mode = 1
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u82s6"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_top = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 0.41960785)
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_m7mey"]
 light_mode = 1
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4yxxb"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
+bg_color = Color(0.4862745, 0.47058824, 0.2627451, 0)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
 border_width_bottom = 1
-border_color = Color(0, 0, 0, 0.52156866)
+border_color = Color(0, 0, 0, 0.23529412)
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+shadow_color = Color(0, 0, 0, 0)
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_4yxxb"]
 
@@ -30,6 +51,69 @@ shader = ExtResource("9_okkf8")
 shader_parameter/noise_tex = SubResource("NoiseTexture2D_4yxxb")
 shader_parameter/speed = 0.2
 shader_parameter/intensity = 0.1
+
+[sub_resource type="Animation" id="Animation_4yxxb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Paper:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(185.45453, 34)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Paper:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(494, -20)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Paper:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Paper:pivot_offset")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(282.862, 260)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Paper/AnswerInput:mouse_filter")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
 
 [sub_resource type="Animation" id="Animation_okkf8"]
 resource_name = "paper_drop"
@@ -85,125 +169,14 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Paper/AnswerInput:modulate")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(3.8666666, 6.133333),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.27450982)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Paper/AnswerInput:mouse_filter")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [2]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("Paper/QuestionText:modulate")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(6.133333, 10),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(0.003921569, 0, 0, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_4yxxb"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Paper:size")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(185.45453, 34)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Paper:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(494, -20)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Paper:scale")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Paper:pivot_offset")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(282.862, 260)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Paper/AnswerInput:modulate")
+tracks/4/path = NodePath("Paper/AnswerInput:mouse_filter")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Paper/AnswerInput:mouse_filter")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [2]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("Paper/QuestionText:modulate")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_m7mey"]
@@ -251,55 +224,60 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="QuestionText" type="Label" parent="Paper"]
-modulate = Color(1, 1, 1, 0)
+visible = false
 material = SubResource("CanvasItemMaterial_4yxxb")
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.156
-anchor_right = 0.84300005
-anchor_bottom = 0.61800003
-offset_left = 0.06910133
-offset_right = -0.01763916
-offset_bottom = -0.012001038
-theme_override_colors/font_color = Color(0, 0, 0, 0.4392157)
+anchor_left = 0.18900001
+anchor_top = 0.07
+anchor_right = 0.827
+anchor_bottom = 0.34300002
+offset_left = 0.14967346
+offset_top = -7.9979286
+offset_right = -0.038238525
+offset_bottom = 0.12298584
+theme_override_colors/font_color = Color(0, 0, 0, 0.60784316)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 0.6039216)
-theme_override_constants/outline_size = 1
-theme_override_fonts/font = ExtResource("8_4yxxb")
-theme_override_font_sizes/font_size = 15
+theme_override_fonts/font = ExtResource("8_m7mey")
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("StyleBoxFlat_u82s6")
+theme_override_styles/focus = SubResource("StyleBoxFlat_u82s6")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="AnswerInput" type="LineEdit" parent="Paper"]
-modulate = Color(1, 1, 1, 0)
-self_modulate = Color(0.3372549, 0.2901961, 0.20784314, 1)
+visible = false
 material = SubResource("CanvasItemMaterial_m7mey")
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.254
-anchor_top = 0.43400002
-anchor_right = 0.77900004
-anchor_bottom = 0.527
-offset_left = -0.22216797
-offset_top = 0.07398987
-offset_right = 0.08239746
-offset_bottom = -0.053009033
+anchor_left = 0.246
+anchor_top = 0.46600002
+anchor_right = 0.76100004
+anchor_bottom = 0.624
+offset_left = 0.13130188
+offset_top = -0.17401123
+offset_right = 1.0701904
+offset_bottom = -0.16070557
+rotation = -8.022413e-05
 mouse_filter = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_selected_color = Color(0, 0, 0, 0.105882354)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_colors/caret_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 3
+theme_override_colors/font_color = Color(0.030002214, 0.030001575, 0.024702752, 0.8392157)
+theme_override_colors/font_selected_color = Color(0.1148968, 0.11489681, 0.1148968, 1)
+theme_override_colors/font_placeholder_color = Color(0.105882354, 0.105882354, 0.02745098, 0.9372549)
+theme_override_colors/caret_color = Color(0.14901961, 0.105882354, 0.02745098, 0.7411765)
+theme_override_colors/selection_color = Color(0.23392546, 0.23392546, 0.23392543, 0.13333334)
 theme_override_constants/caret_width = 1
-theme_override_fonts/font = ExtResource("8_4yxxb")
-theme_override_font_sizes/font_size = 15
+theme_override_fonts/font = ExtResource("9_m7mey")
+theme_override_font_sizes/font_size = 18
 theme_override_styles/normal = SubResource("StyleBoxFlat_4yxxb")
 theme_override_styles/focus = SubResource("StyleBoxFlat_4yxxb")
 alignment = 1
 backspace_deletes_composite_character_enabled = true
 caret_blink = true
+caret_blink_interval = 0.73
 
 [node name="ExitButton" type="TextureButton" parent="Paper"]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.312

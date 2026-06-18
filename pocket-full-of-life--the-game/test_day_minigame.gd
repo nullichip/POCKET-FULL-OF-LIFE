@@ -82,6 +82,9 @@ func _on_paper_pressed() -> void:
 	$Paper.z_index = 10
 	tween.tween_property($Paper, "scale", Vector2(1.5, 1.5), 0.5).set_trans(Tween.TRANS_SINE)
 	$Paper/AnswerInput.mouse_filter = Control.MOUSE_FILTER_STOP
+	
+	$Paper/AnswerInput.visible = true
+	$Paper/QuestionText.visible = true
 
 func _on_answer_input_text_submitted(new_text: String) -> void:
 	var player_guess = new_text.strip_edges().to_lower()
@@ -100,7 +103,7 @@ func _on_answer_input_text_submitted(new_text: String) -> void:
 func load_next_question() -> void:
 	$Paper/AnswerInput.clear()
 	
-	var picked_question = normal_questions.keys().pick_random()
+	var picked_question = available_questions.keys().pick_random()
 	$Paper/QuestionText.text = picked_question
 	current_correct_answer = normal_questions[picked_question]
 	
