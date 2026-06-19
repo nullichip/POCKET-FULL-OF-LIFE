@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://bjwul8vlr0xj1"]
+[gd_scene load_steps=23 format=3 uid="uid://bjwul8vlr0xj1"]
 
 [ext_resource type="Script" uid="uid://dmpg1ev8cf3ps" path="res://test_day_minigame.gd" id="1_6q6ad"]
 [ext_resource type="Texture2D" uid="uid://bc04ak5t4irnt" path="res://Assets/TestDay Assets/Test Day - Classroom.png" id="1_texd0"]
@@ -185,6 +185,13 @@ _data = {
 &"paper_drop": SubResource("Animation_okkf8")
 }
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m7mey"]
+bg_color = Color(0, 0, 0, 0.44705883)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_color = Color(0, 0, 0, 1)
+
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_6q6ad")
 
@@ -280,14 +287,14 @@ caret_blink_interval = 0.73
 visible = false
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.312
-anchor_top = 0.68500006
+anchor_left = 0.27600002
+anchor_top = 0.592
 anchor_right = 0.711
-anchor_bottom = 0.82000005
-offset_left = 0.21533203
-offset_top = -0.21502686
-offset_right = 0.08685303
-offset_bottom = 0.019958496
+anchor_bottom = 0.757
+offset_left = -0.19415283
+offset_top = -0.088012695
+offset_right = -1.913147
+offset_bottom = -0.023010254
 
 [node name="Thumbs" type="Sprite2D" parent="."]
 position = Vector2(591.8214, 332.99997)
@@ -295,7 +302,6 @@ scale = Vector2(1.0080916, 1.0052463)
 texture = ExtResource("7_m7mey")
 
 [node name="WindowLight" type="Sprite2D" parent="."]
-visible = false
 modulate = Color(1, 1, 1, 0.2)
 material = SubResource("ShaderMaterial_m7mey")
 position = Vector2(609.00006, 321.5)
@@ -308,5 +314,34 @@ libraries = {
 }
 speed_scale = 4.0
 
+[node name="DialogueLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Panel" type="Panel" parent="DialogueLayer"]
+visible = false
+modulate = Color(0.62152386, 0.62152386, 0.6215238, 1)
+offset_top = 515.0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_m7mey")
+
+[node name="Label" type="Label" parent="DialogueLayer/Panel"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.50600004
+anchor_top = 0.293
+anchor_right = 0.541
+anchor_bottom = 0.609
+offset_left = 0.08795166
+offset_top = 0.03099823
+offset_right = -0.23199463
+offset_bottom = 0.002998352
+theme_override_fonts/font = ExtResource("9_m7mey")
+theme_override_font_sizes/font_size = 28
+text = "..."
+horizontal_alignment = 1
+
 [connection signal="pressed" from="Paper" to="." method="_on_paper_pressed"]
 [connection signal="text_submitted" from="Paper/AnswerInput" to="." method="_on_answer_input_text_submitted"]
+[connection signal="pressed" from="Paper/ExitButton" to="." method="_on_exit_button_pressed"]
