@@ -32,7 +32,7 @@ var normal_questions = {
 var current_correct_answer = ""
 var questions_answered = 0
 var score = 0
-var max_questions = 6
+var max_questions = 4
 
 var available_questions = {}
 
@@ -121,7 +121,7 @@ func _on_answer_input_text_submitted(new_text: String) -> void:
 	if player_guess == "":
 		blank_count += 1
 		if blank_count > max_blanks:
-			show_dialogue("I can't leave it blank...")
+			DialogueManager.show_dialogue("I can't leave it blank...")
 			return
 		else:
 			questions_answered += 1
@@ -179,15 +179,21 @@ func finish_test() -> void:
 	$Paper/QuestionText.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 
 	$Paper/QuestionText.text = 'You reached the end of the test module.\nSCORE:' + str(score) + "/" + str(max_questions)
+	
+	await get_tree().create_timer(3.0).timeout
+	
 	$Paper/ExitButton.visible = true
+	$Paper/ExitButton/AnimationPlayer.play("exit_fade_in")
 
 func _on_exit_button_pressed() -> void:
 	print("Pretending to go to the classroom")
 	TransitionScreen.transition_to_scene("")
 
-func show_dialogue(dialogue_text: String) -> void:
-	$DialogueLayer/Panel/Label.text = dialogue_text
-	$DialogueLayer.visible = true
-	
-	await get_tree().create_timer(5.0).timeout
-	$DialogueLayer.visible = false
+
+func _on_exit_button_mouse_entered() -> void:
+	var hover = create_tween()
+	hover.tween_property($Paper/ExitButton, "scale", Vector2(1.1, 1.1), 0.1)
+
+func _on_exit_button_mouse_exited() -> void:
+	var hover_out = create_tween()
+	hover_out.tween_property($Paper/ExitButton, "scale", Vector2(1.0, 1.0), 0.1)

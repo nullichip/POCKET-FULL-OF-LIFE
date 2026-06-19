@@ -17,6 +17,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 TransitionScreen="*res://transition_screen.tscn"
+DialogueManager="*res://dialogue_manager.tscn"
 
 [rendering]
 
