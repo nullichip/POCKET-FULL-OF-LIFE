@@ -108,8 +108,9 @@ func _on_paper_pressed() -> void:
 	$Paper.z_index = 10
 	$Paper/ExitButton.z_index = 11
 	tween.tween_property($Paper, "scale", Vector2(1.5, 1.5), 0.5).set_trans(Tween.TRANS_SINE)
-	$Paper/AnswerInput.mouse_filter = Control.MOUSE_FILTER_STOP
+	tween.parallel().tween_property($Paper, "position:y", paper_resting_y - 100, 0.5).set_trans(Tween.TRANS_SINE)
 	
+	$Paper/AnswerInput.mouse_filter = Control.MOUSE_FILTER_STOP
 	$Paper/AnswerInput.visible = true
 	$Paper/QuestionText.visible = true
 
@@ -182,6 +183,7 @@ func finish_test() -> void:
 
 func _on_exit_button_pressed() -> void:
 	print("Pretending to go to the classroom")
+	TransitionScreen.transition_to_scene("")
 
 func show_dialogue(dialogue_text: String) -> void:
 	$DialogueLayer/Panel/Label.text = dialogue_text
