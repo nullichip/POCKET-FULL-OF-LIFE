@@ -14,12 +14,12 @@ var normal_questions = {
 	"What is the square root of 144?" : "12",
 	"If Johnny has four hundred and seventeen apples and Anna has seven hundred and twenty apples, how many more apples does Anna have?" : "303",
 	"What is 133 * 2?" : "266",
-	"A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost?" : "0.5 cents",
+	"A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost?" : "$0.5",
 	"A patch of lilypads doubles in size every day. If it takes 48 days for the patch to cover the entire lake, how long does it take to cover half the lake?" : "47 days",
 	"What is 6 divided by 3(1 + 2)?" : "9",
 	"Solve for x in the following equation:\n		3x+7= 22" : "5",
 	"Solve for y in the following system of equations:\n			2x+y=10\n		x-y= 2" : "2",
-	"Calculate the area of a circle that has a circumference of 18pi cm. Give your answer in terms of pi." : "81pi cm^2",
+	"Calculate the area of a circle that has a circumference of 18pi cm. Give your answer in terms of pi and in cm^2." : "81pi cm^2",
 	"A right-angled triangle has a base of 5 cm and a hypotenuse of 13 cm. What is the length of the missing side?" : "12",
 	"Spell the 11-letter word that means 'to provide lodging or sufficient space for.'" : "accommodate",
 	"Spell the 10-letter word that means 'having mixed feelings or contradictory ideas about something or someone.'" : "ambivalent",
@@ -32,7 +32,7 @@ var normal_questions = {
 var current_correct_answer = ""
 var questions_answered = 0
 var score = 0
-var max_questions = 4
+var max_questions = 2
 
 var available_questions = {}
 
@@ -180,7 +180,14 @@ func finish_test() -> void:
 
 	$Paper/QuestionText.text = 'You reached the end of the test module.\nSCORE:' + str(score) + "/" + str(max_questions)
 	
-	await get_tree().create_timer(3.0).timeout
+	await get_tree().create_timer(3.00).timeout
+	
+	if score < max_questions:
+		await DialogueManager.show_dialogue("I didn't do so well...")
+	else:
+		await DialogueManager.show_dialogue("That wasn't so bad...")
+	
+	await get_tree().create_timer(1.0).timeout
 	
 	$Paper/ExitButton.visible = true
 	$Paper/ExitButton/AnimationPlayer.play("exit_fade_in")
