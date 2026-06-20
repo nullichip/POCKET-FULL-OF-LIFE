@@ -12,3 +12,4 @@ To Play: Itch.io
 
 Link to Website: 
 
+Link to Tiktok: https://www.tiktok.com/@eriomnibus?is_from_webapp=1&sender_device=pc
