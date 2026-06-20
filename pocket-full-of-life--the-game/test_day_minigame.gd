@@ -196,7 +196,6 @@ func _on_exit_button_pressed() -> void:
 	print("Pretending to go to the classroom")
 	TransitionScreen.transition_to_scene("")
 
-
 func _on_exit_button_mouse_entered() -> void:
 	var hover = create_tween()
 	hover.tween_property($Paper/ExitButton, "scale", Vector2(1.1, 1.1), 0.1)
