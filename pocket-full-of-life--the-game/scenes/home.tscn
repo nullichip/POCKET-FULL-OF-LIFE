@@ -1,16 +1,19 @@
-[gd_scene load_steps=8 format=3 uid="uid://bnlp07k066m0h"]
+[gd_scene load_steps=10 format=3 uid="uid://bnlp07k066m0h"]
 
 [ext_resource type="Texture2D" uid="uid://drxptv3e701nt" path="res://Assets/SCROLL-Home Enterance/Home.png" id="1_w18ys"]
 [ext_resource type="PackedScene" uid="uid://b43uktunge7qc" path="res://scenes/interactive_items.tscn" id="2_reixx"]
 [ext_resource type="PackedScene" uid="uid://b53r4vslu8q5n" path="res://scenes/tico_walk.tscn" id="2_w18ys"]
+[ext_resource type="Texture2D" uid="uid://dsccnmryux6l8" path="res://Assets/SCROLL-Home Enterance/Portrait.png" id="3_reixx"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_u4wd2"]
-load_path = "res://.godot/imported/Frame.png-292a596b5d208b3391de607bfa97d8c4.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uhids"]
+size = Vector2(580.5, 764)
 
 [sub_resource type="Gradient" id="Gradient_uhids"]
 interpolation_color_space = 2
-offsets = PackedFloat32Array(0, 0.047210302, 0.54077256)
-colors = PackedColorArray(1, 1, 1, 0, 0.75, 0.75, 0.75, 0, 0, 0, 0, 1)
+offsets = PackedFloat32Array(0.115879826, 0.24034335)
+colors = PackedColorArray(0, 0, 0, 0, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_yxilm"]
 gradient = SubResource("Gradient_uhids")
@@ -39,24 +42,42 @@ texture = SubResource("CompressedTexture2D_u4wd2")
 position = Vector2(-59, 0)
 dialogue_text = "I never knew what this painting meant..."
 
+[node name="InteractivePainting2" parent="." instance=ExtResource("2_reixx")]
+position = Vector2(-59, 0)
+dialogue_text = "Was this 2 years ago...or was it 3..."
+
+[node name="Sprite2D" parent="InteractivePainting2" index="0"]
+position = Vector2(320, 139.00002)
+texture = ExtResource("3_reixx")
+
+[node name="CollisionShape2D" parent="InteractivePainting2" index="1"]
+position = Vector2(320, 323)
+
 [node name="Tico" parent="." instance=ExtResource("2_w18ys")]
 position = Vector2(514, 412)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
+[node name="InvisibleWall" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InvisibleWall"]
+position = Vector2(1492.75, 304)
+shape = SubResource("RectangleShape2D_uhids")
+
 [node name="DoorTrigger" type="Area2D" parent="."]
 
 [node name="TextureRect" type="TextureRect" parent="DoorTrigger"]
-offset_left = 292.0
-offset_top = 45.0
-offset_right = 2005.0
-offset_bottom = 303.0
+offset_left = 1047.0
+offset_top = 26.0
+offset_right = 1370.0
+offset_bottom = 311.0
 texture = SubResource("GradientTexture2D_yxilm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorTrigger"]
-position = Vector2(1245.625, 176)
+position = Vector2(1198, 181)
 shape = SubResource("RectangleShape2D_reixx")
 
 [connection signal="body_entered" from="DoorTrigger" to="Tico" method="_on_door_trigger_body_entered"]
 
 [editable path="InteractivePainting"]
+[editable path="InteractivePainting2"]
