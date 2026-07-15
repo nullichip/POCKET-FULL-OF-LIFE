@@ -27,16 +27,16 @@ func _on_no_btn_pressed() -> void:
 
 func _on_yes_btn_mouse_entered() -> void:
 	var hover = create_tween()
-	hover.tween_property($YesBtn, "scale", Vector2(1.1, 1.1), 0.1)
+	hover.tween_property($Fader/YesBtn, "scale", Vector2(1.1, 1.1), 0.1)
 
 func _on_no_btn_mouse_entered() -> void:
 	var hover = create_tween()
-	hover.tween_property($NoBtn, "scale", Vector2(1.1, 1.1), 0.1)
+	hover.tween_property($Fader/NoBtn, "scale", Vector2(1.1, 1.1), 0.1)
 
 func _on_yes_btn_mouse_exited() -> void:
 	var hover_out = create_tween()
-	hover_out.tween_property($YesBtn, "scale", Vector2(1.0, 1.0), 0.1)
+	hover_out.tween_property($Fader/YesBtn, "scale", Vector2(1.0, 1.0), 0.1)
 	
 func _on_no_btn_mouse_exited() -> void:
 	var hover_out = create_tween()
-	hover_out.tween_property($NoBtn, "scale", Vector2(1.0, 1.0), 0.1)
+	hover_out.tween_property($Fader/NoBtn, "scale", Vector2(1.0, 1.0), 0.1)
