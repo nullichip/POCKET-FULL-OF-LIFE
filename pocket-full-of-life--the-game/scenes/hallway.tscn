@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://c7o75vrfgmosl"]
+
+[ext_resource type="Script" uid="uid://deo4nliggyie5" path="res://doors.gd" id="1_h81ti"]
+[ext_resource type="Texture2D" uid="uid://hplwm8wd7yma" path="res://Assets/SCROLL-Home Enterance/Hallway.png" id="2_u7i40"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3w3tr"]
+size = Vector2(217, 238.5)
+
+[node name="Hallway" type="Area2D"]
+script = ExtResource("1_h81ti")
+prompt_text = "Go Upstairs?"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(592.875, 240.94824)
+scale = Vector2(0.25942287, 0.27553418)
+texture = ExtResource("2_u7i40")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(592.5, 242.25)
+shape = SubResource("RectangleShape2D_3w3tr")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

@@ -1,0 +1,133 @@
+[gd_scene load_steps=17 format=3 uid="uid://blwrtijatrfpn"]
+
+[ext_resource type="Script" uid="uid://cstpt35vfr8kk" path="res://scripts/tico_move.gd" id="1_1nma8"]
+[ext_resource type="Texture2D" uid="uid://dkewl4afvoxa5" path="res://Assets/Walking Tico/uniform/0.R.png" id="2_1nma8"]
+[ext_resource type="Texture2D" uid="uid://b1n17b7msoy32" path="res://Assets/Walking Tico/uniform/0.L.png" id="3_khoqm"]
+[ext_resource type="Texture2D" uid="uid://b1bngp2f2u4q7" path="res://Assets/Walking Tico/uniform/1.R.png" id="4_cqp02"]
+[ext_resource type="Texture2D" uid="uid://ba0k2swxtuiiv" path="res://Assets/Walking Tico/uniform/1.L.png" id="5_66g2m"]
+[ext_resource type="Texture2D" uid="uid://b1feom04ogohp" path="res://Assets/Walking Tico/uniform/5.R.png" id="6_qt28k"]
+[ext_resource type="Texture2D" uid="uid://dl77e7krtqdq6" path="res://Assets/Walking Tico/uniform/4.R.png" id="7_funq3"]
+[ext_resource type="Texture2D" uid="uid://b0vmby8ysgjim" path="res://Assets/Walking Tico/uniform/3.R.png" id="8_ry6ed"]
+[ext_resource type="Texture2D" uid="uid://biblrtmepwn4j" path="res://Assets/Walking Tico/uniform/2.R.png" id="9_4ax0x"]
+[ext_resource type="Texture2D" uid="uid://c8kihi5loxglf" path="res://Assets/Walking Tico/uniform/5.L.png" id="10_w6ljf"]
+[ext_resource type="Texture2D" uid="uid://ttty12603nyx" path="res://Assets/Walking Tico/uniform/4.L.png" id="11_q6leo"]
+[ext_resource type="Texture2D" uid="uid://chfglyjcpl3gn" path="res://Assets/Walking Tico/uniform/3.L.png" id="12_7canq"]
+[ext_resource type="Texture2D" uid="uid://xbfv83iuccg8" path="res://Assets/Walking Tico/uniform/2.L.png" id="13_kffbw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p4cja"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_cqp02")
+}],
+"loop": true,
+"name": &"idle_twd_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_66g2m")
+}],
+"loop": true,
+"name": &"idle_twd_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_1nma8")
+}],
+"loop": true,
+"name": &"look_away_twd_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_khoqm")
+}],
+"loop": true,
+"name": &"look_away_twd_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_qt28k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_funq3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ry6ed")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_4ax0x")
+}],
+"loop": true,
+"name": &"walk_twd_left",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_w6ljf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_q6leo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_7canq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_kffbw")
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"walk_twd_right",
+"speed": 4.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e0jq2"]
+size = Vector2(86, 150)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_nmf1b"]
+blend_mode = 3
+
+[node name="Tico" type="CharacterBody2D" groups=["Player", "Tico"]]
+position = Vector2(562, 439)
+script = ExtResource("1_1nma8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(305, -183)
+scale = Vector2(0.32004824, 0.32004827)
+sprite_frames = SubResource("SpriteFrames_p4cja")
+animation = &"look_away_twd_right"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(305, -183)
+shape = SubResource("RectangleShape2D_e0jq2")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(27, -52)
+offset = Vector2(0, -170)
+zoom = Vector2(1.7, 1.7)
+limit_left = -10000290
+limit_top = -9999949
+limit_right = 9999710
+limit_bottom = 651
+
+[node name="ColorRect2" type="ColorRect" parent="Camera2D"]
+material = SubResource("CanvasItemMaterial_nmf1b")
+offset_left = -339.0
+offset_top = -361.0
+offset_right = 339.0
+offset_bottom = 21.0
+color = Color(0.52539164, 0.67, 0.4221, 0.36078432)

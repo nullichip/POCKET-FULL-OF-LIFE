@@ -2,6 +2,7 @@ extends CanvasLayer
 
 func show_dialogue(dialogue_text: String) -> void:
 	var dialogue_label = $Panel/Label
+	$Panel.modulate.a = 0.0
 	
 	show() 
 	

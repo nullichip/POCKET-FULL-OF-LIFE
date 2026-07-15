@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://bnlp07k066m0h"]
+[gd_scene load_steps=11 format=3 uid="uid://bnlp07k066m0h"]
 
 [ext_resource type="Texture2D" uid="uid://drxptv3e701nt" path="res://Assets/SCROLL-Home Enterance/Home.png" id="1_w18ys"]
 [ext_resource type="PackedScene" uid="uid://b43uktunge7qc" path="res://scenes/interactive_items.tscn" id="2_reixx"]
-[ext_resource type="PackedScene" uid="uid://b53r4vslu8q5n" path="res://scenes/tico_walk.tscn" id="2_w18ys"]
+[ext_resource type="PackedScene" uid="uid://b53r4vslu8q5n" path="res://scenes/tico_walk_sports.tscn" id="2_w18ys"]
 [ext_resource type="Texture2D" uid="uid://dsccnmryux6l8" path="res://Assets/SCROLL-Home Enterance/Portrait.png" id="3_reixx"]
+[ext_resource type="PackedScene" uid="uid://c7o75vrfgmosl" path="res://scenes/hallway.tscn" id="5_uhids"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_u4wd2"]
 
@@ -42,16 +43,25 @@ texture = SubResource("CompressedTexture2D_u4wd2")
 position = Vector2(-59, 0)
 dialogue_text = "I never knew what this painting meant..."
 
+[node name="Sprite2D" parent="InteractivePainting" index="0"]
+position = Vector2(712, 128.00002)
+
+[node name="CollisionShape2D" parent="InteractivePainting" index="1"]
+position = Vector2(712, 323)
+
 [node name="InteractivePainting2" parent="." instance=ExtResource("2_reixx")]
 position = Vector2(-59, 0)
 dialogue_text = "Was this 2 years ago...or was it 3..."
 
 [node name="Sprite2D" parent="InteractivePainting2" index="0"]
-position = Vector2(320, 139.00002)
+position = Vector2(314, 131.00002)
 texture = ExtResource("3_reixx")
 
 [node name="CollisionShape2D" parent="InteractivePainting2" index="1"]
-position = Vector2(320, 323)
+position = Vector2(314, 323)
+
+[node name="Hallway" parent="." instance=ExtResource("5_uhids")]
+position = Vector2(-152, -57)
 
 [node name="Tico" parent="." instance=ExtResource("2_w18ys")]
 position = Vector2(514, 412)

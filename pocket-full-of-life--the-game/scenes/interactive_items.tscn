@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://car4kpeydlank" path="res://Assets/SCROLL-Home Enterance/Painting.png" id="2_0n517"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6wkqi"]
-size = Vector2(81, 650)
+size = Vector2(40, 650)
 
 [node name="InteractivePainting" type="Area2D"]
 script = ExtResource("1_pvngq")
@@ -15,7 +15,7 @@ scale = Vector2(0.29475975, 0.30784315)
 texture = ExtResource("2_0n517")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(675.5, 324)
+position = Vector2(677, 324)
 shape = SubResource("RectangleShape2D_6wkqi")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

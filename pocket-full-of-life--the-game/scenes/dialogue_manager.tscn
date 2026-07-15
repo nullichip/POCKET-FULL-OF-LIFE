@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cgyf37m637hpg" path="res://scripts/dialogue_manager.gd" id="1_iove5"]
 [ext_resource type="FontFile" uid="uid://b7f4af4w3ffwe" path="res://Assets/TestDay Assets/IndieFlower-Regular.ttf" id="1_k6lpl"]
-[ext_resource type="Texture2D" uid="uid://pa7od6v3gs1w" path="res://Assets/Dialogue Box.png" id="2_smvbx"]
+[ext_resource type="Texture2D" uid="uid://pa7od6v3gs1w" path="res://Assets/universal/Dialogue Box.png" id="2_smvbx"]
 
 [sub_resource type="Animation" id="Animation_aal2s"]
 length = 0.001
