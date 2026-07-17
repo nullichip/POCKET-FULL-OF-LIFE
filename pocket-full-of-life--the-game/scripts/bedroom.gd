@@ -1,5 +1,7 @@
 extends Control
 
+var is_journal_open: bool = false
+
 #------------------------BEDROOM------------------------
 func _on_bed_pressed() -> void:
 	var player_said_yes = await ConfirmationMenu.ask_question("GO TO SLEEP?")
@@ -26,8 +28,21 @@ func _on_poster_pressed() -> void:
 
 #------------------------Journal------------------------
 func _on_journal_pressed() -> void:
-	pass
-	#this will be where players save their progress
+	$journal.disabled = true
+	
+	var clicked_journal = create_tween()
+	
+	if is_journal_open == false:
+		is_journal_open = true
+		clicked_journal.tween_property($journal, "position:y", $journal.position.y - 100, 0.3)
+		
+	elif is_journal_open == true:
+		is_journal_open = false
+		clicked_journal.tween_property($journal, "position:y", $journal.position.y + 100, 0.3)
+		
+	await clicked_journal.finished
+	$journal.disabled = false
+	print("Opening Journal...")
 
 #------------------------Mirror------------------------
 func _on_mirror_pressed() -> void:

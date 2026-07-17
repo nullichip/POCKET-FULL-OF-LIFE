@@ -55,6 +55,8 @@ offset_top = 80.0
 offset_right = 632.0
 offset_bottom = 370.0
 
+[connection signal="mouse_entered" from="journal" to="." method="_on_journal_mouse_entered"]
+[connection signal="mouse_exited" from="journal" to="." method="_on_journal_mouse_exited"]
 [connection signal="pressed" from="journal" to="." method="_on_journal_pressed"]
 [connection signal="pressed" from="bed" to="." method="_on_bed_pressed"]
 [connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
