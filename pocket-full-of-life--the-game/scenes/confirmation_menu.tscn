@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://cia6yem7br7ow" path="res://scripts/confirmation_menu.gd" id="1_mgnfe"]
 [ext_resource type="Texture2D" uid="uid://inisuwwvec1o" path="res://Assets/universal/Confirm Menu.png" id="2_jynjw"]
 [ext_resource type="FontFile" uid="uid://b7f4af4w3ffwe" path="res://Assets/TestDay Assets/IndieFlower-Regular.ttf" id="3_u76wg"]
-[ext_resource type="Texture2D" uid="uid://d23hxxler0c7e" path="res://Assets/universal/No Btn.png" id="4_xjgu6"]
-[ext_resource type="Texture2D" uid="uid://cvjsdqxo8gt2m" path="res://Assets/universal/Yes Btn.png" id="5_ma5pd"]
+[ext_resource type="Texture2D" uid="uid://dn6yhlc7fsn5p" path="res://Assets/universal/nobtn.png" id="4_mgnfe"]
+[ext_resource type="Texture2D" uid="uid://g0vott1x7on0" path="res://Assets/universal/yesbtn.png" id="5_jynjw"]
 
 [sub_resource type="Animation" id="Animation_jynjw"]
 length = 0.001
@@ -88,21 +88,21 @@ autowrap_mode = 3
 
 [node name="NoBtn" type="TextureButton" parent="Fader"]
 layout_mode = 0
-offset_left = 600.2564
+offset_left = 594.0
 offset_top = 341.28122
 offset_right = 694.01044
 offset_bottom = 389.28122
-texture_normal = ExtResource("4_xjgu6")
+texture_normal = ExtResource("4_mgnfe")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="YesBtn" type="TextureButton" parent="Fader"]
 layout_mode = 0
-offset_left = 470.2564
+offset_left = 463.0
 offset_top = 341.28122
 offset_right = 564.0101
 offset_bottom = 389.28122
-texture_normal = ExtResource("5_ma5pd")
+texture_normal = ExtResource("5_jynjw")
 ignore_texture_size = true
 stretch_mode = 0
 

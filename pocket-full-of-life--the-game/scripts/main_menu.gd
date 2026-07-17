@@ -79,4 +79,4 @@ func _on_restart_pressed() -> void:
 	TransitionScreen.transition_to_scene("") #TODO: ADD GAME SCENE HERE
 
 func _on_quit_pressed() -> void:
-	pass
+	get_tree().quit()
