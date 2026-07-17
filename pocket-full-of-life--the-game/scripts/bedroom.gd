@@ -15,9 +15,11 @@ func _on_exit_pressed() -> void:
 	var player_said_yes = await ConfirmationMenu.ask_question("LEAVE BEDROOM?")
 	
 	if player_said_yes:
-		await TransitionScreen.transition_to_scene("res://scenes/home.tscn")
+		GameManager.target_spawn_name = "BedroomSpawn"
+		await TransitionScreen.transition_to_scene("res://scenes/home.tscn", 0.0)
 	else:
 		print("Player cancled.")
+
 #------------------------Posters------------------------
 func _on_poster_pressed() -> void:
 	await DialogueManager.show_dialogue("I hope I get as good as them one day...")
