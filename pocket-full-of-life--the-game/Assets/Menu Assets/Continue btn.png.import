@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7q1e5rvlqwj3"
-path="res://.godot/imported/Chapter Btn.png-d7f9e4b2f1312e0fd8cf620505d15c2e.ctex"
+uid="uid://cel3ql37n57fq"
+path="res://.godot/imported/Continue btn.png-d57a4409204040c076f8b9a4a8b5ceb1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Menu Assets/Chapter Btn.png"
-dest_files=["res://.godot/imported/Chapter Btn.png-d7f9e4b2f1312e0fd8cf620505d15c2e.ctex"]
+source_file="res://Assets/Menu Assets/Continue btn.png"
+dest_files=["res://.godot/imported/Continue btn.png-d57a4409204040c076f8b9a4a8b5ceb1.ctex"]
 
 [params]
 

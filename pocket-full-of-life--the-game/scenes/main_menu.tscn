@@ -1,15 +1,17 @@
-[gd_scene load_steps=14 format=3 uid="uid://bygafsmwolmju"]
+[gd_scene load_steps=19 format=3 uid="uid://bygafsmwolmju"]
 
 [ext_resource type="Script" uid="uid://cdohp4brhudjh" path="res://scripts/main_menu.gd" id="1_nlkkf"]
 [ext_resource type="Texture2D" uid="uid://brypp2pywy7t1" path="res://Assets/Menu Assets/Passion Opening.png" id="2_dy7ct"]
 [ext_resource type="Shader" uid="uid://cdn1vkc0y4cro" path="res://scripts/main_menu.gdshader" id="3_0k4wn"]
 [ext_resource type="Texture2D" uid="uid://irdhawh6gye3" path="res://Assets/Menu Assets/Passion Opening-Fire.png" id="3_0o4t1"]
-[ext_resource type="Texture2D" uid="uid://ylvw4tuj4urw" path="res://Assets/Menu Assets/Play Btn.png" id="3_8qtwp"]
 [ext_resource type="Texture2D" uid="uid://cvr8enfjylcru" path="res://Assets/Menu Assets/Game Title.png" id="3_qe12f"]
 [ext_resource type="Texture2D" uid="uid://bgfa8rvolx2gs" path="res://Assets/Menu Assets/Passion Opening-Hand.png" id="4_0k4wn"]
-[ext_resource type="Texture2D" uid="uid://d1re23c7xxe2g" path="res://Assets/Menu Assets/Restart Btn.png" id="4_dy7ct"]
-[ext_resource type="Texture2D" uid="uid://c7q1e5rvlqwj3" path="res://Assets/Menu Assets/Chapter Btn.png" id="5_0o4t1"]
-[ext_resource type="Texture2D" uid="uid://dmfp5r0h1nxgc" path="res://Assets/Menu Assets/Setting Btn.png" id="6_0k4wn"]
+[ext_resource type="Texture2D" uid="uid://31dw6ebpjrao" path="res://Assets/Menu Assets/restartbtn.png" id="7_5dd4i"]
+[ext_resource type="Texture2D" uid="uid://cel3ql37n57fq" path="res://Assets/Menu Assets/Continue btn.png" id="8_lgwnu"]
+[ext_resource type="Texture2D" uid="uid://ddupoqn040prf" path="res://Assets/Menu Assets/playbth.png" id="9_flqon"]
+[ext_resource type="Texture2D" uid="uid://cb3kgctmh7llj" path="res://Assets/Menu Assets/Settings btn.png" id="10_5dd4i"]
+[ext_resource type="Texture2D" uid="uid://dbiwheovjqegm" path="res://Assets/Menu Assets/Linksbtn.png" id="11_flqon"]
+[ext_resource type="Texture2D" uid="uid://tyhbvqtygt88" path="res://Assets/Menu Assets/note.png" id="12_rcqid"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_j5v2v"]
 
@@ -23,6 +25,92 @@ shader = ExtResource("3_0k4wn")
 shader_parameter/noise_tex = SubResource("NoiseTexture2D_iotk1")
 shader_parameter/speed = 1.0
 shader_parameter/strength = 0.1
+
+[sub_resource type="Animation" id="Animation_5dd4i"]
+resource_name = "swaying_stars"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ContinueButton:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.24443091, -0.21598727, -0.24443091]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RestartButton:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.18128371, -0.14383647, -0.18128371]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PlayButton:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.24054304, 0.21532989, 0.24054304]
+}
+
+[sub_resource type="Animation" id="Animation_lgwnu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ContinueButton:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.24443091]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RestartButton:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.18128371]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PlayButton:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.24054304]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_flqon"]
+_data = {
+&"RESET": SubResource("Animation_lgwnu"),
+&"swaying_stars": SubResource("Animation_5dd4i")
+}
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -56,14 +144,14 @@ texture = ExtResource("4_0k4wn")
 [node name="GameTitle" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.062000003
-anchor_top = 0.054
+anchor_left = 0.030000001
+anchor_top = 0.025
 anchor_right = 0.455
-anchor_bottom = 0.395
-offset_left = -0.4240036
-offset_top = -3.9920006
-offset_right = 0.2944336
-offset_bottom = 0.020370483
+anchor_bottom = 0.372
+offset_left = 0.43999863
+offset_top = -0.20000076
+offset_right = -35.705566
+offset_bottom = -0.07562256
 rotation = 0.008726646
 texture = ExtResource("3_qe12f")
 expand_mode = 1
@@ -71,66 +159,97 @@ expand_mode = 1
 [node name="RestartButton" type="TextureButton" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.07700001
-anchor_top = 0.72800004
+anchor_left = 0.287
+anchor_top = 0.76000005
 anchor_right = 0.41000003
-anchor_bottom = 0.86100006
-offset_left = 0.29599
-offset_top = 1.2559814
-offset_right = 0.67996216
-offset_bottom = -3.9280396
-pivot_offset = Vector2(174, 40.5)
-texture_normal = ExtResource("4_dy7ct")
+anchor_bottom = 0.859
+offset_left = -59.16269
+offset_top = -68.24164
+offset_right = 51.5867
+offset_bottom = 85.78845
+rotation = -0.18128371
+scale = Vector2(1, 0.9682836)
+pivot_offset = Vector2(126.223, 109.091)
+texture_normal = ExtResource("7_5dd4i")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="ChapterButton" type="TextureButton" parent="."]
+[node name="ContinueButton" type="TextureButton" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.083000004
 anchor_top = 0.58000004
-anchor_right = 0.41000003
-anchor_bottom = 0.71000004
-offset_left = -7.616005
-offset_top = 0.15997314
-offset_right = -0.32003784
-offset_bottom = -3.080017
-pivot_offset = Vector2(174, 40.5)
-texture_normal = ExtResource("5_0o4t1")
+anchor_right = 0.17600001
+anchor_bottom = 0.67600006
+offset_left = -73.616
+offset_top = -110.84
+offset_right = 89.443665
+offset_bottom = 59.855072
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.24443091
+pivot_offset = Vector2(135.098, 116.452)
+texture_normal = ExtResource("8_lgwnu")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="PlayButton" type="TextureButton" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.078
-anchor_top = 0.43800002
-anchor_right = 0.411
-anchor_bottom = 0.563
-offset_left = 0.14399719
-offset_top = 0.17599487
-offset_right = 0.5279846
-offset_bottom = 0.17599487
-pivot_offset = Vector2(174, 40.5)
-texture_normal = ExtResource("3_8qtwp")
+anchor_left = 0.32200003
+anchor_top = 0.384
+anchor_right = 0.47900003
+anchor_bottom = 0.57600003
+offset_left = -78.94403
+offset_top = -55.832
+offset_right = 57.69635
+offset_bottom = 34.728912
+rotation = 0.24054304
+pivot_offset = Vector2(158.752, 107.489)
+texture_normal = ExtResource("9_flqon")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="SettingButton" type="TextureButton" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.076000005
-anchor_top = 0.864
-anchor_right = 0.143
-anchor_bottom = 0.975
-offset_left = 0.44799805
-offset_top = 0.12799072
-offset_right = 0.2639923
-offset_bottom = -1.7999878
-pivot_offset = Vector2(38.5, 35)
-texture_normal = ExtResource("6_0k4wn")
+anchor_left = 0.022000002
+anchor_top = 0.855
+anchor_right = 0.101
+anchor_bottom = 1.0
+offset_left = 915.656
+offset_top = -7.040039
+offset_right = 915.648
+offset_bottom = -12.0
+pivot_offset = Vector2(45.5, 44.5)
+texture_normal = ExtResource("10_5dd4i")
 ignore_texture_size = true
 stretch_mode = 0
+
+[node name="LinkButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.022000002
+anchor_top = 0.855
+anchor_right = 0.101
+anchor_bottom = 1.0
+offset_left = 1016.656
+offset_top = -7.040039
+offset_right = 1016.648
+offset_bottom = -12.0
+pivot_offset = Vector2(45.5, 44.5)
+texture_normal = ExtResource("11_flqon")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Note" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 531.0
+offset_right = 226.8492
+offset_bottom = 643.0
+texture = ExtResource("12_rcqid")
+expand_mode = 1
 
 [node name="GlitchOverlay" type="ColorRect" parent="."]
 layout_mode = 0
@@ -142,5 +261,11 @@ color = Color(0, 0, 0, 1)
 
 [node name="GlitchTimer" type="Timer" parent="."]
 autostart = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_flqon")
+}
+autoplay = "swaying_stars"
 
 [connection signal="timeout" from="GlitchTimer" to="." method="_on_glitch_timer_timeout"]

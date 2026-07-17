@@ -1,7 +1,8 @@
 extends Control
 
-@onready var menu_buttons = [$PlayButton, $ChapterButton, $RestartButton, $SettingButton]
+@onready var menu_buttons = [$PlayButton, $ContinueButton, $RestartButton, $SettingButton, $LinkButton]
 @onready var game_title = $GameTitle
+@onready var note = $Note
 
 @onready var fire = $Fire
 var time_passed = 0.0
@@ -14,7 +15,7 @@ var base_positions = {}
 
 func _ready() -> void:
 	$PlayButton.pressed.connect(_on_play_pressed)
-	$ChapterButton.pressed.connect(_on_chapter_pressed)
+	$ContinueButton.pressed.connect(_on_chapter_pressed)
 	$RestartButton.pressed.connect(_on_restart_pressed)
 		
 	for btn in menu_buttons:
@@ -25,6 +26,7 @@ func _ready() -> void:
 		
 		base_positions[btn] = btn.position
 		base_positions[game_title] = game_title.position
+		base_positions[note] = note.position
 		base_positions[fire] = fire.position
 
 func animate_button(btn_node, scale_multiplier) -> void:
@@ -52,6 +54,14 @@ func _process(delta: float) -> void:
 		else:
 			game_title.position = base_positions[game_title]
 			game_title.scale.y = base_scale.y
+			
+		if randi() % 10 == 0:
+			note.position.x = base_positions[note].x + randf_range(-1.0, 1.0)
+			note.position.y = base_positions[note].y + randf_range(-1.0, 1.0)
+			note.scale.y = base_scale.y * randf_range(0.95, 1)
+		else:
+			note.position.x = base_positions[note].x
+			note.position.y = base_positions[note].y
 			
 	time_passed += delta
 	#first value is how FAST the fire will sway, the second value is how FAR it will sway
