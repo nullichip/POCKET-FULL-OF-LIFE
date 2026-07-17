@@ -1,6 +1,6 @@
 extends Control
 
-@onready var menu_buttons = [$PlayButton, $ContinueButton, $RestartButton, $SettingButton, $LinkButton]
+@onready var menu_buttons = [$PlayButton, $ContinueButton, $RestartButton, $QuitButton, $SettingButton, $LinkButton]
 @onready var game_title = $GameTitle
 @onready var note = $Note
 
@@ -17,6 +17,7 @@ func _ready() -> void:
 	$PlayButton.pressed.connect(_on_play_pressed)
 	$ContinueButton.pressed.connect(_on_chapter_pressed)
 	$RestartButton.pressed.connect(_on_restart_pressed)
+	$QuitButton.pressed.connect(_on_quit_pressed)
 		
 	for btn in menu_buttons:
 		btn.mouse_entered.connect(animate_button.bind(btn, 1.03))
@@ -76,3 +77,6 @@ func _on_chapter_pressed() -> void:
 
 func _on_restart_pressed() -> void:
 	TransitionScreen.transition_to_scene("") #TODO: ADD GAME SCENE HERE
+
+func _on_quit_pressed() -> void:
+	pass
