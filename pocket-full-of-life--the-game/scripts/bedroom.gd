@@ -1,6 +1,8 @@
 extends Control
 
 var is_journal_open: bool = false
+const JOURNAL_SCENE = preload("res://scenes/journal.tscn")
+var active_journal: Node = null
 
 #------------------------BEDROOM------------------------
 func _on_bed_pressed() -> void:
@@ -30,19 +32,24 @@ func _on_poster_pressed() -> void:
 func _on_journal_pressed() -> void:
 	$journal.disabled = true
 	
-	var clicked_journal = create_tween()
+	var clicked_journal: Tween = create_tween()
 	
 	if is_journal_open == false:
 		is_journal_open = true
 		clicked_journal.tween_property($journal, "position:y", $journal.position.y - 100, 0.3)
 		
+		active_journal = JOURNAL_SCENE.instantiate()
+		add_child(active_journal)
+		
 	elif is_journal_open == true:
 		is_journal_open = false
 		clicked_journal.tween_property($journal, "position:y", $journal.position.y + 100, 0.3)
 		
-	await clicked_journal.finished
-	$journal.disabled = false
-	await 
+		if active_journal != null:
+			active_journal.queue_free()
+			active_journal = null
+		await clicked_journal.finished
+	$journal.disabled = false 
 
 #------------------------Mirror------------------------
 func _on_mirror_pressed() -> void:

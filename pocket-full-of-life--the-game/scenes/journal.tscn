@@ -7,6 +7,45 @@
 [ext_resource type="FontFile" uid="uid://yux64xgu8geh" path="res://Assets/universal/SyneMono-Regular.ttf" id="5_e1ix3"]
 [ext_resource type="Texture2D" uid="uid://cqyqheydwes2w" path="res://Assets/universal/chapter 1 page.png" id="6_l2i16"]
 
+[sub_resource type="Animation" id="Animation_753p8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Page:flip_h")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Page:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(548, 33)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Page:size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(455, 594)]
+}
+
 [sub_resource type="Animation" id="Animation_q6xxf"]
 resource_name = "flip_page"
 length = 0.64
@@ -47,45 +86,6 @@ tracks/2/keys = {
 "values": [Vector2(455, 594), Vector2(10, 594), Vector2(54.5, 594), Vector2(455, 594)]
 }
 
-[sub_resource type="Animation" id="Animation_753p8"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Page:flip_h")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Page:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(548, 33)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Page:size")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(455, 594)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yvp1h"]
 _data = {
 &"RESET": SubResource("Animation_753p8"),
@@ -93,12 +93,18 @@ _data = {
 }
 
 [node name="Journal" type="Control"]
+z_index = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -392.0
+offset_top = -32.0
+offset_right = -392.0
+offset_bottom = -32.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1.1, 1.1)
 
 [node name="FullBook" type="TextureRect" parent="."]
 layout_mode = 0
