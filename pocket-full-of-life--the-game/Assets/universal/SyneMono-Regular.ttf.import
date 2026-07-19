@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://yux64xgu8geh"
-path="res://.godot/imported/SyneMono-Regular.ttf-8a975e49786512877a1bd9930b0ba877.fontdata"
+path="res://.godot/imported/SyneMono-Regular.ttf-7dc47441e8602b6979883e980ffff44d.fontdata"
 
 [deps]
 
-source_file="res://Assets/TestDay Assets/SyneMono-Regular.ttf"
-dest_files=["res://.godot/imported/SyneMono-Regular.ttf-8a975e49786512877a1bd9930b0ba877.fontdata"]
+source_file="res://Assets/universal/SyneMono-Regular.ttf"
+dest_files=["res://.godot/imported/SyneMono-Regular.ttf-7dc47441e8602b6979883e980ffff44d.fontdata"]
 
 [params]
 

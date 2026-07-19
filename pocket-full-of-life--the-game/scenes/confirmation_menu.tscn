@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cia6yem7br7ow" path="res://scripts/confirmation_menu.gd" id="1_mgnfe"]
 [ext_resource type="Texture2D" uid="uid://inisuwwvec1o" path="res://Assets/universal/Confirm Menu.png" id="2_jynjw"]
-[ext_resource type="FontFile" uid="uid://b7f4af4w3ffwe" path="res://Assets/TestDay Assets/IndieFlower-Regular.ttf" id="3_u76wg"]
+[ext_resource type="FontFile" uid="uid://b7f4af4w3ffwe" path="res://Assets/universal/IndieFlower-Regular.ttf" id="3_u76wg"]
 [ext_resource type="Texture2D" uid="uid://dn6yhlc7fsn5p" path="res://Assets/universal/nobtn.png" id="4_mgnfe"]
 [ext_resource type="Texture2D" uid="uid://g0vott1x7on0" path="res://Assets/universal/yesbtn.png" id="5_jynjw"]
 
@@ -60,6 +60,7 @@ _data = {
 }
 
 [node name="ConfirmationMenu" type="CanvasLayer"]
+layer = 5
 script = ExtResource("1_mgnfe")
 
 [node name="Fader" type="Control" parent="."]

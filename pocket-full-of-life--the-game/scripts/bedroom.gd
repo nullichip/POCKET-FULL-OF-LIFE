@@ -42,7 +42,7 @@ func _on_journal_pressed() -> void:
 		
 	await clicked_journal.finished
 	$journal.disabled = false
-	print("Opening Journal...")
+	await 
 
 #------------------------Mirror------------------------
 func _on_mirror_pressed() -> void:

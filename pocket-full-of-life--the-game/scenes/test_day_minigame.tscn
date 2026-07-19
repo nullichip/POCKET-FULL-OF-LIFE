@@ -8,9 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://gtw5bt4tfahb" path="res://Assets/TestDay Assets/Test Day - Hands.png" id="5_okkf8"]
 [ext_resource type="Texture2D" uid="uid://cvu2b5ycxcqbp" path="res://Assets/TestDay Assets/Test Day - Paper.png" id="6_4yxxb"]
 [ext_resource type="Texture2D" uid="uid://bsfs42x2f3kyc" path="res://Assets/TestDay Assets/Test Day - Thumbs.png" id="7_m7mey"]
-[ext_resource type="FontFile" uid="uid://brpjxuh12plfd" path="res://Assets/TestDay Assets/Gelasio-VariableFont_wght.ttf" id="8_m7mey"]
+[ext_resource type="FontFile" uid="uid://brpjxuh12plfd" path="res://Assets/universal/Gelasio-VariableFont_wght.ttf" id="8_m7mey"]
 [ext_resource type="Texture2D" uid="uid://hmft7vyxqoh3" path="res://Assets/TestDay Assets/Test Day - Window Light.png" id="8_u82s6"]
-[ext_resource type="FontFile" uid="uid://b7f4af4w3ffwe" path="res://Assets/TestDay Assets/IndieFlower-Regular.ttf" id="9_m7mey"]
+[ext_resource type="FontFile" uid="uid://b7f4af4w3ffwe" path="res://Assets/universal/IndieFlower-Regular.ttf" id="9_m7mey"]
 [ext_resource type="Shader" uid="uid://c2qg1bhtkikni" path="res://scripts/test_day_minigame.gdshader" id="9_okkf8"]
 [ext_resource type="Texture2D" uid="uid://douqhr1dox1hi" path="res://Assets/universal/exitbth.png" id="10_3ww6s"]
 

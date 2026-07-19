@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://brpjxuh12plfd"
-path="res://.godot/imported/Gelasio-VariableFont_wght.ttf-37fc9c025f97b21c41bb76fbcdbd6a50.fontdata"
+path="res://.godot/imported/Gelasio-VariableFont_wght.ttf-bc0bc125b753cb828668716ff83d45d2.fontdata"
 
 [deps]
 
-source_file="res://Assets/TestDay Assets/Gelasio-VariableFont_wght.ttf"
-dest_files=["res://.godot/imported/Gelasio-VariableFont_wght.ttf-37fc9c025f97b21c41bb76fbcdbd6a50.fontdata"]
+source_file="res://Assets/universal/Gelasio-VariableFont_wght.ttf"
+dest_files=["res://.godot/imported/Gelasio-VariableFont_wght.ttf-bc0bc125b753cb828668716ff83d45d2.fontdata"]
 
 [params]
 
