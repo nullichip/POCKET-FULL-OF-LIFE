@@ -2,6 +2,7 @@ extends Control
 
 var is_journal_open: bool = false
 const JOURNAL_SCENE = preload("res://scenes/journal.tscn")
+const DRESS_UP_SCENE = preload("res://scenes/dress_up.tscn")
 var active_journal: Node = null
 
 #------------------------BEDROOM------------------------
@@ -53,5 +54,5 @@ func _on_journal_pressed() -> void:
 
 #------------------------Mirror------------------------
 func _on_mirror_pressed() -> void:
-	pass 
-	#this is to transition to the changing room minigame
+	var dress_up_menu = DRESS_UP_SCENE.instantiate()
+	add_child(dress_up_menu)

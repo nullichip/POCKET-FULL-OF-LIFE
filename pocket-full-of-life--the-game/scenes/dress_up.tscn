@@ -1,0 +1,625 @@
+[gd_scene load_steps=23 format=3 uid="uid://b0suchv7t1n4n"]
+
+[ext_resource type="Texture2D" uid="uid://cfwmq2bcnew7s" path="res://Assets/Dress-Up/Clothes screen.png" id="1_4spwe"]
+[ext_resource type="Script" uid="uid://c0p80m2rtkpmr" path="res://scenes/dress_up.gd" id="1_y0vdl"]
+[ext_resource type="Texture2D" uid="uid://v46prq0e1t5w" path="res://Assets/Dress-Up/scroll box.png" id="2_y0vdl"]
+[ext_resource type="Texture2D" uid="uid://dn0mvm7v2d1nv" path="res://Assets/Dress-Up/volleyball icon.png" id="3_6sxpq"]
+[ext_resource type="Texture2D" uid="uid://q2af1r653jg0" path="res://Assets/Dress-Up/nighttime icon.png" id="4_x3utr"]
+[ext_resource type="Texture2D" uid="uid://dymjwnqr5vxgf" path="res://Assets/Dress-Up/school icon.png" id="5_sq1iw"]
+[ext_resource type="Texture2D" uid="uid://dgabvgu8nlh7t" path="res://Assets/Dress-Up/emoji7.png" id="6_xuusr"]
+[ext_resource type="Texture2D" uid="uid://bh1ui22pp48kw" path="res://Assets/Dress-Up/emioji4.png" id="7_vcjqi"]
+[ext_resource type="Texture2D" uid="uid://doc6yv37c2n5q" path="res://Assets/Dress-Up/emoji1.png" id="8_pxsyf"]
+[ext_resource type="Texture2D" uid="uid://bvc81p3qxr2w4" path="res://Assets/Dress-Up/emoji2emoji2.png" id="9_cli2n"]
+[ext_resource type="Texture2D" uid="uid://rahu3br3ap84" path="res://Assets/Dress-Up/emoji3.png" id="10_k4dac"]
+[ext_resource type="Texture2D" uid="uid://cpfg0edbix11l" path="res://Assets/Dress-Up/emoji5.png" id="11_8xyym"]
+[ext_resource type="Texture2D" uid="uid://8xaaghogvnf5" path="res://Assets/Dress-Up/emoji6.png" id="12_tmulp"]
+[ext_resource type="Texture2D" uid="uid://b7va6u2k54ynv" path="res://Assets/Dress-Up/Sparkle.png" id="13_ipdcf"]
+[ext_resource type="Texture2D" uid="uid://brefedmc0hkko" path="res://Assets/Dress-Up/dress up screen.png" id="14_llr6x"]
+[ext_resource type="Texture2D" uid="uid://dveaifoio7ge3" path="res://Assets/Dress-Up/pedestal.png" id="15_3k2fo"]
+[ext_resource type="Texture2D" uid="uid://cxkupcao6mk6h" path="res://Assets/Dress-Up/Nighttime Model.png" id="17_6sxpq"]
+[ext_resource type="Texture2D" uid="uid://d0lj01wfbek28" path="res://Assets/Dress-Up/spotlight.png" id="18_x3utr"]
+[ext_resource type="Texture2D" uid="uid://111wf1gh43l0" path="res://Assets/universal/exit button.png" id="19_sq1iw"]
+
+[sub_resource type="Animation" id="Animation_0bupf"]
+resource_name = "twinkling_clothes"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("10:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -0.033105474]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("1:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.021714296]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("6:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0074163117, -0.018961605]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("7:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -0.019005964]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("4:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -0.018937215]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("11:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.026192514]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("12:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -0.049364053]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("13:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.059948765]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("5:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -0.037591588]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("3:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -0.028582264]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("2:rotation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -0.031237418]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("9:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.14490134]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("8:rotation")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.04630372]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("14:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -0.1240215]
+}
+
+[sub_resource type="Animation" id="Animation_5d4oa"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("10:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("1:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("6:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.018961605]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("7:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("4:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("11:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("12:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("13:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("5:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("3:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("2:rotation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("9:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("8:rotation")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("14:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_36w5o"]
+_data = {
+&"RESET": SubResource("Animation_5d4oa"),
+&"twinkling_clothes": SubResource("Animation_0bupf")
+}
+
+[node name="DressUp" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y0vdl")
+
+[node name="Wardrobe" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 690.0
+offset_top = 27.0
+offset_right = 1073.0
+offset_bottom = 608.7098
+texture = ExtResource("1_4spwe")
+expand_mode = 1
+
+[node name="ScrollBox" type="TextureRect" parent="Wardrobe"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 113.0
+offset_right = 364.0
+offset_bottom = 559.0
+rotation = 0.010984805
+texture = ExtResource("2_y0vdl")
+expand_mode = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Wardrobe/ScrollBox"]
+layout_mode = 0
+offset_left = 14.838745
+offset_top = 24.0018
+offset_right = 328.86523
+offset_bottom = 425.15628
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="Wardrobe/ScrollBox/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 15
+columns = 3
+
+[node name="VolleyballIcon" type="TextureButton" parent="Wardrobe/ScrollBox/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(90, 78)
+layout_mode = 2
+texture_normal = ExtResource("3_6sxpq")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="NighttimeIcon" type="TextureButton" parent="Wardrobe/ScrollBox/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(90, 78)
+layout_mode = 2
+texture_normal = ExtResource("4_x3utr")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="SchoolIcon" type="TextureButton" parent="Wardrobe/ScrollBox/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(90, 78)
+layout_mode = 2
+texture_normal = ExtResource("5_sq1iw")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="1" type="TextureRect" parent="Wardrobe"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 39.0
+offset_right = 75.0
+offset_bottom = 101.0
+texture = ExtResource("6_xuusr")
+expand_mode = 1
+
+[node name="2" type="TextureRect" parent="Wardrobe"]
+layout_mode = 0
+offset_left = 313.0
+offset_top = 36.0
+offset_right = 372.0
+offset_bottom = 107.16875
+texture = ExtResource("7_vcjqi")
+expand_mode = 1
+
+[node name="3" type="TextureRect" parent="Wardrobe"]
+layout_mode = 0
+offset_left = 283.0
+offset_top = 22.0
+offset_right = 331.0
+offset_bottom = 45.0
+texture = ExtResource("8_pxsyf")
+expand_mode = 1
+
+[node name="4" type="TextureRect" parent="Wardrobe"]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 12.0
+offset_right = 86.55
+offset_bottom = 45.0
+texture = ExtResource("9_cli2n")
+expand_mode = 1
+
+[node name="5" type="TextureRect" parent="Wardrobe"]
+layout_mode = 0
+offset_left = 262.0
+offset_top = 67.0
+offset_right = 306.95
+offset_bottom = 96.0
+texture = ExtResource("10_k4dac")
+expand_mode = 1
+
+[node name="6" type="TextureRect" parent="Wardrobe"]
+layout_mode = 0
+offset_left = 67.0
+offset_top = 75.0
+offset_right = 119.48193
+offset_bottom = 108.0
+rotation = -0.018961605
+texture = ExtResource("11_8xyym")
+expand_mode = 1
+
+[node name="7" type="TextureRect" parent="Wardrobe"]
+layout_mode = 0
+offset_left = 79.0
+offset_top = 42.0
+offset_right = 141.7
+offset_bottom = 80.0
+texture = ExtResource("12_tmulp")
+expand_mode = 1
+
+[node name="8" type="TextureRect" parent="Wardrobe"]
+layout_mode = 0
+offset_left = 337.0
+offset_top = 18.0
+offset_right = 353.0
+offset_bottom = 34.0
+texture = ExtResource("13_ipdcf")
+expand_mode = 1
+
+[node name="9" type="TextureRect" parent="Wardrobe"]
+layout_mode = 0
+offset_left = 294.0
+offset_top = 91.0
+offset_right = 311.0
+offset_bottom = 108.0
+texture = ExtResource("13_ipdcf")
+expand_mode = 1
+flip_h = true
+
+[node name="10" type="TextureRect" parent="Wardrobe"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 96.0
+offset_right = 37.0
+offset_bottom = 120.0
+texture = ExtResource("13_ipdcf")
+expand_mode = 1
+
+[node name="11" type="TextureRect" parent="Wardrobe"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 25.0
+offset_right = 38.0
+offset_bottom = 38.0
+texture = ExtResource("13_ipdcf")
+expand_mode = 1
+flip_h = true
+
+[node name="12" type="TextureRect" parent="Wardrobe"]
+layout_mode = 0
+offset_left = 161.0
+offset_top = 66.0
+offset_right = 174.0
+offset_bottom = 79.0
+texture = ExtResource("13_ipdcf")
+expand_mode = 1
+flip_h = true
+
+[node name="13" type="TextureRect" parent="Wardrobe"]
+layout_mode = 0
+offset_left = 221.0
+offset_top = 63.0
+offset_right = 240.0
+offset_bottom = 82.0
+texture = ExtResource("13_ipdcf")
+expand_mode = 1
+
+[node name="14" type="TextureRect" parent="Wardrobe"]
+layout_mode = 0
+offset_left = 175.0
+offset_top = 94.99999
+offset_right = 183.0
+offset_bottom = 102.99999
+texture = ExtResource("13_ipdcf")
+expand_mode = 1
+flip_h = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Wardrobe"]
+libraries = {
+&"": SubResource("AnimationLibrary_36w5o")
+}
+autoplay = "twinkling_clothes"
+
+[node name="ModelScreen" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 15.0
+offset_right = 672.0
+offset_bottom = 609.0
+texture = ExtResource("14_llr6x")
+expand_mode = 1
+
+[node name="Pedestal" type="TextureRect" parent="ModelScreen"]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 414.0
+offset_right = 469.26895
+offset_bottom = 528.0
+rotation = -0.012373736
+texture = ExtResource("15_3k2fo")
+expand_mode = 1
+
+[node name="tico" type="TextureRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 249.0
+offset_top = 63.0
+offset_right = 452.0
+offset_bottom = 474.60962
+texture = ExtResource("17_6sxpq")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="spotlight" type="TextureRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 88.0
+offset_top = 15.0
+offset_right = 595.0
+offset_bottom = 600.0
+texture = ExtResource("18_x3utr")
+expand_mode = 1
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 37.0
+offset_right = 86.0
+offset_bottom = 77.0
+texture_normal = ExtResource("19_sq1iw")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="pressed" from="Wardrobe/ScrollBox/ScrollContainer/GridContainer/VolleyballIcon" to="." method="_on_volleyball_icon_pressed"]
+[connection signal="pressed" from="Wardrobe/ScrollBox/ScrollContainer/GridContainer/NighttimeIcon" to="." method="_on_nighttime_icon_pressed"]
+[connection signal="pressed" from="Wardrobe/ScrollBox/ScrollContainer/GridContainer/SchoolIcon" to="." method="_on_school_icon_pressed"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
