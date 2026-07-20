@@ -2,6 +2,7 @@ extends Control
 
 @onready var tico_model = %tico
 @onready var spotlight = %spotlight
+@onready var pedestal = $ModelScreen/Pedestal
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -41,6 +42,17 @@ func _on_school_icon_pressed() -> void:
 	change_outfit_with_flicker(preload("res://Assets/Dress-Up/School Model.png"))
 	print("Switched to School Clothes")
 
+func _on_exit_button_pressed() -> void:
+	var blackout = create_tween()
+	blackout.tween_property(spotlight, "modulate:a", 0.3, 0.05)
+	blackout.parallel().tween_property(tico_model, "modulate:a", 0.3, 0.05)
+	blackout.tween_property(spotlight, "modulate:a", 0.8, 0.05)
+	blackout.tween_property(spotlight, "modulate:a", 0.0, 0.05)
+	blackout.parallel().tween_property(tico_model, "modulate:a", 0.0, 0.05)
+	blackout.parallel().tween_property(pedestal, "modulate:a", 0.0, 0.05)
+	
+	
+	await get_tree().create_timer(1).timeout
 
-func _on_texture_button_pressed() -> void:
+	
 	queue_free()
