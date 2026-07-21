@@ -21,6 +21,10 @@ DialogueManager="*res://scenes/dialogue_manager.tscn"
 ConfirmationMenu="*res://scenes/confirmation_menu.tscn"
 GameManager="*res://scripts/game_manager.gd"
 
+[display]
+
+window/stretch/mode="canvas_items"
+
 [global_group]
 
 Player=""

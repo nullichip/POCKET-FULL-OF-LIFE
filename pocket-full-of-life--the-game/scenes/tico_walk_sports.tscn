@@ -114,8 +114,8 @@ limit_bottom = 651
 
 [node name="ColorRect2" type="ColorRect" parent="Camera2D"]
 material = SubResource("CanvasItemMaterial_nmf1b")
-offset_left = -339.0
+offset_left = -591.0
 offset_top = -361.0
-offset_right = 339.0
+offset_right = 558.0
 offset_bottom = 21.0
 color = Color(0.52539164, 0.67, 0.4221, 0.36078432)
