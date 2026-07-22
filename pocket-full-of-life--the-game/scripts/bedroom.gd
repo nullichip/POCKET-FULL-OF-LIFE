@@ -3,6 +3,7 @@ extends Control
 var is_journal_open: bool = false
 const JOURNAL_SCENE = preload("res://scenes/journal.tscn")
 const DRESS_UP_SCENE = preload("res://scenes/dress_up.tscn")
+const COUNTING_COWS_SCENE = preload("res://scenes/couting_cows.tscn")
 var active_journal: Node = null
 
 #------------------------BEDROOM------------------------
@@ -12,6 +13,11 @@ func _on_bed_pressed() -> void:
 	if player_said_yes:
 		#await TransitionScreen.transition_to_scene("", 6.0)
 		await get_tree().create_timer(6.00).timeout
+		
+		var counting_cows_game = COUNTING_COWS_SCENE.instantiate()
+		add_child(counting_cows_game)
+		
+		await counting_cows_game.game_over
 		print("Change the scene to daytime bedroom")
 	else:
 		print("Player cancled. Staying Up...")
