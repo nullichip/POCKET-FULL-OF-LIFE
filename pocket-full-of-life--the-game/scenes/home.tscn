@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://bnlp07k066m0h"]
 
 [ext_resource type="Texture2D" uid="uid://drxptv3e701nt" path="res://Assets/SCROLL-Home Enterance/Home.png" id="1_w18ys"]
-[ext_resource type="Script" uid="uid://co2lfdp5hmoht" path="res://scenes/home.gd" id="1_yxilm"]
+[ext_resource type="Script" uid="uid://co2lfdp5hmoht" path="res://scripts/home.gd" id="1_yxilm"]
 [ext_resource type="PackedScene" uid="uid://b43uktunge7qc" path="res://scenes/interactive_items.tscn" id="2_reixx"]
 [ext_resource type="PackedScene" uid="uid://b53r4vslu8q5n" path="res://scenes/tico_walk_sports.tscn" id="2_w18ys"]
 [ext_resource type="Texture2D" uid="uid://dsccnmryux6l8" path="res://Assets/SCROLL-Home Enterance/Portrait.png" id="3_reixx"]

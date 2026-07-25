@@ -1,9 +1,8 @@
-[gd_scene load_steps=36 format=3 uid="uid://3lqqduunccro"]
+[gd_scene load_steps=28 format=3 uid="uid://3lqqduunccro"]
 
-[ext_resource type="Script" uid="uid://bf3bywrb5pxkh" path="res://scripts/couting_volleyballs.gd" id="1_wjnp0"]
+[ext_resource type="Script" uid="uid://bf3bywrb5pxkh" path="res://scripts/counting_volleyballs.gd" id="1_wjnp0"]
 [ext_resource type="Texture2D" uid="uid://qrn4i5t2do35" path="res://Assets/Counting Volleyballs/puddle.png" id="2_i8ne8"]
 [ext_resource type="Texture2D" uid="uid://bma3vtvfvslj0" path="res://Assets/Counting Volleyballs/vb.png" id="3_ga8xw"]
-[ext_resource type="Texture2D" uid="uid://ll4vx60k5q5x" path="res://Assets/Counting Volleyballs/entity cow.png" id="4_giry1"]
 [ext_resource type="Texture2D" uid="uid://ifhm2nuigypn" path="res://Assets/Counting Volleyballs/puddle refleCtion.png" id="5_malvq"]
 [ext_resource type="Texture2D" uid="uid://ij8lt1f4mtj1" path="res://Assets/Counting Volleyballs/bg.png" id="6_gg3cj"]
 [ext_resource type="Texture2D" uid="uid://cc7dyfvk6jh6s" path="res://Assets/Counting Volleyballs/fence.png" id="7_ga8xw"]
@@ -19,50 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://gde33jytbwtj" path="res://Assets/Counting Volleyballs/2.png" id="16_ga8xw"]
 [ext_resource type="Texture2D" uid="uid://bieyr22vuunvd" path="res://Assets/Counting Volleyballs/3.png" id="17_sug18"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_malvq"]
-load_path = "res://.godot/imported/cow.png-aa6278ed061abc47d8ca5b475c7ea52d.ctex"
-
-[sub_resource type="Animation" id="Animation_yvob7"]
-resource_name = "cow_jump"
-length = 1.6
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:size")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4, 0.8, 1.22, 1.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(142.06897, 110), Vector2(177.17801, 137.1839), Vector2(222.85248, 172.54837), Vector2(186.1828, 144.15613), Vector2(100.12506, 77.52405)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.4, 0.8, 1.22, 1.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(474, 263), Vector2(435.99997, 359.00003), Vector2(435, 426.99997), Vector2(577, 560.00006), Vector2(851.99994, 680.99994)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".:rotation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.4, 0.8, 1.22, 1.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [0.19328417, 0.24013653, 0.24013653, -0.053928513, -0.2992962]
-}
-
-[sub_resource type="Animation" id="Animation_jxw7n"]
+[sub_resource type="Animation" id="Animation_4pwsf"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -74,7 +30,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(142.06897, 110)]
+"values": [Vector2(87.25922, 82.055786)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -86,7 +42,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(474, 263)]
+"values": [Vector2(587.00006, 360)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -98,13 +54,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [0.19328417]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_emy7v"]
-_data = {
-&"RESET": SubResource("Animation_jxw7n"),
-&"cow_jump": SubResource("Animation_yvob7")
+"values": [2.9602463]
 }
 
 [sub_resource type="Animation" id="Animation_ga8xw"]
@@ -147,134 +97,10 @@ tracks/2/keys = {
 "values": [2.9602463, 2.0682015, 1.5939912, 1.1710385, 0.7146975]
 }
 
-[sub_resource type="Animation" id="Animation_4pwsf"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:size")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(87.25922, 82.055786)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(587.00006, 360)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".:rotation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [2.9602463]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yvob7"]
 _data = {
 &"RESET": SubResource("Animation_4pwsf"),
 &"volleyball_jump": SubResource("Animation_ga8xw")
-}
-
-[sub_resource type="Animation" id="Animation_sug18"]
-resource_name = "entity_jumping"
-length = 1.6
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4, 0.8, 1.22, 1.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(480, 250), Vector2(430.00003, 339.00003), Vector2(424.00006, 398.00003), Vector2(567.00006, 548), Vector2(839, 667)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:size")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.4, 0.8, 1.22, 1.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(153.62671, 127.257935), Vector2(202.81088, 168), Vector2(263.65308, 218.39914), Vector2(206.45398, 171.01782), Vector2(120.91669, 100.16229)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".:rotation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0.4, 0.8, 1.22, 1.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [0.21165062, 0.21165062, -0.12154625, -0.29249048]
-}
-
-[sub_resource type="Animation" id="Animation_vwq4b"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(480, 250)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:size")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(153.62671, 127.257935)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".:rotation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.21165062]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_4pwsf"]
-_data = {
-&"RESET": SubResource("Animation_vwq4b"),
-&"entity_jumping": SubResource("Animation_sug18")
 }
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6tg1j"]
@@ -322,9 +148,6 @@ animations = [{
 }, {
 "duration": 3.0,
 "texture": ExtResource("17_sug18")
-}, {
-"duration": 3.0,
-"texture": ExtResource("16_ga8xw")
 }],
 "loop": true,
 "name": &"tico_sleepy",
@@ -335,7 +158,7 @@ animations = [{
 offsets = PackedFloat32Array(0.50248754, 0.6318408)
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_82bi7"]
-frequency = 0.0019
+frequency = 0.0024
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_pob8s"]
 noise = SubResource("FastNoiseLite_82bi7")
@@ -361,30 +184,16 @@ script = ExtResource("1_wjnp0")
 [node name="puddle" type="TextureRect" parent="."]
 layout_mode = 0
 offset_left = 114.0
-offset_top = 217.0
+offset_top = 151.0
 offset_right = 1059.7036
 offset_bottom = 658.0
 mouse_filter = 2
 texture = ExtResource("2_i8ne8")
 expand_mode = 1
 
-[node name="CowEntity" type="TextureButton" parent="."]
-layout_mode = 0
-offset_left = 474.0
-offset_top = 263.0
-offset_right = 616.069
-offset_bottom = 373.0
-rotation = 0.19328417
-texture_normal = SubResource("CompressedTexture2D_malvq")
-ignore_texture_size = true
-stretch_mode = 4
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CowEntity"]
-libraries = {
-&"": SubResource("AnimationLibrary_emy7v")
-}
-
 [node name="Volleyball" type="TextureButton" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.50200003)
 layout_mode = 0
 offset_left = 587.00006
 offset_top = 360.0
@@ -400,27 +209,10 @@ libraries = {
 &"": SubResource("AnimationLibrary_yvob7")
 }
 
-[node name="Entitysleepy" type="TextureButton" parent="."]
-visible = false
-layout_mode = 0
-offset_left = 480.0
-offset_top = 250.0
-offset_right = 633.6267
-offset_bottom = 377.25793
-rotation = 0.21165062
-texture_normal = ExtResource("4_giry1")
-ignore_texture_size = true
-stretch_mode = 4
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Entitysleepy"]
-libraries = {
-&"": SubResource("AnimationLibrary_4pwsf")
-}
-
 [node name="Reflection2" type="TextureRect" parent="."]
 layout_mode = 0
 offset_left = 27.0
-offset_top = 236.0
+offset_top = 144.0
 offset_right = 1096.0
 offset_bottom = 647.0
 mouse_filter = 2
@@ -429,6 +221,7 @@ expand_mode = 1
 
 [node name="BG" type="TextureRect" parent="."]
 layout_mode = 0
+offset_top = -78.0
 offset_right = 1152.1493
 offset_bottom = 651.0
 mouse_filter = 2
@@ -560,7 +353,7 @@ autoplay = "swaying grass"
 frame_progress = 0.42077407
 
 [node name="GrassSwaying8" type="AnimatedSprite2D" parent="."]
-position = Vector2(167, 456)
+position = Vector2(166, 433.99997)
 scale = Vector2(1, 0.8023256)
 sprite_frames = SubResource("SpriteFrames_6tg1j")
 animation = &"swaying grass"
@@ -664,13 +457,13 @@ autoplay = "swaying_flowers"
 frame_progress = 0.63073355
 
 [node name="Tico" type="AnimatedSprite2D" parent="."]
-visible = false
-position = Vector2(627, 291)
-scale = Vector2(0.7745589, 0.774559)
+position = Vector2(585, 262.00003)
+rotation = -0.032988798
+scale = Vector2(0.8004854, 0.7935052)
 sprite_frames = SubResource("SpriteFrames_vwq4b")
 animation = &"tico_sleepy"
 autoplay = "tico_sleepy"
-frame_progress = 0.8123327
+frame_progress = 0.32220805
 
 [node name="Box" type="TextureRect" parent="."]
 layout_mode = 0
@@ -698,22 +491,25 @@ theme_override_font_sizes/font_size = 30
 autowrap_mode = 3
 
 [node name="CloudOverlay" type="ColorRect" parent="."]
-visible = false
 layout_mode = 0
 offset_left = -138.0
 offset_top = -309.0
 offset_right = 1544.0
 offset_bottom = 861.39856
 mouse_filter = 2
-color = Color(0.13110203, 0.10031434, 0.22838303, 0.42745098)
+color = Color(0.12315822, 0.086104214, 0.21209751, 0.365)
 
 [node name="ColorRect" type="ColorRect" parent="."]
-visible = false
 material = SubResource("ShaderMaterial_pob8s")
 layout_mode = 0
-offset_left = 60.72679
-offset_top = -588.75244
-offset_right = 2125.8215
-offset_bottom = 584.04626
+offset_left = 276.0
+offset_top = -636.0
+offset_right = 2109.0925
+offset_bottom = 807.7875
 rotation = 0.46103114
 color = Color(0.09985284, 0.09985284, 0.09985284, 0.596)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
