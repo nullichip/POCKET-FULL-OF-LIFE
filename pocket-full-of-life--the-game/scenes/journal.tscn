@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dpl04k2svjjip" path="res://Assets/universal/chapter 1 book.png" id="1_l4kfj"]
 [ext_resource type="Texture2D" uid="uid://cll8tq0seekc0" path="res://Assets/universal/save log window.png" id="2_hlfw0"]
 [ext_resource type="Texture2D" uid="uid://c7yyp3x27e3gc" path="res://Assets/universal/save slot.png" id="3_84c5g"]
-[ext_resource type="Script" uid="uid://vq145iynj2r3" path="res://save_slot.gd" id="4_u1uw5"]
+[ext_resource type="Script" uid="uid://vq145iynj2r3" path="res://scripts/save_slot.gd" id="4_u1uw5"]
 [ext_resource type="FontFile" uid="uid://yux64xgu8geh" path="res://Assets/universal/SyneMono-Regular.ttf" id="5_e1ix3"]
 [ext_resource type="Texture2D" uid="uid://cqyqheydwes2w" path="res://Assets/universal/chapter 1 page.png" id="6_l2i16"]
 

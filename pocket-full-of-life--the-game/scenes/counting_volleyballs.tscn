@@ -1,10 +1,14 @@
-[gd_scene load_steps=28 format=3 uid="uid://3lqqduunccro"]
+[gd_scene load_steps=34 format=3 uid="uid://3lqqduunccro"]
 
 [ext_resource type="Script" uid="uid://bf3bywrb5pxkh" path="res://scripts/counting_volleyballs.gd" id="1_wjnp0"]
 [ext_resource type="Texture2D" uid="uid://qrn4i5t2do35" path="res://Assets/Counting Volleyballs/puddle.png" id="2_i8ne8"]
-[ext_resource type="Texture2D" uid="uid://bma3vtvfvslj0" path="res://Assets/Counting Volleyballs/vb.png" id="3_ga8xw"]
+[ext_resource type="PackedScene" uid="uid://6o78ahr1814x" path="res://scenes/cow.tscn" id="2_unfg6"]
+[ext_resource type="PackedScene" uid="uid://bkbugu45u583x" path="res://scenes/entity.tscn" id="3_87cva"]
+[ext_resource type="PackedScene" uid="uid://ciri5whwbdapk" path="res://scenes/volleyball.tscn" id="4_nmyqy"]
 [ext_resource type="Texture2D" uid="uid://ifhm2nuigypn" path="res://Assets/Counting Volleyballs/puddle refleCtion.png" id="5_malvq"]
+[ext_resource type="Texture2D" uid="uid://i083mpupv63j" path="res://Assets/Counting Volleyballs/counting cows.png" id="5_nmyqy"]
 [ext_resource type="Texture2D" uid="uid://ij8lt1f4mtj1" path="res://Assets/Counting Volleyballs/bg.png" id="6_gg3cj"]
+[ext_resource type="Texture2D" uid="uid://cweruhcm3hxep" path="res://Assets/Counting Volleyballs/heart break.png" id="6_xq7yv"]
 [ext_resource type="Texture2D" uid="uid://cc7dyfvk6jh6s" path="res://Assets/Counting Volleyballs/fence.png" id="7_ga8xw"]
 [ext_resource type="Texture2D" uid="uid://cw7ugpaeatk8" path="res://Assets/Counting Volleyballs/grass.png" id="8_sug18"]
 [ext_resource type="Texture2D" uid="uid://d216n7xj7k6k1" path="res://Assets/Counting Volleyballs/grass- windy.png" id="9_vwq4b"]
@@ -16,92 +20,8 @@
 [ext_resource type="Texture2D" uid="uid://bagag0fagx8bc" path="res://Assets/Counting Volleyballs/flower windy.png" id="14_giry1"]
 [ext_resource type="Texture2D" uid="uid://ckb117ofkpds" path="res://Assets/Counting Volleyballs/1.png" id="15_gg3cj"]
 [ext_resource type="Texture2D" uid="uid://gde33jytbwtj" path="res://Assets/Counting Volleyballs/2.png" id="16_ga8xw"]
+[ext_resource type="Texture2D" uid="uid://dui8oawqvsk1d" path="res://Assets/Counting Volleyballs/congrats screen.png" id="16_khptm"]
 [ext_resource type="Texture2D" uid="uid://bieyr22vuunvd" path="res://Assets/Counting Volleyballs/3.png" id="17_sug18"]
-
-[sub_resource type="Animation" id="Animation_4pwsf"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:size")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(87.25922, 82.055786)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(587.00006, 360)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".:rotation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [2.9602463]
-}
-
-[sub_resource type="Animation" id="Animation_ga8xw"]
-resource_name = "volleyball_jump"
-length = 1.6
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:size")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4, 0.8, 1.22, 1.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(87.25922, 82.055786), Vector2(128.86755, 121.18286), Vector2(185.02637, 173.9928), Vector2(134.44019, 126.42322), Vector2(82.83649, 77.89679)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.4, 0.8, 1.22, 1.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(587.00006, 360), Vector2(590, 423), Vector2(618, 447), Vector2(710, 536.99994), Vector2(905.00006, 645)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".:rotation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.4, 0.8, 1.22, 1.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [2.9602463, 2.0682015, 1.5939912, 1.1710385, 0.7146975]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_yvob7"]
-_data = {
-&"RESET": SubResource("Animation_4pwsf"),
-&"volleyball_jump": SubResource("Animation_ga8xw")
-}
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6tg1j"]
 animations = [{
@@ -154,6 +74,85 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="Animation" id="Animation_q5yup"]
+resource_name = "pop_up_board"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(190, -879), Vector2(211.99998, -326)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.22522302, 0.22522302]
+}
+
+[sub_resource type="Animation" id="Animation_kljcp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(190, -879)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.3915024]
+}
+
+[sub_resource type="Animation" id="Animation_unfg6"]
+resource_name = "swaying_board"
+length = 4.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.29713818, 0.22369274]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_87cva"]
+_data = {
+&"RESET": SubResource("Animation_kljcp"),
+&"pop_up_board": SubResource("Animation_q5yup"),
+&"swaying_board": SubResource("Animation_unfg6")
+}
+
 [sub_resource type="Gradient" id="Gradient_ihbly"]
 offsets = PackedFloat32Array(0.50248754, 0.6318408)
 
@@ -180,6 +179,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_wjnp0")
+cow_scene = ExtResource("2_unfg6")
+entity_scene = ExtResource("3_87cva")
+volleyball_scene = ExtResource("4_nmyqy")
+full_heart = ExtResource("5_nmyqy")
+broken_heart = ExtResource("6_xq7yv")
 
 [node name="puddle" type="TextureRect" parent="."]
 layout_mode = 0
@@ -191,23 +195,7 @@ mouse_filter = 2
 texture = ExtResource("2_i8ne8")
 expand_mode = 1
 
-[node name="Volleyball" type="TextureButton" parent="."]
-visible = false
-modulate = Color(1, 1, 1, 0.50200003)
-layout_mode = 0
-offset_left = 587.00006
-offset_top = 360.0
-offset_right = 674.2593
-offset_bottom = 442.0558
-rotation = 2.9602463
-texture_normal = ExtResource("3_ga8xw")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Volleyball"]
-libraries = {
-&"": SubResource("AnimationLibrary_yvob7")
-}
+[node name="SpawnLayer" type="Node2D" parent="."]
 
 [node name="Reflection2" type="TextureRect" parent="."]
 layout_mode = 0
@@ -486,9 +474,64 @@ offset_top = -4.181713
 offset_right = 0.13912964
 offset_bottom = 0.07875061
 rotation = 0.025439702
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("11_yvob7")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 27
+horizontal_alignment = 1
+vertical_alignment = 1
 autowrap_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 558.0
+offset_right = 1080.0
+offset_bottom = 858.0
+scale = Vector2(0.3, 0.3)
+mouse_filter = 2
+theme_override_constants/separation = 25
+
+[node name="Heart1" type="TextureRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(350, 300)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("5_nmyqy")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Heart2" type="TextureRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(350, 300)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("5_nmyqy")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Heart3" type="TextureRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(350, 300)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("5_nmyqy")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="CongratulationsBoard" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 190.0
+offset_top = -879.0
+offset_right = 1211.2308
+offset_bottom = 32.733276
+rotation = 0.3915024
+texture = ExtResource("16_khptm")
+expand_mode = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CongratulationsBoard"]
+libraries = {
+&"": SubResource("AnimationLibrary_87cva")
+}
 
 [node name="CloudOverlay" type="ColorRect" parent="."]
 layout_mode = 0
@@ -507,9 +550,5 @@ offset_top = -636.0
 offset_right = 2109.0925
 offset_bottom = 807.7875
 rotation = 0.46103114
+mouse_filter = 2
 color = Color(0.09985284, 0.09985284, 0.09985284, 0.596)
-
-[node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
