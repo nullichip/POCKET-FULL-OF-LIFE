@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://bx7l28bpilwrc"]
+[gd_scene load_steps=7 format=3 uid="uid://bx7l28bpilwrc"]
 
 [ext_resource type="Script" uid="uid://7vk0dhuxo7xj" path="res://scripts/bedroom.gd" id="1_h6kpn"]
 [ext_resource type="Texture2D" uid="uid://dafwaly1c24ms" path="res://Assets/SCROLL-Home Enterance/bedroom.png" id="2_wb8ky"]
 [ext_resource type="Texture2D" uid="uid://box76fwcmpxeq" path="res://Assets/SCROLL-Home Enterance/journal.png" id="3_1d11a"]
+[ext_resource type="Texture2D" uid="uid://dc2e7cthhfq0r" path="res://Assets/SCROLL-Home Enterance/lamp.png" id="4_1d11a"]
+[ext_resource type="Texture2D" uid="uid://ds62wvew45w7h" path="res://Assets/SCROLL-Home Enterance/lamp light.png" id="5_86fbk"]
+[ext_resource type="Texture2D" uid="uid://l0uyj2fhtqqv" path="res://Assets/SCROLL-Home Enterance/scary eyes.png" id="6_86fbk"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -20,40 +23,62 @@ texture = ExtResource("2_wb8ky")
 
 [node name="journal" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 879.0
-offset_top = 329.0
-offset_right = 1009.0
-offset_bottom = 498.87115
+offset_left = 894.00006
+offset_top = 273.00003
+offset_right = 1024.0
+offset_bottom = 442.8712
+rotation = 0.066776924
 texture_normal = ExtResource("3_1d11a")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="bed" type="TextureButton" parent="."]
 layout_mode = 0
-offset_top = 242.0
-offset_right = 266.0
-offset_bottom = 629.0
+offset_left = 6.0
+offset_top = 195.0
+offset_right = 304.0
+offset_bottom = 634.0
 
 [node name="exit" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 707.0
-offset_top = 62.0
-offset_right = 854.0
-offset_bottom = 277.0
+offset_left = 727.0
+offset_top = 22.0
+offset_right = 879.0
+offset_bottom = 329.0
 
 [node name="poster" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 300.0
-offset_top = 80.0
-offset_right = 535.0
-offset_bottom = 353.0
+offset_left = 412.0
+offset_top = 66.0
+offset_right = 592.0
+offset_bottom = 258.0
 
 [node name="mirror" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 559.0
-offset_top = 80.0
-offset_right = 632.0
-offset_bottom = 370.0
+offset_left = 609.0
+offset_top = 35.0
+offset_right = 682.0
+offset_bottom = 325.0
+
+[node name="lamp" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 854.0
+offset_top = -7.0
+offset_right = 1031.0
+offset_bottom = 289.0
+texture_normal = ExtResource("4_1d11a")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(546, 343.00003)
+scale = Vector2(0.33415192, 0.33415195)
+texture = ExtResource("5_86fbk")
+
+[node name="ScaryEyes" type="Sprite2D" parent="."]
+position = Vector2(792.05554, 128.5)
+scale = Vector2(0.38888884, 0.3888889)
+texture = ExtResource("6_86fbk")
 
 [connection signal="mouse_entered" from="journal" to="." method="_on_journal_mouse_entered"]
 [connection signal="mouse_exited" from="journal" to="." method="_on_journal_mouse_exited"]
@@ -62,3 +87,4 @@ offset_bottom = 370.0
 [connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="poster" to="." method="_on_poster_pressed"]
 [connection signal="pressed" from="mirror" to="." method="_on_mirror_pressed"]
+[connection signal="pressed" from="lamp" to="." method="_on_lamp_pressed"]

@@ -6,6 +6,12 @@ const DRESS_UP_SCENE = preload("res://scenes/dress_up.tscn")
 const COUNTING_VBS_SCENE = preload("res://scenes/counting_volleyballs.tscn")
 var active_journal: Node = null
 
+@onready var lamp_light = $PointLight2D
+@onready var eyes = $ScaryEyes
+
+func _ready() -> void:
+	update_room_state()
+
 #------------------------BEDROOM------------------------
 func _on_bed_pressed() -> void:
 	var player_said_yes = await ConfirmationMenu.ask_question("GO TO SLEEP?")
@@ -17,7 +23,8 @@ func _on_bed_pressed() -> void:
 		add_child(counting_vbs_game)
 		
 		await counting_vbs_game.game_over
-		print("Change the scene to daytime bedroom")
+		
+		#loading morning scene
 	else:
 		print("Player cancled. Staying Up...")
 #------------------------Exit------------------------
@@ -61,3 +68,14 @@ func _on_journal_pressed() -> void:
 func _on_mirror_pressed() -> void:
 	var dress_up_menu = DRESS_UP_SCENE.instantiate()
 	add_child(dress_up_menu)
+
+#----------------------Lamp----------------------
+func _on_lamp_pressed() -> void:
+	lamp_light.enabled = not lamp_light.enabled
+	update_room_state()
+
+func update_room_state() -> void:
+	if lamp_light.enabled == true:
+		eyes.visible = false
+	else:
+		eyes.visible = true
