@@ -102,4 +102,3 @@ stretch_mode = 0
 libraries = {
 &"": SubResource("AnimationLibrary_yvob7")
 }
-autoplay = "jump_animation"

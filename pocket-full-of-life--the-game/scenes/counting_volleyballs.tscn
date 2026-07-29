@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://3lqqduunccro"]
+[gd_scene load_steps=36 format=3 uid="uid://3lqqduunccro"]
 
 [ext_resource type="Script" uid="uid://bf3bywrb5pxkh" path="res://scripts/counting_volleyballs.gd" id="1_wjnp0"]
 [ext_resource type="Texture2D" uid="uid://qrn4i5t2do35" path="res://Assets/Counting Volleyballs/puddle.png" id="2_i8ne8"]
@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://cc7dyfvk6jh6s" path="res://Assets/Counting Volleyballs/fence.png" id="7_ga8xw"]
 [ext_resource type="Texture2D" uid="uid://cw7ugpaeatk8" path="res://Assets/Counting Volleyballs/grass.png" id="8_sug18"]
 [ext_resource type="Texture2D" uid="uid://d216n7xj7k6k1" path="res://Assets/Counting Volleyballs/grass- windy.png" id="9_vwq4b"]
-[ext_resource type="Shader" uid="uid://de7mcy8feiyxe" path="res://scenes/couting_cows.gdshader" id="10_4pwsf"]
+[ext_resource type="Shader" uid="uid://de7mcy8feiyxe" path="res://scripts/couting_cows.gdshader" id="10_4pwsf"]
 [ext_resource type="FontFile" uid="uid://yux64xgu8geh" path="res://Assets/universal/SyneMono-Regular.ttf" id="11_yvob7"]
 [ext_resource type="Texture2D" uid="uid://xf3u46h00knc" path="res://Assets/Counting Volleyballs/box.png" id="12_jxw7n"]
 [ext_resource type="Texture2D" uid="uid://b240rhbnw3q25" path="res://Assets/Counting Volleyballs/flower.png" id="13_ciixf"]
@@ -22,6 +22,9 @@
 [ext_resource type="Texture2D" uid="uid://gde33jytbwtj" path="res://Assets/Counting Volleyballs/2.png" id="16_ga8xw"]
 [ext_resource type="Texture2D" uid="uid://dui8oawqvsk1d" path="res://Assets/Counting Volleyballs/congrats screen.png" id="16_khptm"]
 [ext_resource type="Texture2D" uid="uid://bieyr22vuunvd" path="res://Assets/Counting Volleyballs/3.png" id="17_sug18"]
+[ext_resource type="Texture2D" uid="uid://byio7gadkymgh" path="res://Assets/Counting Volleyballs/wake up btn.png" id="22_xq7yv"]
+[ext_resource type="Texture2D" uid="uid://oft03uy6jwtn" path="res://Assets/Counting Volleyballs/warnings.png" id="24_a7bjg"]
+[ext_resource type="Texture2D" uid="uid://bqbin3mnl73e0" path="res://Assets/Counting Volleyballs/get out!!.png" id="25_pd6dx"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6tg1j"]
 animations = [{
@@ -74,64 +77,24 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="Animation" id="Animation_q5yup"]
-resource_name = "pop_up_board"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(190, -879), Vector2(211.99998, -326)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.22522302, 0.22522302]
-}
-
 [sub_resource type="Animation" id="Animation_kljcp"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
+tracks/0/path = NodePath(".:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(190, -879)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.3915024]
+"values": [0.0]
 }
 
 [sub_resource type="Animation" id="Animation_unfg6"]
 resource_name = "swaying_board"
-length = 4.0
+length = 2.0
 loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -140,16 +103,15 @@ tracks/0/path = NodePath(".:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 4),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1.0000001, 1),
 "update": 0,
-"values": [0.29713818, 0.22369274]
+"values": [0.0, 0.22369274]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_87cva"]
 _data = {
 &"RESET": SubResource("Animation_kljcp"),
-&"pop_up_board": SubResource("Animation_q5yup"),
 &"swaying_board": SubResource("Animation_unfg6")
 }
 
@@ -451,7 +413,7 @@ scale = Vector2(0.8004854, 0.7935052)
 sprite_frames = SubResource("SpriteFrames_vwq4b")
 animation = &"tico_sleepy"
 autoplay = "tico_sleepy"
-frame_progress = 0.32220805
+frame_progress = 0.9199161
 
 [node name="Box" type="TextureRect" parent="."]
 layout_mode = 0
@@ -520,11 +482,11 @@ stretch_mode = 4
 [node name="CongratulationsBoard" type="TextureRect" parent="."]
 visible = false
 layout_mode = 0
-offset_left = 190.0
-offset_top = -879.0
-offset_right = 1211.2308
-offset_bottom = 32.733276
-rotation = 0.3915024
+offset_left = 62.0
+offset_top = -1008.0
+offset_right = 1083.2306
+offset_bottom = -96.26672
+pivot_offset = Vector2(510.616, 0)
 texture = ExtResource("16_khptm")
 expand_mode = 1
 
@@ -532,6 +494,16 @@ expand_mode = 1
 libraries = {
 &"": SubResource("AnimationLibrary_87cva")
 }
+
+[node name="ExitBtn" type="TextureButton" parent="CongratulationsBoard"]
+layout_mode = 0
+offset_left = 498.0
+offset_top = 581.0
+offset_right = 729.3717
+offset_bottom = 747.0
+texture_normal = ExtResource("22_xq7yv")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="CloudOverlay" type="ColorRect" parent="."]
 layout_mode = 0
@@ -545,10 +517,114 @@ color = Color(0.12315822, 0.086104214, 0.21209751, 0.365)
 [node name="ColorRect" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_pob8s")
 layout_mode = 0
-offset_left = 276.0
-offset_top = -636.0
-offset_right = 2109.0925
-offset_bottom = 807.7875
+offset_left = 248.00002
+offset_top = -747.0
+offset_right = 2081.0925
+offset_bottom = 696.7875
 rotation = 0.46103114
 mouse_filter = 2
 color = Color(0.09985284, 0.09985284, 0.09985284, 0.596)
+
+[node name="LoseScreen" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_left = -21.0
+offset_top = -21.0
+offset_right = 1178.0
+offset_bottom = 688.0
+
+[node name="WarningContainer" type="Control" parent="LoseScreen"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Warning" type="Sprite2D" parent="LoseScreen/WarningContainer"]
+position = Vector2(160, 81.90626)
+scale = Vector2(0.24184519, 0.12481743)
+texture = ExtResource("24_a7bjg")
+
+[node name="Warning2" type="Sprite2D" parent="LoseScreen/WarningContainer"]
+position = Vector2(304, 134)
+scale = Vector2(0.24184519, 0.12481743)
+texture = ExtResource("24_a7bjg")
+
+[node name="Warning3" type="Sprite2D" parent="LoseScreen/WarningContainer"]
+position = Vector2(185.00003, 387)
+scale = Vector2(0.24184519, 0.12481743)
+texture = ExtResource("24_a7bjg")
+
+[node name="Warning4" type="Sprite2D" parent="LoseScreen/WarningContainer"]
+position = Vector2(173.00002, 583)
+scale = Vector2(0.24184519, 0.12481743)
+texture = ExtResource("24_a7bjg")
+
+[node name="Warning5" type="Sprite2D" parent="LoseScreen/WarningContainer"]
+position = Vector2(384, 468)
+scale = Vector2(0.24184519, 0.12481743)
+texture = ExtResource("24_a7bjg")
+
+[node name="Warning6" type="Sprite2D" parent="LoseScreen/WarningContainer"]
+position = Vector2(996, 501)
+scale = Vector2(0.24184519, 0.12481743)
+texture = ExtResource("24_a7bjg")
+
+[node name="Warning7" type="Sprite2D" parent="LoseScreen/WarningContainer"]
+position = Vector2(411.00006, 303)
+scale = Vector2(0.24184519, 0.12481743)
+texture = ExtResource("24_a7bjg")
+
+[node name="Warning8" type="Sprite2D" parent="LoseScreen/WarningContainer"]
+position = Vector2(757, 172)
+scale = Vector2(0.24184519, 0.12481743)
+texture = ExtResource("24_a7bjg")
+
+[node name="Warning9" type="Sprite2D" parent="LoseScreen/WarningContainer"]
+position = Vector2(613, 15)
+scale = Vector2(0.24184519, 0.12481743)
+texture = ExtResource("24_a7bjg")
+
+[node name="Warning10" type="Sprite2D" parent="LoseScreen/WarningContainer"]
+position = Vector2(798, 406)
+scale = Vector2(0.24184519, 0.12481743)
+texture = ExtResource("24_a7bjg")
+
+[node name="Warning11" type="Sprite2D" parent="LoseScreen/WarningContainer"]
+position = Vector2(653, 610)
+scale = Vector2(0.24184519, 0.12481743)
+texture = ExtResource("24_a7bjg")
+
+[node name="Warning12" type="Sprite2D" parent="LoseScreen/WarningContainer"]
+position = Vector2(1076, 78)
+scale = Vector2(0.24184519, 0.12481743)
+texture = ExtResource("24_a7bjg")
+
+[node name="Warning13" type="Sprite2D" parent="LoseScreen/WarningContainer"]
+position = Vector2(930, 261)
+scale = Vector2(0.24184519, 0.12481743)
+texture = ExtResource("24_a7bjg")
+
+[node name="WakeUp" type="TextureButton" parent="LoseScreen"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -273.5
+offset_top = -172.0
+offset_right = 273.5
+offset_bottom = 172.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("25_pd6dx")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="PanicTimer" type="Timer" parent="LoseScreen"]
+one_shot = true
+
+[connection signal="mouse_entered" from="CongratulationsBoard/ExitBtn" to="." method="_on_exit_btn_mouse_entered"]
+[connection signal="mouse_exited" from="CongratulationsBoard/ExitBtn" to="." method="_on_exit_btn_mouse_exited"]
+[connection signal="pressed" from="CongratulationsBoard/ExitBtn" to="." method="_on_exit_btn_pressed"]
+[connection signal="pressed" from="LoseScreen/WakeUp" to="." method="_on_wake_up_pressed"]
+[connection signal="timeout" from="LoseScreen/PanicTimer" to="." method="_on_panic_timer_timeout"]
