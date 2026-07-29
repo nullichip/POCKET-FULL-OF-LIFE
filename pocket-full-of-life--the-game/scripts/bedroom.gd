@@ -51,17 +51,22 @@ func _on_journal_pressed() -> void:
 		is_journal_open = true
 		clicked_journal.tween_property($journal, "position:y", $journal.position.y - 100, 0.3)
 		
-		active_journal = JOURNAL_SCENE.instantiate()
-		add_child(active_journal)
-		
+		if active_journal == null:
+			active_journal = JOURNAL_SCENE.instantiate()
+			add_child(active_journal)
+		else:
+			active_journal.visible = true
+			active_journal.get_node("AnimationPlayer2").play("swipe_up_book")
+		await clicked_journal.finished
+
 	elif is_journal_open == true:
 		is_journal_open = false
 		clicked_journal.tween_property($journal, "position:y", $journal.position.y + 100, 0.3)
 		
 		if active_journal != null:
-			active_journal.queue_free()
-			active_journal = null
-		await clicked_journal.finished
+			active_journal.get_node("AnimationPlayer2").play("swipe_down_book")
+			await active_journal.get_node("AnimationPlayer2").animation_finished
+			active_journal.visible = false
 	$journal.disabled = false 
 
 #------------------------Mirror------------------------
