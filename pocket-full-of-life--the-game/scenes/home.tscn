@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bnlp07k066m0h"]
+[gd_scene load_steps=13 format=3 uid="uid://bnlp07k066m0h"]
 
 [ext_resource type="Texture2D" uid="uid://drxptv3e701nt" path="res://Assets/SCROLL-Home Enterance/Home.png" id="1_w18ys"]
 [ext_resource type="Script" uid="uid://co2lfdp5hmoht" path="res://scripts/home.gd" id="1_yxilm"]
@@ -6,19 +6,14 @@
 [ext_resource type="PackedScene" uid="uid://b53r4vslu8q5n" path="res://scenes/tico_walk_sports.tscn" id="2_w18ys"]
 [ext_resource type="Texture2D" uid="uid://dsccnmryux6l8" path="res://Assets/SCROLL-Home Enterance/Portrait.png" id="3_reixx"]
 [ext_resource type="PackedScene" uid="uid://c7o75vrfgmosl" path="res://scenes/hallway.tscn" id="5_uhids"]
+[ext_resource type="Texture2D" uid="uid://b5f4dqffx431m" path="res://Assets/SCROLL-Home Enterance/embroidary.png" id="5_vc333"]
+[ext_resource type="Texture2D" uid="uid://drbe2qvw16jl3" path="res://Assets/universal/teleport.png" id="8_hhep5"]
+[ext_resource type="Texture2D" uid="uid://6cp2vuenj0ek" path="res://Assets/universal/Frame.png" id="9_cmjdo"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_u4wd2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uhids"]
-size = Vector2(580.5, 764)
-
-[sub_resource type="Gradient" id="Gradient_uhids"]
-interpolation_color_space = 2
-offsets = PackedFloat32Array(0.115879826, 0.24034335)
-colors = PackedColorArray(0, 0, 0, 0, 0, 0, 0, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_yxilm"]
-gradient = SubResource("Gradient_uhids")
+size = Vector2(292, 764)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_reixx"]
 size = Vector2(109.25, 313)
@@ -42,7 +37,7 @@ scale = Vector2(0.3, 0.3)
 texture = SubResource("CompressedTexture2D_u4wd2")
 
 [node name="InteractivePainting" parent="." instance=ExtResource("2_reixx")]
-position = Vector2(-59, 0)
+position = Vector2(30, 141)
 dialogue_text = "I never knew what this painting meant..."
 
 [node name="Sprite2D" parent="InteractivePainting" index="0"]
@@ -52,7 +47,7 @@ position = Vector2(712, 128.00002)
 position = Vector2(712, 323)
 
 [node name="InteractivePainting2" parent="." instance=ExtResource("2_reixx")]
-position = Vector2(-59, 0)
+position = Vector2(-23, 140)
 dialogue_text = "Was this 2 years ago...or was it 3..."
 
 [node name="Sprite2D" parent="InteractivePainting2" index="0"]
@@ -62,31 +57,53 @@ texture = ExtResource("3_reixx")
 [node name="CollisionShape2D" parent="InteractivePainting2" index="1"]
 position = Vector2(314, 323)
 
+[node name="InteractivePainting3" parent="." instance=ExtResource("2_reixx")]
+position = Vector2(-180, 139)
+dialogue_text = "what pretty petals..."
+
+[node name="Sprite2D" parent="InteractivePainting3" index="0"]
+position = Vector2(314, 131.00002)
+texture = ExtResource("5_vc333")
+
+[node name="CollisionShape2D" parent="InteractivePainting3" index="1"]
+position = Vector2(314, 323)
+
+[node name="InteractivePainting4" parent="." instance=ExtResource("2_reixx")]
+position = Vector2(-139, 138)
+dialogue_text = "wait...no, it can't be..."
+
+[node name="Sprite2D" parent="InteractivePainting4" index="0"]
+position = Vector2(314, 131.00002)
+texture = ExtResource("5_vc333")
+
+[node name="CollisionShape2D" parent="InteractivePainting4" index="1"]
+position = Vector2(314, 323)
+
 [node name="Hallway" parent="." instance=ExtResource("5_uhids")]
-position = Vector2(-152, -57)
+position = Vector2(-48, 69)
 
 [node name="Tico" parent="." instance=ExtResource("2_w18ys")]
-position = Vector2(551, 412)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(589, 529)
 
 [node name="InvisibleWall" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InvisibleWall"]
-position = Vector2(1492.75, 304)
+position = Vector2(1396, 295)
 shape = SubResource("RectangleShape2D_uhids")
 
 [node name="DoorTrigger" type="Area2D" parent="."]
+position = Vector2(-62, 118)
 
 [node name="TextureRect" type="TextureRect" parent="DoorTrigger"]
-offset_left = 1047.0
-offset_top = 26.0
-offset_right = 1370.0
-offset_bottom = 311.0
-texture = SubResource("GradientTexture2D_yxilm")
+offset_left = 1059.0
+offset_top = -64.0
+offset_right = 1699.0
+offset_bottom = 380.52087
+texture = ExtResource("8_hhep5")
+expand_mode = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorTrigger"]
-position = Vector2(1198, 181)
+position = Vector2(1281, 178)
 shape = SubResource("RectangleShape2D_reixx")
 
 [node name="BedroomSpawn" type="Marker2D" parent="."]
@@ -95,7 +112,19 @@ position = Vector2(178, 412)
 [node name="OutsideSpawn" type="Marker2D" parent="."]
 position = Vector2(551, 412)
 
+[node name="Frame" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Frame"]
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Frame/ParallaxLayer"]
+position = Vector2(593.5, 323.49997)
+scale = Vector2(0.31015626, 0.3023148)
+texture = ExtResource("9_cmjdo")
+
 [connection signal="body_entered" from="DoorTrigger" to="Tico" method="_on_door_trigger_body_entered"]
 
 [editable path="InteractivePainting"]
 [editable path="InteractivePainting2"]
+[editable path="InteractivePainting3"]
+[editable path="InteractivePainting4"]

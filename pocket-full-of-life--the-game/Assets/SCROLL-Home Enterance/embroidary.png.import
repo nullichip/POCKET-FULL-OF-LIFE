@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5nmaiphlxrmq"
-path="res://.godot/imported/Mirror.png-88b0d517933e63abb664ec1994a00b00.ctex"
+uid="uid://b5f4dqffx431m"
+path="res://.godot/imported/embroidary.png-9e9ad30a7d4a3e98c9ca4e4ba5c289ef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/SCROLL-Home Enterance/Mirror.png"
-dest_files=["res://.godot/imported/Mirror.png-88b0d517933e63abb664ec1994a00b00.ctex"]
+source_file="res://Assets/SCROLL-Home Enterance/embroidary.png"
+dest_files=["res://.godot/imported/embroidary.png-9e9ad30a7d4a3e98c9ca4e4ba5c289ef.ctex"]
 
 [params]
 

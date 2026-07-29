@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cyob4hf43hblg"
-path="res://.godot/imported/hwk.png-ca5b37980f06212319e6ca11d48615a6.ctex"
+uid="uid://drbe2qvw16jl3"
+path="res://.godot/imported/teleport.png-2de58fdbf9edc27a6c573a560de3b1c8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/SCROLL-Home Enterance/hwk.png"
-dest_files=["res://.godot/imported/hwk.png-ca5b37980f06212319e6ca11d48615a6.ctex"]
+source_file="res://Assets/universal/teleport.png"
+dest_files=["res://.godot/imported/teleport.png-2de58fdbf9edc27a6c573a560de3b1c8.ctex"]
 
 [params]
 

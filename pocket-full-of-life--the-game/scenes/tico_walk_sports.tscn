@@ -95,12 +95,13 @@ script = ExtResource("1_kqui6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(305, -183)
-scale = Vector2(0.32004824, 0.32004827)
+scale = Vector2(0.36822882, 0.36822885)
 sprite_frames = SubResource("SpriteFrames_p4cja")
 animation = &"idle_twd_left"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(305, -183)
+scale = Vector2(1.1505418, 1.1505418)
 shape = SubResource("RectangleShape2D_e0jq2")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -115,7 +116,7 @@ limit_bottom = 651
 [node name="ColorRect2" type="ColorRect" parent="Camera2D"]
 material = SubResource("CanvasItemMaterial_nmf1b")
 offset_left = -591.0
-offset_top = -361.0
+offset_top = -389.0
 offset_right = 558.0
-offset_bottom = 21.0
+offset_bottom = 52.0
 color = Color(0.52539164, 0.67, 0.4221, 0.36078432)
