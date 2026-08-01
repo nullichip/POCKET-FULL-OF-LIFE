@@ -72,7 +72,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+"values": [Color(1, 1, 1, 0), Color(1, 1, 0.97269243, 0.40300003)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_518ki"]
@@ -251,10 +251,10 @@ scale = Vector2(1.0112994, 1.0112995)
 texture = ExtResource("5_okkf8")
 
 [node name="Paper" type="TextureButton" parent="."]
-offset_left = 494.0
-offset_top = -20.0
-offset_right = 679.4545
-offset_bottom = 14.0
+offset_left = 319.0
+offset_top = 146.0
+offset_right = 863.18164
+offset_bottom = 685.0
 pivot_offset = Vector2(282.862, 260)
 texture_normal = ExtResource("6_4yxxb")
 ignore_texture_size = true
