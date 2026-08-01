@@ -33,7 +33,7 @@ func start_interaction() -> void:
 	var player_said_yes = await ConfirmationMenu.ask_question(prompt_text)
 	
 	if player_said_yes:
-		await TransitionScreen.transition_to_scene("res://scenes/nighttimebedroom.tscn")
+		await TransitionScreen.transition_to_scene("res://scenes/places/nighttimebedroom.tscn")
 	else:
 		print("unlocking Tico")
 		if tico.last_direction < 0:

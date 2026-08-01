@@ -1,9 +1,9 @@
 extends Control
 
 var is_journal_open: bool = false
-const JOURNAL_SCENE = preload("res://scenes/journal.tscn")
-const DRESS_UP_SCENE = preload("res://scenes/dress_up.tscn")
-const COUNTING_VBS_SCENE = preload("res://scenes/counting_volleyballs.tscn")
+const JOURNAL_SCENE = preload("res://scenes/minigames/journal.tscn")
+const DRESS_UP_SCENE = preload("res://scenes/minigames/dress_up.tscn")
+const COUNTING_VBS_SCENE = preload("res://scenes/minigames/counting_volleyballs.tscn")
 var active_journal: Node = null
 
 @onready var lamp_light = $PointLight2D
@@ -17,7 +17,7 @@ func _on_bed_pressed() -> void:
 	var player_said_yes = await ConfirmationMenu.ask_question("GO TO SLEEP?")
 	
 	if player_said_yes:
-		await TransitionScreen.transition_to_scene("res://scenes/counting_volleyballs.tscn", 6.0)
+		await TransitionScreen.transition_to_scene("res://scenes/minigames/counting_volleyballs.tscn", 6.0)
 		
 		var counting_vbs_game = COUNTING_VBS_SCENE.instantiate()
 		add_child(counting_vbs_game)
@@ -33,7 +33,7 @@ func _on_exit_pressed() -> void:
 	
 	if player_said_yes:
 		GameManager.target_spawn_name = "BedroomSpawn"
-		await TransitionScreen.transition_to_scene("res://scenes/home.tscn", 0.0)
+		await TransitionScreen.transition_to_scene("res://scenes/places/home.tscn", 0.0)
 	else:
 		print("Player cancled.")
 
