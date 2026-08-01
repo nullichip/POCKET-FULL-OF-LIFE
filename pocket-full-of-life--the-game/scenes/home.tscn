@@ -19,7 +19,7 @@ size = Vector2(292, 764)
 size = Vector2(109.25, 313)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vc333"]
-size = Vector2(55.5, 314)
+size = Vector2(90.75, 360)
 
 [node name="Home" type="Node2D"]
 script = ExtResource("1_yxilm")
@@ -41,17 +41,17 @@ scale = Vector2(0.3, 0.3)
 texture = SubResource("CompressedTexture2D_u4wd2")
 
 [node name="InteractivePainting" parent="." instance=ExtResource("2_reixx")]
-position = Vector2(30, 141)
+position = Vector2(25, 158)
 dialogue_text = "I never knew what this painting meant..."
 
 [node name="Sprite2D" parent="InteractivePainting" index="0"]
-position = Vector2(712, 128.00002)
+position = Vector2(711.99994, 82.000015)
 
 [node name="CollisionShape2D" parent="InteractivePainting" index="1"]
 position = Vector2(712, 323)
 
 [node name="InteractivePainting2" parent="." instance=ExtResource("2_reixx")]
-position = Vector2(-23, 140)
+position = Vector2(25, 110)
 dialogue_text = "Was this 2 years ago...or was it 3..."
 
 [node name="Sprite2D" parent="InteractivePainting2" index="0"]
@@ -62,7 +62,7 @@ texture = ExtResource("3_reixx")
 position = Vector2(314, 323)
 
 [node name="InteractivePainting3" parent="." instance=ExtResource("2_reixx")]
-position = Vector2(-180, 139)
+position = Vector2(-167, 110)
 dialogue_text = "what pretty petals..."
 
 [node name="Sprite2D" parent="InteractivePainting3" index="0"]
@@ -73,7 +73,7 @@ texture = ExtResource("5_vc333")
 position = Vector2(314, 323)
 
 [node name="InteractivePainting4" parent="." instance=ExtResource("2_reixx")]
-position = Vector2(-139, 138)
+position = Vector2(-113, 110)
 dialogue_text = "wait...no, it can't be..."
 
 [node name="Sprite2D" parent="InteractivePainting4" index="0"]
@@ -84,10 +84,10 @@ texture = ExtResource("5_vc333")
 position = Vector2(314, 323)
 
 [node name="Hallway" parent="." instance=ExtResource("5_uhids")]
-position = Vector2(-48, 69)
+position = Vector2(-62, 18)
 
 [node name="Tico" parent="." instance=ExtResource("2_w18ys")]
-position = Vector2(589, 529)
+position = Vector2(568, 479)
 
 [node name="InvisibleWall" type="StaticBody2D" parent="."]
 
@@ -127,29 +127,22 @@ shape = SubResource("RectangleShape2D_reixx")
 [node name="ColorRect" type="ColorRect" parent="KitchenEnterance"]
 offset_left = -871.0
 offset_top = -3.0
-offset_right = -208.0
 offset_bottom = 650.0
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
-[node name="TextureRect2" type="TextureRect" parent="KitchenEnterance"]
-offset_left = -514.0
-offset_top = 76.0
-offset_right = -62.0
-offset_bottom = 520.5209
-texture = ExtResource("8_hhep5")
-expand_mode = 1
-flip_h = true
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KitchenEnterance"]
-position = Vector2(-271, 281)
+position = Vector2(-81, 260)
 shape = SubResource("RectangleShape2D_vc333")
 
 [node name="BedroomSpawn" type="Marker2D" parent="."]
-position = Vector2(178, 412)
+position = Vector2(230, 481)
 
 [node name="OutsideSpawn" type="Marker2D" parent="."]
-position = Vector2(551, 412)
+position = Vector2(568, 481)
+
+[node name="KitchenSpawn" type="Marker2D" parent="."]
+position = Vector2(-261, 479)
 
 [node name="Frame" type="ParallaxBackground" parent="."]
 

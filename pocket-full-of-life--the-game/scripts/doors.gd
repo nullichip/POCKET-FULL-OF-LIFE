@@ -23,6 +23,8 @@ func start_interaction() -> void:
 		
 	tico.is_interacting = true
 	
+	tico.velocity = Vector2.ZERO
+	
 	if tico.last_direction > 0:
 		tico.animated_sprite.play("look_away_twd_right")
 	else:

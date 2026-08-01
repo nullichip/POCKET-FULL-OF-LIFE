@@ -1,0 +1,62 @@
+[gd_scene load_steps=6 format=3 uid="uid://bp3mtc8q1ovsw"]
+
+[ext_resource type="Texture2D" uid="uid://ca5l0csrb5qom" path="res://Assets/SCROLL-kitchen/fridge 1.png" id="1_buvrw"]
+[ext_resource type="Script" uid="uid://c86k0xtahe5sy" path="res://scripts/fridge.gd" id="1_husjh"]
+[ext_resource type="Texture2D" uid="uid://2pre11gruf2n" path="res://Assets/SCROLL-kitchen/fridge 2.png" id="2_husjh"]
+[ext_resource type="Texture2D" uid="uid://d3pyis6oothbf" path="res://Assets/SCROLL-kitchen/fridge 3.png" id="3_c4248"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_husjh"]
+animations = [{
+"frames": [{
+"duration": 2.0,
+"texture": ExtResource("3_c4248")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_husjh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_buvrw")
+}],
+"loop": false,
+"name": &"close_fridge",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_buvrw")
+}],
+"loop": false,
+"name": &"closed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_buvrw")
+}, {
+"duration": 2.0,
+"texture": ExtResource("2_husjh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_c4248")
+}],
+"loop": false,
+"name": &"open_fridge",
+"speed": 5.0
+}]
+
+[node name="Fridge" type="Node2D"]
+script = ExtResource("1_husjh")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = -283.0
+offset_top = -363.0
+offset_right = 141.0
+offset_bottom = 363.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_husjh")
+animation = &"open_fridge"
+frame = 2
+frame_progress = 1.0
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

@@ -108,15 +108,16 @@ shape = SubResource("RectangleShape2D_e0jq2")
 position = Vector2(27, -52)
 offset = Vector2(0, -170)
 zoom = Vector2(1.7, 1.7)
-limit_left = -10000290
-limit_top = -9999949
-limit_right = 9999710
-limit_bottom = 651
+limit_left = 1
+limit_top = -10000012
+limit_right = 1152
+limit_bottom = 9999988
 
 [node name="ColorRect2" type="ColorRect" parent="Camera2D"]
 material = SubResource("CanvasItemMaterial_nmf1b")
-offset_left = -591.0
+offset_left = -1062.0
 offset_top = -389.0
-offset_right = 558.0
-offset_bottom = 52.0
+offset_right = 1204.0
+offset_bottom = 258.0
+mouse_filter = 2
 color = Color(0.52539164, 0.67, 0.4221, 0.36078432)
