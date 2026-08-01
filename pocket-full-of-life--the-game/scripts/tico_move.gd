@@ -56,8 +56,19 @@ func face_door() -> void:
 		animated_sprite.play("look_away_twd_left")
 	else:
 		animated_sprite.play("look_away_twd_right")
-	
-func _on_door_trigger_body_entered(body: Node2D) -> void:
+
+func _on_home_enterance_body_entered(body: Node2D) -> void:
+	if body.is_in_group("Player"):
+		
+		body.is_interacting = true 
+		if body.last_direction < 0:
+			body.animated_sprite.play("idle_twd_left")
+		else:
+			body.animated_sprite.play("idle_twd_right")
+			
+		TransitionScreen.transition_to_scene("res://your_next_scene.tscn")
+
+func _on_kitchen_enterance_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		
 		body.is_interacting = true 
