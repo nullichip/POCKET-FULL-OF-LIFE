@@ -1,14 +1,14 @@
 [gd_scene load_steps=14 format=3 uid="uid://bnlp07k066m0h"]
 
-[ext_resource type="Texture2D" uid="uid://drxptv3e701nt" path="res://Assets/SCROLL-Home Enterance/Home.png" id="1_w18ys"]
-[ext_resource type="Script" uid="uid://co2lfdp5hmoht" path="res://scripts/home.gd" id="1_yxilm"]
-[ext_resource type="PackedScene" uid="uid://b43uktunge7qc" path="res://scenes/interactive_items.tscn" id="2_reixx"]
-[ext_resource type="PackedScene" uid="uid://b53r4vslu8q5n" path="res://scenes/tico_walk_sports.tscn" id="2_w18ys"]
-[ext_resource type="Texture2D" uid="uid://dsccnmryux6l8" path="res://Assets/SCROLL-Home Enterance/Portrait.png" id="3_reixx"]
-[ext_resource type="PackedScene" uid="uid://c7o75vrfgmosl" path="res://scenes/hallway.tscn" id="5_uhids"]
-[ext_resource type="Texture2D" uid="uid://b5f4dqffx431m" path="res://Assets/SCROLL-Home Enterance/embroidary.png" id="5_vc333"]
-[ext_resource type="Texture2D" uid="uid://drbe2qvw16jl3" path="res://Assets/universal/teleport.png" id="8_hhep5"]
-[ext_resource type="Texture2D" uid="uid://6cp2vuenj0ek" path="res://Assets/universal/Frame.png" id="9_cmjdo"]
+[ext_resource type="Script" uid="uid://co2lfdp5hmoht" path="res://scripts/home.gd" id="1_22wlk"]
+[ext_resource type="Texture2D" uid="uid://drxptv3e701nt" path="res://Assets/SCROLL-Home Enterance/Home.png" id="2_a7mac"]
+[ext_resource type="PackedScene" uid="uid://b43uktunge7qc" path="res://scenes/interactive/interactive_items.tscn" id="3_n55ij"]
+[ext_resource type="Texture2D" uid="uid://dsccnmryux6l8" path="res://Assets/SCROLL-Home Enterance/Portrait.png" id="4_otpjv"]
+[ext_resource type="Texture2D" uid="uid://b5f4dqffx431m" path="res://Assets/SCROLL-Home Enterance/embroidary.png" id="5_0fbcy"]
+[ext_resource type="PackedScene" uid="uid://c7o75vrfgmosl" path="res://scenes/interactive/hallway.tscn" id="6_8vvuq"]
+[ext_resource type="PackedScene" uid="uid://b53r4vslu8q5n" path="res://scenes/universal/tico_walk_sports.tscn" id="7_n2b61"]
+[ext_resource type="Texture2D" uid="uid://drbe2qvw16jl3" path="res://Assets/universal/teleport.png" id="8_c5nt7"]
+[ext_resource type="Texture2D" uid="uid://6cp2vuenj0ek" path="res://Assets/universal/Frame.png" id="9_orh08"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_u4wd2"]
 
@@ -22,7 +22,7 @@ size = Vector2(109.25, 313)
 size = Vector2(90.75, 360)
 
 [node name="Home" type="Node2D"]
-script = ExtResource("1_yxilm")
+script = ExtResource("1_22wlk")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -32,7 +32,7 @@ motion_mirroring = Vector2(1152, 0)
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2(-208, 0)
 scale = Vector2(0.3541667, 0.3)
-texture = ExtResource("1_w18ys")
+texture = ExtResource("2_a7mac")
 centered = false
 
 [node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
@@ -40,7 +40,7 @@ position = Vector2(576, 323)
 scale = Vector2(0.3, 0.3)
 texture = SubResource("CompressedTexture2D_u4wd2")
 
-[node name="InteractivePainting" parent="." instance=ExtResource("2_reixx")]
+[node name="InteractivePainting" parent="." instance=ExtResource("3_n55ij")]
 position = Vector2(25, 158)
 dialogue_text = "I never knew what this painting meant..."
 
@@ -50,43 +50,43 @@ position = Vector2(711.99994, 82.000015)
 [node name="CollisionShape2D" parent="InteractivePainting" index="1"]
 position = Vector2(712, 323)
 
-[node name="InteractivePainting2" parent="." instance=ExtResource("2_reixx")]
+[node name="InteractivePainting2" parent="." instance=ExtResource("3_n55ij")]
 position = Vector2(25, 110)
 dialogue_text = "Was this 2 years ago...or was it 3..."
 
 [node name="Sprite2D" parent="InteractivePainting2" index="0"]
 position = Vector2(314, 131.00002)
-texture = ExtResource("3_reixx")
+texture = ExtResource("4_otpjv")
 
 [node name="CollisionShape2D" parent="InteractivePainting2" index="1"]
 position = Vector2(314, 323)
 
-[node name="InteractivePainting3" parent="." instance=ExtResource("2_reixx")]
+[node name="InteractivePainting3" parent="." instance=ExtResource("3_n55ij")]
 position = Vector2(-167, 110)
 dialogue_text = "what pretty petals..."
 
 [node name="Sprite2D" parent="InteractivePainting3" index="0"]
 position = Vector2(314, 131.00002)
-texture = ExtResource("5_vc333")
+texture = ExtResource("5_0fbcy")
 
 [node name="CollisionShape2D" parent="InteractivePainting3" index="1"]
 position = Vector2(314, 323)
 
-[node name="InteractivePainting4" parent="." instance=ExtResource("2_reixx")]
+[node name="InteractivePainting4" parent="." instance=ExtResource("3_n55ij")]
 position = Vector2(-113, 110)
 dialogue_text = "wait...no, it can't be..."
 
 [node name="Sprite2D" parent="InteractivePainting4" index="0"]
 position = Vector2(314, 131.00002)
-texture = ExtResource("5_vc333")
+texture = ExtResource("5_0fbcy")
 
 [node name="CollisionShape2D" parent="InteractivePainting4" index="1"]
 position = Vector2(314, 323)
 
-[node name="Hallway" parent="." instance=ExtResource("5_uhids")]
+[node name="Hallway" parent="." instance=ExtResource("6_8vvuq")]
 position = Vector2(-62, 18)
 
-[node name="Tico" parent="." instance=ExtResource("2_w18ys")]
+[node name="Tico" parent="." instance=ExtResource("7_n2b61")]
 position = Vector2(568, 479)
 
 [node name="InvisibleWall" type="StaticBody2D" parent="."]
@@ -115,7 +115,7 @@ offset_left = 1059.0
 offset_top = -64.0
 offset_right = 1699.0
 offset_bottom = 380.52087
-texture = ExtResource("8_hhep5")
+texture = ExtResource("8_c5nt7")
 expand_mode = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HomeEnterance"]
@@ -152,7 +152,7 @@ motion_mirroring = Vector2(1152, 0)
 [node name="Sprite2D" type="Sprite2D" parent="Frame/ParallaxLayer"]
 position = Vector2(489.99997, 286)
 scale = Vector2(0.3640625, 0.26759258)
-texture = ExtResource("9_cmjdo")
+texture = ExtResource("9_orh08")
 
 [connection signal="body_entered" from="HomeEnterance" to="Tico" method="_on_home_enterance_body_entered"]
 [connection signal="body_entered" from="KitchenEnterance" to="Tico" method="_on_kitchen_enterance_body_entered"]

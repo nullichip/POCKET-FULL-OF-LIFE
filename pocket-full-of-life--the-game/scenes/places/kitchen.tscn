@@ -1,16 +1,16 @@
 [gd_scene load_steps=15 format=3 uid="uid://be4bxst4bsx51"]
 
-[ext_resource type="Script" uid="uid://co2lfdp5hmoht" path="res://scripts/home.gd" id="1_mwmjw"]
-[ext_resource type="Texture2D" uid="uid://2rk08fcqh5bq" path="res://Assets/SCROLL-kitchen/kitchen.png" id="2_bems3"]
-[ext_resource type="PackedScene" uid="uid://b43uktunge7qc" path="res://scenes/interactive_items.tscn" id="3_vpxcu"]
-[ext_resource type="Texture2D" uid="uid://dmxxgu40i4jc8" path="res://Assets/SCROLL-kitchen/3 paintings.png" id="4_cwf2y"]
-[ext_resource type="PackedScene" uid="uid://bp3mtc8q1ovsw" path="res://scenes/fridge.tscn" id="5_ibrlr"]
-[ext_resource type="PackedScene" uid="uid://bi0t7iab7x5qc" path="res://scenes/dishwasher.tscn" id="5_k1jr4"]
-[ext_resource type="PackedScene" uid="uid://b53r4vslu8q5n" path="res://scenes/tico_walk_sports.tscn" id="7_bs8bs"]
-[ext_resource type="Texture2D" uid="uid://bbt3vne12uu2a" path="res://Assets/SCROLL-kitchen/chair 2.png" id="7_vpxcu"]
-[ext_resource type="Texture2D" uid="uid://7lw3q1d6nov0" path="res://Assets/SCROLL-kitchen/table.png" id="8_k1jr4"]
-[ext_resource type="Texture2D" uid="uid://6cp2vuenj0ek" path="res://Assets/universal/Frame.png" id="9_acu1m"]
-[ext_resource type="Texture2D" uid="uid://m0p5kuesf8i3" path="res://Assets/SCROLL-kitchen/chair.png" id="11_umms5"]
+[ext_resource type="Script" uid="uid://co2lfdp5hmoht" path="res://scripts/home.gd" id="1_g275a"]
+[ext_resource type="Texture2D" uid="uid://2rk08fcqh5bq" path="res://Assets/SCROLL-kitchen/kitchen.png" id="2_losyq"]
+[ext_resource type="PackedScene" uid="uid://b43uktunge7qc" path="res://scenes/interactive/interactive_items.tscn" id="3_ekv3l"]
+[ext_resource type="Texture2D" uid="uid://dmxxgu40i4jc8" path="res://Assets/SCROLL-kitchen/3 paintings.png" id="4_ubdrg"]
+[ext_resource type="PackedScene" uid="uid://bi0t7iab7x5qc" path="res://scenes/interactive/dishwasher.tscn" id="5_sjsiy"]
+[ext_resource type="PackedScene" uid="uid://bp3mtc8q1ovsw" path="res://scenes/interactive/fridge.tscn" id="6_6gk1o"]
+[ext_resource type="PackedScene" uid="uid://b53r4vslu8q5n" path="res://scenes/universal/tico_walk_sports.tscn" id="7_eiwfd"]
+[ext_resource type="Texture2D" uid="uid://bbt3vne12uu2a" path="res://Assets/SCROLL-kitchen/chair 2.png" id="8_xsd4o"]
+[ext_resource type="Texture2D" uid="uid://m0p5kuesf8i3" path="res://Assets/SCROLL-kitchen/chair.png" id="9_l12lo"]
+[ext_resource type="Texture2D" uid="uid://7lw3q1d6nov0" path="res://Assets/SCROLL-kitchen/table.png" id="10_je4fj"]
+[ext_resource type="Texture2D" uid="uid://6cp2vuenj0ek" path="res://Assets/universal/Frame.png" id="11_kdeeo"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_u4wd2"]
 
@@ -21,7 +21,7 @@ size = Vector2(333, 686)
 size = Vector2(178.5, 474)
 
 [node name="Kitchen" type="Node2D"]
-script = ExtResource("1_mwmjw")
+script = ExtResource("1_g275a")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -31,7 +31,7 @@ motion_mirroring = Vector2(1152, 0)
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2(1, -7.999999)
 scale = Vector2(0.31131008, 0.27314818)
-texture = ExtResource("2_bems3")
+texture = ExtResource("2_losyq")
 centered = false
 
 [node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
@@ -39,22 +39,22 @@ position = Vector2(576, 323)
 scale = Vector2(0.3, 0.3)
 texture = SubResource("CompressedTexture2D_u4wd2")
 
-[node name="InteractivePainting" parent="." instance=ExtResource("3_vpxcu")]
+[node name="InteractivePainting" parent="." instance=ExtResource("3_ekv3l")]
 position = Vector2(219, 106)
 dialogue_text = "I...I can't see the letters..."
 
 [node name="Sprite2D" parent="InteractivePainting" index="0"]
-texture = ExtResource("4_cwf2y")
+texture = ExtResource("4_ubdrg")
 
-[node name="Dishwasher" parent="." instance=ExtResource("5_k1jr4")]
+[node name="Dishwasher" parent="." instance=ExtResource("5_sjsiy")]
 position = Vector2(391.00003, 331)
 scale = Vector2(0.31999755, 0.31999755)
 
-[node name="Fridge" parent="." instance=ExtResource("5_ibrlr")]
+[node name="Fridge" parent="." instance=ExtResource("6_6gk1o")]
 position = Vector2(744, 264.00003)
 scale = Vector2(0.3199994, 0.3199994)
 
-[node name="Tico" parent="." instance=ExtResource("7_bs8bs")]
+[node name="Tico" parent="." instance=ExtResource("7_eiwfd")]
 position = Vector2(724, 474)
 
 [node name="TableBG" type="Node2D" parent="."]
@@ -63,34 +63,34 @@ position = Vector2(77, 4)
 [node name="Chair2" type="Sprite2D" parent="TableBG"]
 position = Vector2(630.2284, 303.36334)
 scale = Vector2(0.29060787, 0.22049679)
-texture = ExtResource("7_vpxcu")
+texture = ExtResource("8_xsd4o")
 
 [node name="Chair3" type="Sprite2D" parent="TableBG"]
 position = Vector2(783.2284, 305.36334)
 scale = Vector2(0.29060787, 0.22049679)
-texture = ExtResource("7_vpxcu")
+texture = ExtResource("8_xsd4o")
 flip_h = true
 
 [node name="Chair" type="Sprite2D" parent="TableBG"]
 position = Vector2(666.2284, 290.36337)
 scale = Vector2(0.27999997, 0.24635735)
-texture = ExtResource("11_umms5")
+texture = ExtResource("9_l12lo")
 
 [node name="Chair4" type="Sprite2D" parent="TableBG"]
 position = Vector2(599.2284, 292.36334)
 scale = Vector2(0.27999997, 0.24635735)
-texture = ExtResource("11_umms5")
+texture = ExtResource("9_l12lo")
 
 [node name="Chair5" type="Sprite2D" parent="TableBG"]
 position = Vector2(715.22845, 291.36334)
 scale = Vector2(0.27999997, 0.24635735)
-texture = ExtResource("11_umms5")
+texture = ExtResource("9_l12lo")
 flip_h = true
 
 [node name="Table" type="Sprite2D" parent="TableBG"]
 position = Vector2(654.2284, 276.36334)
 scale = Vector2(0.33293146, 0.29292902)
-texture = ExtResource("8_k1jr4")
+texture = ExtResource("10_je4fj")
 
 [node name="InvisibleWall" type="StaticBody2D" parent="."]
 
@@ -127,7 +127,7 @@ motion_mirroring = Vector2(1152, 0)
 [node name="Sprite2D" type="Sprite2D" parent="Frame/ParallaxLayer"]
 position = Vector2(489.99997, 286)
 scale = Vector2(0.3640625, 0.26759258)
-texture = ExtResource("9_acu1m")
+texture = ExtResource("11_kdeeo")
 
 [connection signal="body_entered" from="HallwayEnterance" to="Tico" method="_on_hallway_enterance_body_entered"]
 

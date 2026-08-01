@@ -16,9 +16,9 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-TransitionScreen="*res://scenes/transition_screen.tscn"
-DialogueManager="*res://scenes/dialogue_manager.tscn"
-ConfirmationMenu="*res://scenes/confirmation_menu.tscn"
+TransitionScreen="*res://scenes/universal/transition_screen.tscn"
+DialogueManager="*res://scenes/universal/dialogue_manager.tscn"
+ConfirmationMenu="*res://scenes/universal/confirmation_menu.tscn"
 GameManager="*res://scripts/game_manager.gd"
 
 [display]

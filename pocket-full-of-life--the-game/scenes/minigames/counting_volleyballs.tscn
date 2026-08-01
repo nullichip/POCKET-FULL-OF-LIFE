@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://bf3bywrb5pxkh" path="res://scripts/counting_volleyballs.gd" id="1_wjnp0"]
 [ext_resource type="Texture2D" uid="uid://qrn4i5t2do35" path="res://Assets/Counting Volleyballs/puddle.png" id="2_i8ne8"]
-[ext_resource type="PackedScene" uid="uid://6o78ahr1814x" path="res://scenes/cow.tscn" id="2_unfg6"]
-[ext_resource type="PackedScene" uid="uid://bkbugu45u583x" path="res://scenes/entity.tscn" id="3_87cva"]
-[ext_resource type="PackedScene" uid="uid://ciri5whwbdapk" path="res://scenes/volleyball.tscn" id="4_nmyqy"]
+[ext_resource type="PackedScene" uid="uid://6o78ahr1814x" path="res://scenes/interactive/cow.tscn" id="2_unfg6"]
+[ext_resource type="PackedScene" uid="uid://bkbugu45u583x" path="res://scenes/interactive/entity.tscn" id="3_87cva"]
+[ext_resource type="PackedScene" uid="uid://ciri5whwbdapk" path="res://scenes/interactive/volleyball.tscn" id="4_nmyqy"]
 [ext_resource type="Texture2D" uid="uid://ifhm2nuigypn" path="res://Assets/Counting Volleyballs/puddle refleCtion.png" id="5_malvq"]
 [ext_resource type="Texture2D" uid="uid://i083mpupv63j" path="res://Assets/Counting Volleyballs/counting cows.png" id="5_nmyqy"]
 [ext_resource type="Texture2D" uid="uid://ij8lt1f4mtj1" path="res://Assets/Counting Volleyballs/bg.png" id="6_gg3cj"]
