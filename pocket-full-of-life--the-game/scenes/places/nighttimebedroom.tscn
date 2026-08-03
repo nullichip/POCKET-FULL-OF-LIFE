@@ -49,21 +49,6 @@ offset_top = 35.0
 offset_right = 682.0
 offset_bottom = 325.0
 
-[node name="lamp" type="TextureButton" parent="."]
-layout_mode = 0
-offset_left = 854.0
-offset_top = -7.0
-offset_right = 1031.0
-offset_bottom = 289.0
-texture_normal = ExtResource("4_1d11a")
-ignore_texture_size = true
-stretch_mode = 4
-
-[node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(546, 343.00003)
-scale = Vector2(0.33415192, 0.33415195)
-texture = ExtResource("5_86fbk")
-
 [node name="ScaryEyes" type="Sprite2D" parent="."]
 position = Vector2(792.05554, 128.5)
 scale = Vector2(0.38888884, 0.3888889)
@@ -81,18 +66,33 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="ColorRect" type="ColorRect" parent="."]
-modulate = Color(1, 1, 1, 0.596)
+modulate = Color(0, 0, 0, 0.69000006)
 layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 648.0
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
+[node name="lamp" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 854.0
+offset_top = -7.0
+offset_right = 1031.0
+offset_bottom = 289.0
+texture_normal = ExtResource("4_1d11a")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(388.99994, 410.05795)
+scale = Vector2(0.45104164, 0.39624262)
+texture = ExtResource("5_86fbk")
+
 [connection signal="pressed" from="bed" to="." method="_on_bed_pressed"]
 [connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="poster" to="." method="_on_poster_pressed"]
 [connection signal="pressed" from="mirror" to="." method="_on_mirror_pressed"]
-[connection signal="pressed" from="lamp" to="." method="_on_lamp_pressed"]
 [connection signal="mouse_entered" from="journal" to="." method="_on_journal_mouse_entered"]
 [connection signal="mouse_exited" from="journal" to="." method="_on_journal_mouse_exited"]
 [connection signal="pressed" from="journal" to="." method="_on_journal_pressed"]
+[connection signal="pressed" from="lamp" to="." method="_on_lamp_pressed"]
