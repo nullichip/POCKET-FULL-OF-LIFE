@@ -80,6 +80,14 @@ texture_normal = ExtResource("3_1d11a")
 ignore_texture_size = true
 stretch_mode = 0
 
+[node name="ColorRect" type="ColorRect" parent="."]
+modulate = Color(1, 1, 1, 0.596)
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
 [connection signal="pressed" from="bed" to="." method="_on_bed_pressed"]
 [connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="poster" to="." method="_on_poster_pressed"]
