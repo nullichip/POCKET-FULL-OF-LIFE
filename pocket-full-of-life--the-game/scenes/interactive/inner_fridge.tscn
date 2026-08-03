@@ -1,0 +1,159 @@
+[gd_scene load_steps=16 format=3 uid="uid://bb5tybtadly0k"]
+
+[ext_resource type="Script" uid="uid://q34rxfdbtntb" path="res://inner_fridge.gd" id="1_otkln"]
+[ext_resource type="Texture2D" uid="uid://c2s7b8jtjguvp" path="res://Assets/SCROLL-kitchen/InnerFridge.png" id="2_8xgp6"]
+[ext_resource type="Texture2D" uid="uid://cfq7hl1811xqo" path="res://Assets/SCROLL-kitchen/milk.png" id="3_fgd0e"]
+[ext_resource type="Texture2D" uid="uid://bf5bmuw1kt3s0" path="res://Assets/SCROLL-kitchen/banana.png" id="4_nejxh"]
+[ext_resource type="Texture2D" uid="uid://bcewpvwprgsxo" path="res://Assets/SCROLL-kitchen/jar.png" id="5_yc88y"]
+[ext_resource type="Texture2D" uid="uid://y4dbpp6ql3m2" path="res://Assets/SCROLL-kitchen/jar 2.png" id="6_tew8i"]
+[ext_resource type="Texture2D" uid="uid://bf8qc6r0qmv4k" path="res://Assets/SCROLL-kitchen/jar 3.png" id="7_v3j6u"]
+[ext_resource type="Texture2D" uid="uid://bnaywg6t2h00s" path="res://Assets/SCROLL-kitchen/fruit1.png" id="8_evqs0"]
+[ext_resource type="Texture2D" uid="uid://dujlr52vasl65" path="res://Assets/SCROLL-kitchen/fruit 2.png" id="9_2y00j"]
+[ext_resource type="Texture2D" uid="uid://eb22liw0q3ls" path="res://Assets/SCROLL-kitchen/heart 1.png" id="10_o4jpk"]
+[ext_resource type="Texture2D" uid="uid://c6k18053mlsgk" path="res://Assets/SCROLL-kitchen/heart 2.png" id="11_n8elq"]
+[ext_resource type="Texture2D" uid="uid://cuh72hvahnotq" path="res://Assets/SCROLL-kitchen/fruit 3.png" id="12_b3ixe"]
+[ext_resource type="Texture2D" uid="uid://cmgkimwlssqq6" path="res://Assets/SCROLL-kitchen/fruit 4.png" id="13_6pu71"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x7xk7"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": ExtResource("5_yc88y")
+}, {
+"duration": 2.0,
+"texture": ExtResource("6_tew8i")
+}, {
+"duration": 2.0,
+"texture": ExtResource("6_tew8i")
+}, {
+"duration": 2.0,
+"texture": ExtResource("7_v3j6u")
+}],
+"loop": true,
+"name": &"bubbling_eyes",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w87cf"]
+animations = [{
+"frames": [{
+"duration": 4.91,
+"texture": ExtResource("10_o4jpk")
+}, {
+"duration": 2.0,
+"texture": ExtResource("11_n8elq")
+}],
+"loop": true,
+"name": &"beating_heart",
+"speed": 5.0
+}]
+
+[node name="InnerFridge" type="Control"]
+z_index = 10
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1785.0
+offset_top = -474.0
+offset_right = -1785.0
+offset_bottom = -474.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.0800014, 2.0800014)
+script = ExtResource("1_otkln")
+
+[node name="Fridge" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 618.7496
+offset_top = 113.461464
+offset_right = 1228.4678
+offset_bottom = 518.4615
+scale = Vector2(0.5501878, 0.5501878)
+texture = ExtResource("2_8xgp6")
+expand_mode = 1
+
+[node name="Milk" type="TextureButton" parent="Fridge"]
+layout_mode = 0
+offset_left = 67.0
+offset_top = 221.0
+offset_right = 305.8025
+offset_bottom = 375.0
+texture_normal = ExtResource("3_fgd0e")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Bananas" type="TextureButton" parent="Fridge"]
+layout_mode = 0
+offset_left = 280.0
+offset_top = 237.0
+offset_right = 437.26056
+offset_bottom = 374.0
+texture_normal = ExtResource("4_nejxh")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Eyes" type="AnimatedSprite2D" parent="Fridge"]
+position = Vector2(466.00003, 300)
+scale = Vector2(0.3223506, 0.3223505)
+sprite_frames = SubResource("SpriteFrames_x7xk7")
+animation = &"bubbling_eyes"
+autoplay = "bubbling_eyes"
+frame_progress = 0.6496343
+
+[node name="PassionFruit" type="TextureButton" parent="Fridge"]
+layout_mode = 0
+offset_left = 311.0
+offset_top = 98.0
+offset_right = 504.32178
+offset_bottom = 187.0
+texture_normal = ExtResource("8_evqs0")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Pomegranate" type="TextureButton" parent="Fridge"]
+layout_mode = 0
+offset_left = 379.0
+offset_top = 83.0
+offset_right = 552.4403
+offset_bottom = 210.0
+texture_normal = ExtResource("9_2y00j")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Heart" type="AnimatedSprite2D" parent="Fridge"]
+position = Vector2(164, 124)
+scale = Vector2(0.28114185, 0.28114185)
+sprite_frames = SubResource("SpriteFrames_w87cf")
+animation = &"beating_heart"
+autoplay = "beating_heart"
+frame_progress = 0.6773173
+
+[node name="Kiwi" type="TextureButton" parent="Fridge"]
+layout_mode = 0
+offset_left = 219.0
+offset_top = 98.0
+offset_right = 385.37836
+offset_bottom = 206.0
+texture_normal = ExtResource("12_b3ixe")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Blueberries" type="TextureButton" parent="Fridge"]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 53.0
+offset_right = 367.86484
+offset_bottom = 136.0
+texture_normal = ExtResource("13_6pu71")
+ignore_texture_size = true
+stretch_mode = 4
+
+[connection signal="pressed" from="Fridge/Milk" to="." method="_on_milk_pressed"]
+[connection signal="pressed" from="Fridge/Bananas" to="." method="_on_bananas_pressed"]
+[connection signal="pressed" from="Fridge/PassionFruit" to="." method="_on_passion_fruit_pressed"]
+[connection signal="pressed" from="Fridge/Pomegranate" to="." method="_on_pomegranate_pressed"]
+[connection signal="pressed" from="Fridge/Kiwi" to="." method="_on_kiwi_pressed"]
+[connection signal="pressed" from="Fridge/Blueberries" to="." method="_on_blueberries_pressed"]

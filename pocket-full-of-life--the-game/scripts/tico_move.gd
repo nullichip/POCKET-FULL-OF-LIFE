@@ -67,7 +67,7 @@ func _on_home_enterance_body_entered(body: Node2D) -> void:
 			body.animated_sprite.play("idle_twd_right")
 			
 		GameManager.target_spawn_name = "OutsideSpawn"
-		await TransitionScreen.transition_to_scene("res://scenes/home.tscn", 3.0)
+		await TransitionScreen.transition_to_scene("res://scenes/places/home.tscn", 3.0)
 
 func _on_kitchen_enterance_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
@@ -78,7 +78,7 @@ func _on_kitchen_enterance_body_entered(body: Node2D) -> void:
 		else:
 			body.animated_sprite.play("idle_twd_right")
 			
-		TransitionScreen.transition_to_scene("res://scenes/kitchen.tscn", 0.0)
+		TransitionScreen.transition_to_scene("res://scenes/places/kitchen.tscn", 0.0)
 
 
 func _on_hallway_enterance_body_entered(body: Node2D) -> void:
@@ -91,4 +91,4 @@ func _on_hallway_enterance_body_entered(body: Node2D) -> void:
 			body.animated_sprite.play("idle_twd_right")
 			
 		GameManager.target_spawn_name = "KitchenSpawn"
-		await TransitionScreen.transition_to_scene("res://scenes/home.tscn", 0.0)
+		await TransitionScreen.transition_to_scene("res://scenes/places/home.tscn", 0.0)

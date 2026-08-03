@@ -55,7 +55,7 @@ position = Vector2(744, 264.00003)
 scale = Vector2(0.3199994, 0.3199994)
 
 [node name="Tico" parent="." instance=ExtResource("7_eiwfd")]
-position = Vector2(724, 474)
+position = Vector2(724, 477)
 
 [node name="TableBG" type="Node2D" parent="."]
 position = Vector2(77, 4)
@@ -128,6 +128,9 @@ motion_mirroring = Vector2(1152, 0)
 position = Vector2(489.99997, 286)
 scale = Vector2(0.3640625, 0.26759258)
 texture = ExtResource("11_kdeeo")
+
+[node name="UI_Layer_Kitchen" type="CanvasLayer" parent="."]
+layer = 10
 
 [connection signal="body_entered" from="HallwayEnterance" to="Tico" method="_on_hallway_enterance_body_entered"]
 
