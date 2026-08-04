@@ -1,0 +1,144 @@
+[gd_scene load_steps=16 format=3 uid="uid://cdtuwgwnvbhom"]
+
+[ext_resource type="Script" uid="uid://2yx7svlw16b7" path="res://scripts/pixel_tico.gd" id="1_14f4j"]
+[ext_resource type="Texture2D" uid="uid://bgbhuice1glct" path="res://Assets/Map/tico/pixil-layer-9.png" id="2_14f4j"]
+[ext_resource type="Texture2D" uid="uid://d4hhvcjn2g5v1" path="res://Assets/Map/tico/pixil-layer-10.png" id="2_qxste"]
+[ext_resource type="Texture2D" uid="uid://cp3henp7why42" path="res://Assets/Map/tico/pixil-layer-11.png" id="3_14f4j"]
+[ext_resource type="Texture2D" uid="uid://dmo3wdka44fw3" path="res://Assets/Map/tico/pixil-layer-13.png" id="4_wkt1t"]
+[ext_resource type="Texture2D" uid="uid://pptis738edqf" path="res://Assets/Map/tico/pixil-layer-12.png" id="5_1r2de"]
+[ext_resource type="Texture2D" uid="uid://ghsqwuler1yq" path="res://Assets/Map/tico/pixil-layer-14.png" id="6_6sikc"]
+[ext_resource type="Texture2D" uid="uid://bnv7vpwgp2a1i" path="res://Assets/Map/tico/pixil-layer-15.png" id="7_du3jh"]
+[ext_resource type="Texture2D" uid="uid://wpa6ncofbh5k" path="res://Assets/Map/tico/pixil-layer-16.png" id="8_2xl2c"]
+[ext_resource type="Texture2D" uid="uid://bx4s58ibkg3lf" path="res://Assets/Map/tico/pixil-layer-17.png" id="9_7l0gq"]
+[ext_resource type="Texture2D" uid="uid://bk2tcq5nutx51" path="res://Assets/Map/tico/pixil-layer-18.png" id="10_m0hgp"]
+[ext_resource type="Texture2D" uid="uid://cs7gt3qbqavok" path="res://Assets/Map/tico/pixil-layer-19.png" id="11_0bujw"]
+[ext_resource type="Texture2D" uid="uid://c4ielpnlrldji" path="res://Assets/Map/tico/pixil-layer-20.png" id="12_6rwss"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8hwur"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_14f4j")
+}],
+"loop": true,
+"name": &"idle_back",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_1r2de")
+}],
+"loop": true,
+"name": &"idle_fwd",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_du3jh")
+}],
+"loop": true,
+"name": &"idle_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_m0hgp")
+}],
+"loop": true,
+"name": &"idle_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_14f4j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_qxste")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_14f4j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_14f4j")
+}],
+"loop": true,
+"name": &"walk_back",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_1r2de")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_wkt1t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_1r2de")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_6sikc")
+}],
+"loop": true,
+"name": &"walk_fwd",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_du3jh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_2xl2c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_du3jh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_7l0gq")
+}],
+"loop": true,
+"name": &"walk_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_m0hgp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_0bujw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_m0hgp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_6rwss")
+}],
+"loop": true,
+"name": &"walk_right",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k1t0r"]
+size = Vector2(100, 122)
+
+[node name="PixelTico" type="CharacterBody2D" groups=["Player"]]
+script = ExtResource("1_14f4j")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(606, 318.1111)
+scale = Vector2(5.5555553, 5.555555)
+sprite_frames = SubResource("SpriteFrames_8hwur")
+animation = &"idle_fwd"
+frame_progress = 0.50626856
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(606, 318.1111)
+shape = SubResource("RectangleShape2D_k1t0r")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(609, 318)
+zoom = Vector2(1.2, 1.2)
+limit_left = -76
+limit_top = -81
+limit_right = 1270
+limit_bottom = 734

@@ -97,7 +97,7 @@ script = ExtResource("1_kqui6")
 position = Vector2(305, -183)
 scale = Vector2(0.36822882, 0.36822885)
 sprite_frames = SubResource("SpriteFrames_p4cja")
-animation = &"idle_twd_left"
+animation = &"walk_twd_right"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(305, -183)
@@ -105,7 +105,7 @@ scale = Vector2(1.1505418, 1.1505418)
 shape = SubResource("RectangleShape2D_e0jq2")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(27, -52)
+position = Vector2(16, -50)
 offset = Vector2(0, -170)
 zoom = Vector2(1.7, 1.7)
 limit_left = 1
