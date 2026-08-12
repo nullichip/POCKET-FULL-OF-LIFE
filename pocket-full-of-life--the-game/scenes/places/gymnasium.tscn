@@ -113,6 +113,9 @@ position = Vector2(489.99997, 286)
 scale = Vector2(0.3640625, 0.26759258)
 texture = ExtResource("4_n0qo2")
 
+[node name="UI_Layer_Gym" type="CanvasLayer" parent="."]
+layer = 10
+
 [node name="InvisibleWall" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="InvisibleWall"]

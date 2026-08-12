@@ -1,0 +1,171 @@
+[gd_scene load_steps=16 format=3 uid="uid://cdyetvgr5g8e"]
+
+[ext_resource type="Script" uid="uid://qsvh6mmvyf51" path="res://scripts/inner_storage_room.gd" id="1_7kkqh"]
+[ext_resource type="Texture2D" uid="uid://b7gms4gywp2qa" path="res://Assets/SCROLL-Gym/inside storage.png" id="1_lsllu"]
+[ext_resource type="Texture2D" uid="uid://c6omnwqpnqcdu" path="res://Assets/SCROLL-Gym/B2.png" id="2_7kkqh"]
+[ext_resource type="Texture2D" uid="uid://cixdre5cpklxf" path="res://Assets/SCROLL-Gym/B1.png" id="3_gpx7d"]
+[ext_resource type="Texture2D" uid="uid://b4s25d13d3s3g" path="res://Assets/SCROLL-Gym/cones.png" id="4_le5qr"]
+[ext_resource type="Texture2D" uid="uid://cn42m7rlgwm3g" path="res://Assets/SCROLL-Gym/tennis.png" id="5_bhar5"]
+[ext_resource type="Texture2D" uid="uid://dwomvamyniukp" path="res://Assets/SCROLL-Gym/tennis2.png" id="6_7jubj"]
+[ext_resource type="Texture2D" uid="uid://cxekyvie6p7ny" path="res://Assets/SCROLL-Gym/BL1.png" id="7_qq8u6"]
+[ext_resource type="Texture2D" uid="uid://bibey33yp5p7a" path="res://Assets/SCROLL-Gym/BL2.png" id="8_ophge"]
+[ext_resource type="Texture2D" uid="uid://8wa3381fh6vq" path="res://Assets/SCROLL-Gym/BL3.png" id="9_h7ai6"]
+[ext_resource type="Texture2D" uid="uid://c5dscrvo4gvom" path="res://Assets/SCROLL-Gym/cart.png" id="10_fmd46"]
+[ext_resource type="Texture2D" uid="uid://c7547wijtlpcb" path="res://Assets/SCROLL-Gym/BOX 1.png" id="11_6vkbf"]
+[ext_resource type="Texture2D" uid="uid://daswvyg4dbqyg" path="res://Assets/SCROLL-Gym/BOX 2.png" id="12_jbf1i"]
+[ext_resource type="Texture2D" uid="uid://c85rqq52w5gvw" path="res://Assets/SCROLL-Gym/light.png" id="13_26q4q"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5i0wd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_qq8u6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qq8u6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ophge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_h7ai6")
+}],
+"loop": true,
+"name": &"flowing_bl",
+"speed": 5.0
+}]
+
+[node name="InnerStorageRoom" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1244.0
+offset_top = -150.0
+offset_right = -2396.0
+offset_bottom = -798.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.08, 2.08)
+script = ExtResource("1_7kkqh")
+
+[node name="StorageRoom" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 618.75
+offset_top = 113.461
+offset_right = 1228.468
+offset_bottom = 518.461
+scale = Vector2(0.55, 0.55)
+texture = ExtResource("1_lsllu")
+expand_mode = 1
+
+[node name="B1" type="TextureButton" parent="StorageRoom"]
+layout_mode = 0
+offset_left = 100.52448
+offset_top = 84.79121
+offset_right = 160.83917
+offset_bottom = 145.10591
+texture_normal = ExtResource("2_7kkqh")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="B2" type="TextureButton" parent="StorageRoom"]
+layout_mode = 0
+offset_left = 63.896
+offset_top = 108.39649
+offset_right = 121.5446
+offset_bottom = 159.90335
+rotation = 0.0021207184
+texture_normal = ExtResource("3_gpx7d")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="cones" type="TextureButton" parent="StorageRoom"]
+layout_mode = 0
+offset_left = 95.4398
+offset_top = 176.54703
+offset_right = 157.14503
+offset_bottom = 218.03596
+rotation = 0.0021207184
+texture_normal = ExtResource("4_le5qr")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="tennis1" type="TextureButton" parent="StorageRoom"]
+layout_mode = 0
+offset_left = 74.30072
+offset_top = 193.18282
+offset_right = 121.171684
+offset_bottom = 234.67175
+rotation = 0.0021207184
+texture_normal = ExtResource("5_bhar5")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="tennis2" type="TextureButton" parent="StorageRoom"]
+layout_mode = 0
+offset_left = 123.25178
+offset_top = 229.8961
+offset_right = 171.79422
+offset_bottom = 264.9782
+rotation = 2.7082558
+texture_normal = ExtResource("6_7jubj")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="sussy" type="AnimatedSprite2D" parent="StorageRoom"]
+position = Vector2(112.043396, 284.90277)
+rotation = -0.107968666
+scale = Vector2(0.2754484, 0.20458719)
+sprite_frames = SubResource("SpriteFrames_5i0wd")
+animation = &"flowing_bl"
+autoplay = "flowing_bl"
+frame_progress = 0.8147858
+
+[node name="cart" type="TextureButton" parent="StorageRoom"]
+layout_mode = 0
+offset_left = 204.60622
+offset_top = 26.426468
+offset_right = 451.42426
+offset_bottom = 279.3025
+rotation = 0.0021207184
+texture_normal = ExtResource("10_fmd46")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="B3" type="TextureButton" parent="StorageRoom"]
+layout_mode = 0
+offset_left = 142.48251
+offset_top = 166.08492
+offset_right = 389.30054
+offset_bottom = 342.9648
+rotation = 0.0021207184
+texture_normal = ExtResource("11_6vkbf")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="B4" type="TextureButton" parent="StorageRoom"]
+layout_mode = 0
+offset_left = 263.98605
+offset_top = 189.68631
+offset_right = 510.80408
+offset_bottom = 366.56622
+rotation = 0.0021207184
+texture_normal = ExtResource("12_jbf1i")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Light" type="PointLight2D" parent="."]
+position = Vector2(786.5385, 283.6538)
+scale = Vector2(0.13377556, 0.13377556)
+energy = 12.88
+texture = ExtResource("13_26q4q")
+
+[connection signal="pressed" from="StorageRoom/B1" to="." method="_on_b_1_pressed"]
+[connection signal="pressed" from="StorageRoom/B2" to="." method="_on_b_2_pressed"]
+[connection signal="pressed" from="StorageRoom/cones" to="." method="_on_cones_pressed"]
+[connection signal="pressed" from="StorageRoom/tennis1" to="." method="_on_tennis_1_pressed"]
+[connection signal="pressed" from="StorageRoom/tennis2" to="." method="_on_tennis_2_pressed"]
+[connection signal="pressed" from="StorageRoom/cart" to="." method="_on_cart_pressed"]
+[connection signal="pressed" from="StorageRoom/B3" to="." method="_on_b_3_pressed"]
+[connection signal="pressed" from="StorageRoom/B4" to="." method="_on_b_4_pressed"]
