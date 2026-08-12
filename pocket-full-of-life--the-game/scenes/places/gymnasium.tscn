@@ -1,0 +1,154 @@
+[gd_scene load_steps=17 format=3 uid="uid://hwqxvca1fiw8"]
+
+[ext_resource type="Script" uid="uid://bq6hsws5g1lg5" path="res://scripts/gymnasium.gd" id="1_pvasr"]
+[ext_resource type="Texture2D" uid="uid://dn4t6y60trhlw" path="res://Assets/SCROLL-Gym/wallpaper-gym.png" id="2_hsqul"]
+[ext_resource type="PackedScene" uid="uid://b53r4vslu8q5n" path="res://scenes/universal/tico_walk_sports.tscn" id="3_1to4h"]
+[ext_resource type="PackedScene" uid="uid://bcxc653yw0fru" path="res://scenes/interactive/storage_room.tscn" id="3_hsqul"]
+[ext_resource type="Texture2D" uid="uid://c5lel26yo7vln" path="res://Assets/SCROLL-Gym/net.png" id="4_ghird"]
+[ext_resource type="Texture2D" uid="uid://6cp2vuenj0ek" path="res://Assets/universal/Frame.png" id="4_n0qo2"]
+[ext_resource type="Texture2D" uid="uid://cf38h6gqmenhh" path="res://Assets/SCROLL-Gym/vb cart 2.png" id="5_jceb3"]
+[ext_resource type="Texture2D" uid="uid://uyjvjsnng02q" path="res://Assets/SCROLL-Gym/vb.png" id="6_56em3"]
+[ext_resource type="Texture2D" uid="uid://w4iu4jhp34ss" path="res://Assets/SCROLL-Gym/whiteboard.png" id="7_xn06h"]
+[ext_resource type="Texture2D" uid="uid://ctepufx7vbd78" path="res://Assets/SCROLL-Gym/athletics office door.png" id="8_bkipu"]
+[ext_resource type="Script" uid="uid://chgnoqmysvnih" path="res://scripts/onto_court.gd" id="11_jceb3"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_31umq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p67u2"]
+size = Vector2(376.5, 788.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ghird"]
+size = Vector2(615.5, 819)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jceb3"]
+size = Vector2(178, 507)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_56em3"]
+size = Vector2(456, 324)
+
+[node name="Gymnasium" type="Node2D"]
+script = ExtResource("1_pvasr")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(10.000003, -14)
+scale = Vector2(0.35104167, 0.2736111)
+texture = ExtResource("2_hsqul")
+centered = false
+flip_h = true
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(576, 323)
+scale = Vector2(0.3, 0.3)
+texture = SubResource("CompressedTexture2D_31umq")
+
+[node name="BackGround" type="Node2D" parent="."]
+
+[node name="StorageRoom" parent="BackGround" instance=ExtResource("3_hsqul")]
+position = Vector2(523, 283)
+scale = Vector2(0.2327834, 0.2327834)
+
+[node name="Whiteboard" type="Sprite2D" parent="BackGround"]
+position = Vector2(311.00003, 250.00002)
+scale = Vector2(0.33501777, 0.29493165)
+texture = ExtResource("7_xn06h")
+
+[node name="Office" type="TextureButton" parent="BackGround"]
+offset_left = 48.000004
+offset_top = 180.0
+offset_right = 573.0
+offset_bottom = 970.29504
+scale = Vector2(0.2756998, 0.25939676)
+texture_normal = ExtResource("8_bkipu")
+
+[node name="Net" type="Sprite2D" parent="BackGround"]
+position = Vector2(1092, 247)
+scale = Vector2(0.47999758, 0.47999758)
+texture = ExtResource("4_ghird")
+
+[node name="VbCart2" type="Sprite2D" parent="BackGround"]
+position = Vector2(856, 330)
+scale = Vector2(0.34601456, 0.27965957)
+texture = ExtResource("5_jceb3")
+
+[node name="Vb" type="Sprite2D" parent="BackGround"]
+position = Vector2(710, 357)
+scale = Vector2(0.39999753, 0.39999753)
+texture = ExtResource("6_56em3")
+
+[node name="Vb2" type="Sprite2D" parent="BackGround"]
+position = Vector2(744, 357.00003)
+rotation = 0.45260835
+scale = Vector2(0.39999753, 0.39999753)
+texture = ExtResource("6_56em3")
+
+[node name="Vb3" type="Sprite2D" parent="BackGround"]
+position = Vector2(803.9999, 357)
+rotation = 0.45260835
+scale = Vector2(0.34455806, 0.34455806)
+texture = ExtResource("6_56em3")
+
+[node name="Vb4" type="Sprite2D" parent="BackGround"]
+position = Vector2(830, 363.00003)
+rotation = -1.2962724
+scale = Vector2(0.34455806, 0.34455806)
+texture = ExtResource("6_56em3")
+
+[node name="Tico" parent="." instance=ExtResource("3_1to4h")]
+position = Vector2(-198, 477)
+
+[node name="Frame" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Frame"]
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Frame/ParallaxLayer"]
+position = Vector2(489.99997, 286)
+scale = Vector2(0.3640625, 0.26759258)
+texture = ExtResource("4_n0qo2")
+
+[node name="InvisibleWall" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="InvisibleWall"]
+position = Vector2(-368, 350)
+shape = SubResource("RectangleShape2D_p67u2")
+
+[node name="ColorRect2" type="ColorRect" parent="InvisibleWall"]
+offset_left = -440.0
+offset_right = -14.0
+offset_bottom = 685.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="InvisibleWall"]
+position = Vector2(1592.75, 338.5)
+shape = SubResource("RectangleShape2D_ghird")
+
+[node name="ColorRect3" type="ColorRect" parent="InvisibleWall"]
+offset_left = 1169.0
+offset_top = -42.0
+offset_right = 1972.0
+offset_bottom = 643.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="BacktoHall2" type="Area2D" parent="."]
+position = Vector2(1169, -42)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BacktoHall2"]
+position = Vector2(-1347, 329)
+shape = SubResource("RectangleShape2D_jceb3")
+
+[node name="OntoCourt" type="Area2D" parent="."]
+script = ExtResource("11_jceb3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OntoCourt"]
+position = Vector2(991, 239)
+shape = SubResource("RectangleShape2D_56em3")
+
+[connection signal="pressed" from="BackGround/Office" to="." method="_on_office_pressed"]
+[connection signal="body_entered" from="BacktoHall2" to="." method="_on_backto_hall_2_body_entered"]

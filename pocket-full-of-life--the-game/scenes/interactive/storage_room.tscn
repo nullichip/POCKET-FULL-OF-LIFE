@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=3 uid="uid://bcxc653yw0fru"]
+
+[ext_resource type="Script" uid="uid://bpf3rg8b7uy1w" path="res://scripts/storage_room.gd" id="1_1cl3p"]
+[ext_resource type="Texture2D" uid="uid://vmhmedrphext" path="res://Assets/SCROLL-Gym/S3.png" id="2_yndsi"]
+[ext_resource type="Texture2D" uid="uid://bkjrwyp6qfph1" path="res://Assets/SCROLL-Gym/S2.png" id="3_24pyd"]
+[ext_resource type="Texture2D" uid="uid://dercoh3jqftyp" path="res://Assets/SCROLL-Gym/S1.png" id="4_giep7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1spfg"]
+animations = [{
+"frames": [{
+"duration": 2.0,
+"texture": ExtResource("2_yndsi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_24pyd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_giep7")
+}],
+"loop": false,
+"name": &"close_storage",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_giep7")
+}],
+"loop": false,
+"name": &"closed_storage",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_giep7")
+}, {
+"duration": 2.0,
+"texture": ExtResource("3_24pyd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_yndsi")
+}],
+"loop": false,
+"name": &"open_storage",
+"speed": 5.0
+}]
+
+[node name="StorageRoom" type="Node2D"]
+script = ExtResource("1_1cl3p")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = -382.0
+offset_top = -369.0
+offset_right = 386.0
+offset_bottom = 413.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_1spfg")
+animation = &"closed_storage"
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

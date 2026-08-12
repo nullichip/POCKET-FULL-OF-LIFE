@@ -84,7 +84,7 @@ scale = Vector2(0.35999653, 0.31999654)
 destination_scene_path = "res://scenes/places/classroom.tscn"
 
 [node name="GirlsLockerRoom" parent="BackGround" instance=ExtResource("7_xtf4b")]
-position = Vector2(1102, 276)
+position = Vector2(1103, 270.00003)
 scale = Vector2(0.33497074, 0.33497074)
 
 [node name="Tico" parent="." instance=ExtResource("6_220yv")]
@@ -141,3 +141,4 @@ shape = SubResource("RectangleShape2D_xtf4b")
 [connection signal="pressed" from="BackGround/EnglishRoom" to="." method="_on_english_room_pressed"]
 [connection signal="pressed" from="BackGround/MathRoom" to="." method="_on_math_room_pressed"]
 [connection signal="body_entered" from="BacktoHall1" to="." method="_on_backto_hall_1_body_entered"]
+[connection signal="body_entered" from="ToGym" to="." method="_on_to_gym_body_entered"]

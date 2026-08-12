@@ -1,13 +1,13 @@
 extends Node2D
 
-@onready var cabinet = $AnimatedSprite2D
-#const INNER_CABINET_VIEW = preload("res://scenes/interactive/inner_cabinet.tscn")
+@onready var storage = $AnimatedSprite2D
+#const INNER_STORAGE_VIEW = preload("res://scenes/interactive/inner_fridge.tscn")
 
 var is_open: bool = false
-#var spawned_UI_instance: Node = null
+var spawned_UI_instance: Node = null
 
 func _ready() -> void:
-	cabinet.play("closed_cabinet")
+	storage.play("closed_storage")
 
 func _on_texture_button_pressed() -> void:
 	var player = get_tree().get_nodes_in_group("Player")
@@ -18,7 +18,7 @@ func _on_texture_button_pressed() -> void:
 	if is_open == false:
 		if tico.is_interacting:
 			return
-		cabinet.play("open_cabinet")
+		storage.play("open_storage")
 		is_open = true
 		
 		tico.is_interacting = true
@@ -27,20 +27,20 @@ func _on_texture_button_pressed() -> void:
 		else:
 			tico.animated_sprite.play("look_away_twd_left")
 		
-		await cabinet.animation_finished
+		await storage.animation_finished
 		
-		#spawned_UI_instance = INNER_CABINET_VIEW.instantiate()
-		#var ui_layer = get_tree().current_scene.get_node("UI_Layer_Cabinet")
+		#spawned_UI_instance = INNER_STORAGE_VIEW.instantiate()
+		#var ui_layer = get_tree().current_scene.get_node("UI_Layer_Storage")
 		#ui_layer.add_child(spawned_UI_instance)
 	else:
 		#if spawned_UI_instance != null:
 			#spawned_UI_instance.queue_free()
 			#spawned_UI_instance = null
 		
-		cabinet.play("close_cabinet")
+		storage.play("close_storage")
 		is_open = false
 		
-		await cabinet.animation_finished
+		await storage.animation_finished
 		
 		tico.is_interacting = false
 		

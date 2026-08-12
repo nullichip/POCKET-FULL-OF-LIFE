@@ -30,7 +30,7 @@ func _on_texture_button_pressed() -> void:
 		await locker.animation_finished
 		
 		#spawned_UI_instance = INNER_SCHOOL_LOCKER_VIEW.instantiate()
-		#var ui_layer = get_tree().current_scene.get_node("UI_Layer_Kitchen")
+		#var ui_layer = get_tree().current_scene.get_node("UI_Layer_School_Locker")
 		#ui_layer.add_child(spawned_UI_instance)
 	else:
 		#if spawned_UI_instance != null:

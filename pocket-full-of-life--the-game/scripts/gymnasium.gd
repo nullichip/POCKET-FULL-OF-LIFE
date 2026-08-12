@@ -21,7 +21,7 @@ func _ready() -> void:
 		
 	print("--- DEBUG END ---")
 
-func _on_backto_hall_1_body_entered(body: Node2D) -> void:
+func _on_backto_hall_2_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		
 		body.is_interacting = true 
@@ -30,25 +30,12 @@ func _on_backto_hall_1_body_entered(body: Node2D) -> void:
 		else:
 			body.animated_sprite.play("idle_twd_right")
 			
-		GameManager.target_spawn_name = "FromSchoolHall2"
-		await TransitionScreen.transition_to_scene("res://scenes/places/school_hall_1.tscn", 0.0)
+		GameManager.target_spawn_name = "FromGym"
+		await TransitionScreen.transition_to_scene("res://scenes/places/school_hall_2.tscn", 0.0)
 
-func _on_to_gym_body_entered(body: Node2D) -> void:
-	if body.is_in_group("Player"):
-		
-		body.is_interacting = true 
-		if body.last_direction < 0:
-			body.animated_sprite.play("idle_twd_left")
-		else:
-			body.animated_sprite.play("idle_twd_right")
-		
-		await TransitionScreen.transition_to_scene("res://scenes/places/gymnasium.tscn", 0.0)
 
-func _on_english_room_pressed() -> void:
-	shake_item($BackGround/EnglishRoom)
-
-func _on_math_room_pressed() -> void:
-	shake_item($BackGround/MathRoom)
+func _on_office_pressed() -> void:
+	shake_item($BackGround/Office)
 
 func shake_item(target_item: Control) -> void:
 	var shake_tween = create_tween()
