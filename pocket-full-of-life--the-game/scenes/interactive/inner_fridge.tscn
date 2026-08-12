@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://bb5tybtadly0k"]
 
-[ext_resource type="Script" uid="uid://q34rxfdbtntb" path="res://inner_fridge.gd" id="1_otkln"]
+[ext_resource type="Script" uid="uid://q34rxfdbtntb" path="res://scripts/inner_fridge.gd" id="1_otkln"]
 [ext_resource type="Texture2D" uid="uid://c2s7b8jtjguvp" path="res://Assets/SCROLL-kitchen/InnerFridge.png" id="2_8xgp6"]
 [ext_resource type="Texture2D" uid="uid://cfq7hl1811xqo" path="res://Assets/SCROLL-kitchen/milk.png" id="3_fgd0e"]
 [ext_resource type="Texture2D" uid="uid://bf5bmuw1kt3s0" path="res://Assets/SCROLL-kitchen/banana.png" id="4_nejxh"]

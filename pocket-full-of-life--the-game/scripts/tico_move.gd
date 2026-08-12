@@ -56,39 +56,3 @@ func face_door() -> void:
 		animated_sprite.play("look_away_twd_left")
 	else:
 		animated_sprite.play("look_away_twd_right")
-
-func _on_home_enterance_body_entered(body: Node2D) -> void:
-	if body.is_in_group("Player"):
-		
-		body.is_interacting = true 
-		if body.last_direction < 0:
-			body.animated_sprite.play("idle_twd_left")
-		else:
-			body.animated_sprite.play("idle_twd_right")
-			
-		GameManager.target_spawn_name = "FromHouse"
-		await TransitionScreen.transition_to_scene("res://scenes/universal/crosspath1.tscn", 2.0)
-
-func _on_kitchen_enterance_body_entered(body: Node2D) -> void:
-	if body.is_in_group("Player"):
-		
-		body.is_interacting = true 
-		if body.last_direction < 0:
-			body.animated_sprite.play("idle_twd_left")
-		else:
-			body.animated_sprite.play("idle_twd_right")
-			
-		TransitionScreen.transition_to_scene("res://scenes/places/kitchen.tscn", 0.0)
-
-
-func _on_hallway_enterance_body_entered(body: Node2D) -> void:
-	if body.is_in_group("Player"):
-		
-		body.is_interacting = true 
-		if body.last_direction < 0:
-			body.animated_sprite.play("idle_twd_left")
-		else:
-			body.animated_sprite.play("idle_twd_right")
-			
-		GameManager.target_spawn_name = "KitchenSpawn"
-		await TransitionScreen.transition_to_scene("res://scenes/places/home.tscn", 0.0)

@@ -1,0 +1,108 @@
+[gd_scene load_steps=11 format=3 uid="uid://by2jn3d363x5j"]
+
+[ext_resource type="Script" uid="uid://2euipe2cql2n" path="res://outsideofthe_house.gd" id="1_flmow"]
+[ext_resource type="Texture2D" uid="uid://b0mpy2s4mycy7" path="res://Assets/Map/pixilart-layers (2)/pixil-layer-7.png" id="2_6vdgf"]
+[ext_resource type="Texture2D" uid="uid://22tx5mrsaqcc" path="res://Assets/Map/pixilart-layers (2)/pixil-layer-24.png" id="3_hlp0k"]
+[ext_resource type="PackedScene" uid="uid://cdtuwgwnvbhom" path="res://scenes/universal/pixel_tico.tscn" id="4_nqdgp"]
+[ext_resource type="Texture2D" uid="uid://ccxyp0e1nt1fj" path="res://Assets/Map/pixilart-layers (2)/house.png" id="5_miqli"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d2p60"]
+size = Vector2(75, 171)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2bofp"]
+size = Vector2(420, 127)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5mnda"]
+size = Vector2(530.5, 578)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y587g"]
+size = Vector2(784.5, 176.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ow6x8"]
+size = Vector2(352.5, 861)
+
+[node name="OutsideoftheHouse" type="Node2D"]
+script = ExtResource("1_flmow")
+
+[node name="BG" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = -72.0
+offset_top = -111.0
+offset_right = 1313.0
+offset_bottom = 767.0
+texture = ExtResource("2_6vdgf")
+
+[node name="BackGround" type="Node2D" parent="."]
+
+[node name="PixilLayer24" type="Sprite2D" parent="BackGround"]
+texture_filter = 1
+position = Vector2(1076, -110.99994)
+scale = Vector2(9.9, 9.9)
+texture = ExtResource("3_hlp0k")
+
+[node name="PixilLayer25" type="Sprite2D" parent="BackGround"]
+texture_filter = 1
+position = Vector2(932.875, -52.000004)
+scale = Vector2(6.95, 6.95)
+texture = ExtResource("3_hlp0k")
+
+[node name="PixilLayer26" type="Sprite2D" parent="BackGround"]
+texture_filter = 1
+position = Vector2(793, -86)
+scale = Vector2(8.299999, 8.3)
+texture = ExtResource("3_hlp0k")
+
+[node name="PixilLayer27" type="Sprite2D" parent="BackGround"]
+texture_filter = 1
+position = Vector2(855.00006, 407)
+scale = Vector2(8.299999, 8.3)
+texture = ExtResource("3_hlp0k")
+
+[node name="PixelTico" parent="." instance=ExtResource("4_nqdgp")]
+position = Vector2(354, 241)
+scale = Vector2(1.2000015, 1.2000015)
+
+[node name="FromPath" type="Marker2D" parent="."]
+position = Vector2(354, 241)
+
+[node name="FromInsidetheHouse" type="Marker2D" parent="."]
+position = Vector2(-21, -252)
+
+[node name="HomeEnterance" type="Area2D" parent="."]
+position = Vector2(16, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HomeEnterance"]
+position = Vector2(586, 143)
+shape = SubResource("RectangleShape2D_d2p60")
+
+[node name="House" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = -72.0
+offset_top = -111.0
+offset_right = 1313.0
+offset_bottom = 767.0
+texture = ExtResource("5_miqli")
+
+[node name="PathEnterance" type="Area2D" parent="."]
+position = Vector2(70, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PathEnterance"]
+position = Vector2(1014, 790)
+shape = SubResource("RectangleShape2D_2bofp")
+
+[node name="InvisibleWalls" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="InvisibleWalls"]
+position = Vector2(708.75, 504)
+shape = SubResource("RectangleShape2D_5mnda")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="InvisibleWalls"]
+position = Vector2(927.75, -41.25)
+shape = SubResource("RectangleShape2D_y587g")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="InvisibleWalls"]
+position = Vector2(1350.25, 412.5)
+shape = SubResource("RectangleShape2D_ow6x8")
+
+[connection signal="body_entered" from="HomeEnterance" to="." method="_on_home_enterance_body_entered"]
+[connection signal="body_entered" from="PathEnterance" to="." method="_on_path_enterance_body_entered"]

@@ -1,0 +1,249 @@
+[gd_scene load_steps=10 format=3 uid="uid://wj2is06lhtok"]
+
+[ext_resource type="Script" uid="uid://k7bfnixblyoo" path="res://scripts/path.gd" id="1_52dla"]
+[ext_resource type="Texture2D" uid="uid://dj4lfgfsdvd7b" path="res://Assets/Map/pixilart-layers (2)/pixil-layer-2.png" id="1_sw6ft"]
+[ext_resource type="PackedScene" uid="uid://cdtuwgwnvbhom" path="res://scenes/universal/pixel_tico.tscn" id="2_fqhut"]
+[ext_resource type="Texture2D" uid="uid://bavs7auvtjxqm" path="res://Assets/Map/pixilart-layers (2)/pixil-layer-21.png" id="3_5u482"]
+[ext_resource type="Texture2D" uid="uid://dbhdjv7fgbv3i" path="res://Assets/Map/pixilart-layers (2)/pixil-layer-23.png" id="4_mw7ov"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j3fm8"]
+size = Vector2(790, 1297)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iyx10"]
+size = Vector2(868.5, 1320)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_20jd4"]
+size = Vector2(346, 108)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sfkl2"]
+size = Vector2(389, 102)
+
+[node name="Path" type="Node2D"]
+script = ExtResource("1_52dla")
+
+[node name="BG2" type="ColorRect" parent="."]
+offset_left = -92.0
+offset_top = -205.0
+offset_right = 1431.0
+offset_bottom = 940.83203
+color = Color(0, 0, 0, 1)
+
+[node name="BG" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = 172.0
+offset_top = 798.75
+offset_right = 1081.8212
+offset_bottom = 1646.169
+rotation = -1.5707964
+texture = ExtResource("1_sw6ft")
+
+[node name="PixelTico" parent="." instance=ExtResource("2_fqhut")]
+position = Vector2(-15, 85)
+
+[node name="ForeGround" type="Node2D" parent="."]
+
+[node name="PixilLayer23" type="Sprite2D" parent="ForeGround"]
+texture_filter = 1
+position = Vector2(474, 158.25183)
+scale = Vector2(8.836795, 4.437653)
+texture = ExtResource("3_5u482")
+
+[node name="PixilLayer24" type="Sprite2D" parent="ForeGround"]
+texture_filter = 1
+position = Vector2(473.76556, 302.50366)
+scale = Vector2(8.836795, 4.437653)
+texture = ExtResource("3_5u482")
+
+[node name="PixilLayer25" type="Sprite2D" parent="ForeGround"]
+texture_filter = 1
+position = Vector2(473.76556, 448.50366)
+scale = Vector2(8.836795, 4.437653)
+texture = ExtResource("3_5u482")
+
+[node name="PixilLayer26" type="Sprite2D" parent="ForeGround"]
+texture_filter = 1
+position = Vector2(473.76556, 591.50366)
+scale = Vector2(8.836795, 4.437653)
+texture = ExtResource("3_5u482")
+
+[node name="PixilLayer27" type="Sprite2D" parent="ForeGround"]
+texture_filter = 1
+position = Vector2(473.76556, 733.25183)
+scale = Vector2(8.836795, 4.437653)
+texture = ExtResource("3_5u482")
+
+[node name="PixilLayer28" type="Sprite2D" parent="ForeGround"]
+texture_filter = 1
+position = Vector2(473.76556, 876.25183)
+scale = Vector2(8.836795, 4.437653)
+texture = ExtResource("3_5u482")
+
+[node name="PixilLayer31" type="Sprite2D" parent="ForeGround"]
+texture_filter = 1
+position = Vector2(696, 158.25183)
+scale = Vector2(8.836795, 4.437653)
+texture = ExtResource("3_5u482")
+flip_h = true
+
+[node name="PixilLayer32" type="Sprite2D" parent="ForeGround"]
+texture_filter = 1
+position = Vector2(695.76556, 302.50366)
+scale = Vector2(8.836795, 4.437653)
+texture = ExtResource("3_5u482")
+flip_h = true
+
+[node name="PixilLayer33" type="Sprite2D" parent="ForeGround"]
+texture_filter = 1
+position = Vector2(695.76556, 448.50366)
+scale = Vector2(8.836795, 4.437653)
+texture = ExtResource("3_5u482")
+flip_h = true
+
+[node name="PixilLayer34" type="Sprite2D" parent="ForeGround"]
+texture_filter = 1
+position = Vector2(695.76556, 591.50366)
+scale = Vector2(8.836795, 4.437653)
+texture = ExtResource("3_5u482")
+flip_h = true
+
+[node name="PixilLayer35" type="Sprite2D" parent="ForeGround"]
+texture_filter = 1
+position = Vector2(695.76556, 733.25183)
+scale = Vector2(8.836795, 4.437653)
+texture = ExtResource("3_5u482")
+flip_h = true
+
+[node name="PixilLayer36" type="Sprite2D" parent="ForeGround"]
+texture_filter = 1
+position = Vector2(695.76556, 876.25183)
+scale = Vector2(8.836795, 4.437653)
+texture = ExtResource("3_5u482")
+flip_h = true
+
+[node name="PixilLayer37" type="Sprite2D" parent="ForeGround"]
+texture_filter = 1
+position = Vector2(71, 113)
+scale = Vector2(8.71875, 8.71875)
+texture = ExtResource("4_mw7ov")
+
+[node name="PixilLayer38" type="Sprite2D" parent="ForeGround"]
+texture_filter = 1
+position = Vector2(205, 255)
+scale = Vector2(8.71875, 8.71875)
+texture = ExtResource("4_mw7ov")
+
+[node name="PixilLayer39" type="Sprite2D" parent="ForeGround"]
+texture_filter = 1
+position = Vector2(63, 401)
+scale = Vector2(8.71875, 8.71875)
+texture = ExtResource("4_mw7ov")
+
+[node name="PixilLayer40" type="Sprite2D" parent="ForeGround"]
+texture_filter = 1
+position = Vector2(1059, 645)
+scale = Vector2(8.71875, 8.71875)
+texture = ExtResource("4_mw7ov")
+
+[node name="PixilLayer41" type="Sprite2D" parent="ForeGround"]
+texture_filter = 1
+position = Vector2(1219, 359)
+scale = Vector2(8.71875, 8.71875)
+texture = ExtResource("4_mw7ov")
+
+[node name="PixilLayer42" type="Sprite2D" parent="ForeGround"]
+texture_filter = 1
+position = Vector2(1024, 265)
+scale = Vector2(8.71875, 8.71875)
+texture = ExtResource("4_mw7ov")
+
+[node name="PixilLayer43" type="Sprite2D" parent="ForeGround"]
+texture_filter = 1
+position = Vector2(931, 401.00003)
+scale = Vector2(2.921875, 4.128606)
+texture = ExtResource("4_mw7ov")
+
+[node name="PixilLayer44" type="Sprite2D" parent="ForeGround"]
+texture_filter = 1
+position = Vector2(284, 422)
+scale = Vector2(2.921875, 4.128606)
+texture = ExtResource("4_mw7ov")
+
+[node name="PixilLayer45" type="Sprite2D" parent="ForeGround"]
+texture_filter = 1
+position = Vector2(378, 38)
+scale = Vector2(2.921875, 4.128606)
+texture = ExtResource("4_mw7ov")
+
+[node name="PixilLayer46" type="Sprite2D" parent="ForeGround"]
+texture_filter = 1
+position = Vector2(834, 57)
+scale = Vector2(2.921875, 4.128606)
+texture = ExtResource("4_mw7ov")
+
+[node name="PixilLayer47" type="Sprite2D" parent="ForeGround"]
+texture_filter = 1
+position = Vector2(873, 468)
+scale = Vector2(2.921875, 4.128606)
+texture = ExtResource("4_mw7ov")
+
+[node name="PixilLayer48" type="Sprite2D" parent="ForeGround"]
+texture_filter = 1
+position = Vector2(191.00006, 577)
+scale = Vector2(2.921875, 4.128606)
+texture = ExtResource("4_mw7ov")
+
+[node name="PixilLayer49" type="Sprite2D" parent="ForeGround"]
+texture_filter = 1
+position = Vector2(406.875, 510.2539)
+scale = Vector2(2.117188, 6.7309694)
+texture = ExtResource("4_mw7ov")
+
+[node name="PixilLayer50" type="Sprite2D" parent="ForeGround"]
+texture_filter = 1
+position = Vector2(406.875, 510.2539)
+scale = Vector2(2.117188, 6.7309694)
+texture = ExtResource("4_mw7ov")
+
+[node name="PixilLayer51" type="Sprite2D" parent="ForeGround"]
+texture_filter = 1
+position = Vector2(804, 203.99997)
+scale = Vector2(2.117188, 6.7309694)
+texture = ExtResource("4_mw7ov")
+
+[node name="PixilLayer52" type="Sprite2D" parent="ForeGround"]
+texture_filter = 1
+position = Vector2(408, 206)
+scale = Vector2(2.117188, 6.7309694)
+texture = ExtResource("4_mw7ov")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ForeGround"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ForeGround/StaticBody2D"]
+position = Vector2(121, 403.5)
+shape = SubResource("RectangleShape2D_j3fm8")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="ForeGround/StaticBody2D"]
+position = Vector2(1100.75, 387)
+shape = SubResource("RectangleShape2D_iyx10")
+
+[node name="FromCrossPath" type="Marker2D" parent="."]
+position = Vector2(-15.0000305, 249)
+scale = Vector2(2.117188, 6.7309694)
+
+[node name="FromHouse" type="Marker2D" parent="."]
+position = Vector2(-15, -230)
+
+[node name="HouseEnter" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HouseEnter"]
+position = Vector2(594, -43)
+shape = SubResource("RectangleShape2D_20jd4")
+
+[node name="CrossPathEnter" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CrossPathEnter"]
+position = Vector2(591, 721)
+shape = SubResource("RectangleShape2D_sfkl2")
+
+[connection signal="body_entered" from="HouseEnter" to="." method="_on_house_enter_body_entered"]
+[connection signal="body_entered" from="CrossPathEnter" to="." method="_on_cross_path_enter_body_entered"]

@@ -178,9 +178,9 @@ texture = ExtResource("7_ljncp")
 position = Vector2(680.5, 726)
 shape = SubResource("RectangleShape2D_jmmi5")
 
-[node name="HomePathEnter" type="Area2D" parent="."]
+[node name="PathEnter" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HomePathEnter"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PathEnter"]
 position = Vector2(690, -91)
 shape = SubResource("RectangleShape2D_lsqj0")
 
@@ -196,7 +196,7 @@ shape = SubResource("RectangleShape2D_6hu4h")
 position = Vector2(1333.5, 289.5)
 shape = SubResource("RectangleShape2D_lghg4")
 
-[node name="FromHouse" type="Marker2D" parent="."]
+[node name="FromPath" type="Marker2D" parent="."]
 position = Vector2(-149, -404)
 
 [node name="From???" type="Marker2D" parent="."]
@@ -227,6 +227,6 @@ position = Vector2(1121, -24.5)
 shape = SubResource("RectangleShape2D_svlia")
 
 [connection signal="body_entered" from="SchoolPathEnter" to="." method="_on_school_path_enter_body_entered"]
-[connection signal="body_entered" from="HomePathEnter" to="." method="_on_home_path_enter_body_entered"]
+[connection signal="body_entered" from="PathEnter" to="." method="_on_path_enter_body_entered"]
 [connection signal="body_entered" from="???Enter" to="." method="_on_enter_body_entered"]
 [connection signal="body_entered" from="ParkEnter" to="." method="_on_park_enter_body_entered"]

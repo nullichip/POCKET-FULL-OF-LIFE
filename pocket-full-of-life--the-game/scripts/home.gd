@@ -20,3 +20,38 @@ func _ready() -> void:
 		GameManager.target_spawn_name = ""
 		
 	print("--- DEBUG END ---")
+
+func _on_home_enterance_body_entered(body: Node2D) -> void:
+	if body.is_in_group("Player"):
+		
+		body.is_interacting = true 
+		if body.last_direction < 0:
+			body.animated_sprite.play("idle_twd_left")
+		else:
+			body.animated_sprite.play("idle_twd_right")
+			
+		GameManager.target_spawn_name = "FromInsidetheHouse"
+		await TransitionScreen.transition_to_scene("res://scenes/places/outsideofthe_house.tscn", 2.0)
+
+func _on_kitchen_enterance_body_entered(body: Node2D) -> void:
+	if body.is_in_group("Player"):
+		
+		body.is_interacting = true 
+		if body.last_direction < 0:
+			body.animated_sprite.play("idle_twd_left")
+		else:
+			body.animated_sprite.play("idle_twd_right")
+			
+		TransitionScreen.transition_to_scene("res://scenes/places/kitchen.tscn", 0.0)
+
+func _on_hallway_enterance_body_entered(body: Node2D) -> void:
+	if body.is_in_group("Player"):
+		
+		body.is_interacting = true 
+		if body.last_direction < 0:
+			body.animated_sprite.play("idle_twd_left")
+		else:
+			body.animated_sprite.play("idle_twd_right")
+			
+		GameManager.target_spawn_name = "KitchenSpawn"
+		await TransitionScreen.transition_to_scene("res://scenes/places/home.tscn", 0.0)

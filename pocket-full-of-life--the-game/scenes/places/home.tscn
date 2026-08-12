@@ -154,8 +154,8 @@ position = Vector2(489.99997, 286)
 scale = Vector2(0.3640625, 0.26759258)
 texture = ExtResource("9_orh08")
 
-[connection signal="body_entered" from="HomeEnterance" to="Tico" method="_on_home_enterance_body_entered"]
-[connection signal="body_entered" from="KitchenEnterance" to="Tico" method="_on_kitchen_enterance_body_entered"]
+[connection signal="body_entered" from="HomeEnterance" to="." method="_on_home_enterance_body_entered"]
+[connection signal="body_entered" from="KitchenEnterance" to="." method="_on_kitchen_enterance_body_entered"]
 
 [editable path="InteractivePainting"]
 [editable path="InteractivePainting2"]
