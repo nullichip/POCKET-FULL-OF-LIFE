@@ -49,11 +49,13 @@ dialogue_text = "I...I can't see the letters..."
 [node name="Sprite2D" parent="InteractivePainting" index="0"]
 texture = ExtResource("4_ubdrg")
 
-[node name="Dishwasher" parent="." instance=ExtResource("5_sjsiy")]
+[node name="BackGround" type="Node2D" parent="."]
+
+[node name="Dishwasher" parent="BackGround" instance=ExtResource("5_sjsiy")]
 position = Vector2(391.00003, 331)
 scale = Vector2(0.31999755, 0.31999755)
 
-[node name="Fridge" parent="." instance=ExtResource("6_6gk1o")]
+[node name="Fridge" parent="BackGround" instance=ExtResource("6_6gk1o")]
 position = Vector2(744, 264.00003)
 scale = Vector2(0.3199994, 0.3199994)
 

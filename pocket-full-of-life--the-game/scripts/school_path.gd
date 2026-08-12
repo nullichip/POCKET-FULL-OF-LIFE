@@ -25,8 +25,8 @@ func _on_school_enterance_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		body.velocity = Vector2.ZERO
 		
-		GameManager.target_spawn_name = "FromOutside"
-		await TransitionScreen.transition_to_scene("res://scenes/places/lockerhallway.tscn", 0.0)
+		GameManager.target_spawn_name = "FromSchoolEnterance"
+		await TransitionScreen.transition_to_scene("res://scenes/places/school_hall_1.tscn", 0.0)
 
 func _on_cross_road_enterance_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
