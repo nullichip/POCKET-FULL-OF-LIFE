@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bnlp07k066m0h"]
+[gd_scene load_steps=15 format=3 uid="uid://bnlp07k066m0h"]
 
 [ext_resource type="Script" uid="uid://co2lfdp5hmoht" path="res://scripts/home.gd" id="1_22wlk"]
 [ext_resource type="Texture2D" uid="uid://drxptv3e701nt" path="res://Assets/SCROLL-Home Enterance/Home.png" id="2_a7mac"]
@@ -12,14 +12,17 @@
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_u4wd2"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_uhids"]
-size = Vector2(292, 764)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_reixx"]
 size = Vector2(109.25, 313)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vc333"]
 size = Vector2(90.75, 360)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_22wlk"]
+size = Vector2(694, 942)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a7mac"]
+size = Vector2(1261, 1051)
 
 [node name="Home" type="Node2D"]
 script = ExtResource("1_22wlk")
@@ -40,47 +43,49 @@ position = Vector2(576, 323)
 scale = Vector2(0.3, 0.3)
 texture = SubResource("CompressedTexture2D_u4wd2")
 
-[node name="InteractivePainting" parent="." instance=ExtResource("3_n55ij")]
+[node name="BackGround" type="Node2D" parent="."]
+
+[node name="InteractivePainting" parent="BackGround" instance=ExtResource("3_n55ij")]
 position = Vector2(25, 158)
 dialogue_text = "I never knew what this painting meant..."
 
-[node name="Sprite2D" parent="InteractivePainting" index="0"]
+[node name="Sprite2D" parent="BackGround/InteractivePainting" index="0"]
 position = Vector2(711.99994, 82.000015)
 
-[node name="CollisionShape2D" parent="InteractivePainting" index="1"]
+[node name="CollisionShape2D" parent="BackGround/InteractivePainting" index="1"]
 position = Vector2(712, 323)
 
-[node name="InteractivePainting2" parent="." instance=ExtResource("3_n55ij")]
+[node name="InteractivePainting2" parent="BackGround" instance=ExtResource("3_n55ij")]
 position = Vector2(25, 110)
 dialogue_text = "Was this 2 years ago...or was it 3..."
 
-[node name="Sprite2D" parent="InteractivePainting2" index="0"]
+[node name="Sprite2D" parent="BackGround/InteractivePainting2" index="0"]
 position = Vector2(314, 131.00002)
 texture = ExtResource("4_otpjv")
 
-[node name="CollisionShape2D" parent="InteractivePainting2" index="1"]
+[node name="CollisionShape2D" parent="BackGround/InteractivePainting2" index="1"]
 position = Vector2(314, 323)
 
-[node name="InteractivePainting3" parent="." instance=ExtResource("3_n55ij")]
+[node name="InteractivePainting3" parent="BackGround" instance=ExtResource("3_n55ij")]
 position = Vector2(-167, 110)
 dialogue_text = "what pretty petals..."
 
-[node name="Sprite2D" parent="InteractivePainting3" index="0"]
+[node name="Sprite2D" parent="BackGround/InteractivePainting3" index="0"]
 position = Vector2(314, 131.00002)
 texture = ExtResource("5_0fbcy")
 
-[node name="CollisionShape2D" parent="InteractivePainting3" index="1"]
+[node name="CollisionShape2D" parent="BackGround/InteractivePainting3" index="1"]
 position = Vector2(314, 323)
 
-[node name="InteractivePainting4" parent="." instance=ExtResource("3_n55ij")]
+[node name="InteractivePainting4" parent="BackGround" instance=ExtResource("3_n55ij")]
 position = Vector2(-113, 110)
 dialogue_text = "wait...no, it can't be..."
 
-[node name="Sprite2D" parent="InteractivePainting4" index="0"]
+[node name="Sprite2D" parent="BackGround/InteractivePainting4" index="0"]
 position = Vector2(314, 131.00002)
 texture = ExtResource("5_0fbcy")
 
-[node name="CollisionShape2D" parent="InteractivePainting4" index="1"]
+[node name="CollisionShape2D" parent="BackGround/InteractivePainting4" index="1"]
 position = Vector2(314, 323)
 
 [node name="Hallway" parent="." instance=ExtResource("6_8vvuq")]
@@ -88,16 +93,6 @@ position = Vector2(-62, 18)
 
 [node name="Tico" parent="." instance=ExtResource("7_n2b61")]
 position = Vector2(568, 479)
-
-[node name="InvisibleWall" type="StaticBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="InvisibleWall"]
-position = Vector2(1396, 295)
-shape = SubResource("RectangleShape2D_uhids")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="InvisibleWall"]
-position = Vector2(-416, 281)
-shape = SubResource("RectangleShape2D_uhids")
 
 [node name="HomeEnterance" type="Area2D" parent="."]
 position = Vector2(-62, 118)
@@ -119,30 +114,21 @@ texture = ExtResource("8_c5nt7")
 expand_mode = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HomeEnterance"]
-position = Vector2(1281, 178)
+position = Vector2(1321, 162)
 shape = SubResource("RectangleShape2D_reixx")
 
-[node name="KitchenEnterance" type="Area2D" parent="."]
+[node name="LivingRoomEnterance" type="Area2D" parent="."]
 
-[node name="ColorRect" type="ColorRect" parent="KitchenEnterance"]
+[node name="ColorRect" type="ColorRect" parent="LivingRoomEnterance"]
 offset_left = -871.0
 offset_top = -3.0
 offset_bottom = 650.0
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KitchenEnterance"]
-position = Vector2(-81, 260)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LivingRoomEnterance"]
+position = Vector2(-113, 260)
 shape = SubResource("RectangleShape2D_vc333")
-
-[node name="BedroomSpawn" type="Marker2D" parent="."]
-position = Vector2(230, 481)
-
-[node name="OutsideSpawn" type="Marker2D" parent="."]
-position = Vector2(568, 481)
-
-[node name="KitchenSpawn" type="Marker2D" parent="."]
-position = Vector2(-261, 479)
 
 [node name="Frame" type="ParallaxBackground" parent="."]
 
@@ -154,10 +140,29 @@ position = Vector2(489.99997, 286)
 scale = Vector2(0.3640625, 0.26759258)
 texture = ExtResource("9_orh08")
 
-[connection signal="body_entered" from="HomeEnterance" to="." method="_on_home_enterance_body_entered"]
-[connection signal="body_entered" from="KitchenEnterance" to="." method="_on_kitchen_enterance_body_entered"]
+[node name="InvisibleWalls" type="StaticBody2D" parent="."]
 
-[editable path="InteractivePainting"]
-[editable path="InteractivePainting2"]
-[editable path="InteractivePainting3"]
-[editable path="InteractivePainting4"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InvisibleWalls"]
+position = Vector2(-499, 342)
+shape = SubResource("RectangleShape2D_22wlk")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="InvisibleWalls"]
+position = Vector2(1918.5, 326.5)
+shape = SubResource("RectangleShape2D_a7mac")
+
+[node name="BedroomSpawn" type="Marker2D" parent="."]
+position = Vector2(230, 481)
+
+[node name="OutsideSpawn" type="Marker2D" parent="."]
+position = Vector2(568, 481)
+
+[node name="LivingRoomSpawn" type="Marker2D" parent="."]
+position = Vector2(-261, 479)
+
+[connection signal="body_entered" from="HomeEnterance" to="." method="_on_home_enterance_body_entered"]
+[connection signal="body_entered" from="LivingRoomEnterance" to="." method="_on_living_room_enterance_body_entered"]
+
+[editable path="BackGround/InteractivePainting"]
+[editable path="BackGround/InteractivePainting2"]
+[editable path="BackGround/InteractivePainting3"]
+[editable path="BackGround/InteractivePainting4"]

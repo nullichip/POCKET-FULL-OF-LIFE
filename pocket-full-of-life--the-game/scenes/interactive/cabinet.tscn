@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=3 uid="uid://co1yixyigpx36"]
+
+[ext_resource type="Script" uid="uid://b4yxc3pnxi8yq" path="res://scripts/cabinet.gd" id="1_8fh1s"]
+[ext_resource type="Texture2D" uid="uid://gevsvte54mx3" path="res://Assets/livingroom/C3.png" id="2_0pjwr"]
+[ext_resource type="Texture2D" uid="uid://rygejb3jbewm" path="res://Assets/livingroom/C2.png" id="3_xj6xg"]
+[ext_resource type="Texture2D" uid="uid://d36o1csa082qh" path="res://Assets/livingroom/C1.png" id="4_0gtcx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vysob"]
+animations = [{
+"frames": [{
+"duration": 2.0,
+"texture": ExtResource("2_0pjwr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_xj6xg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0gtcx")
+}],
+"loop": false,
+"name": &"close_cabinet",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_0gtcx")
+}],
+"loop": false,
+"name": &"closed_cabinet",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_0gtcx")
+}, {
+"duration": 2.0,
+"texture": ExtResource("3_xj6xg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_0pjwr")
+}],
+"loop": false,
+"name": &"open_cabinet",
+"speed": 5.0
+}]
+
+[node name="Cabinet" type="Node2D"]
+script = ExtResource("1_8fh1s")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = -216.0
+offset_top = -386.0
+offset_right = 222.0
+offset_bottom = 355.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_vysob")
+animation = &"closed_cabinet"
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

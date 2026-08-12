@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://be4bxst4bsx51"]
+[gd_scene load_steps=16 format=3 uid="uid://be4bxst4bsx51"]
 
 [ext_resource type="Script" uid="uid://co2lfdp5hmoht" path="res://scripts/home.gd" id="1_g275a"]
 [ext_resource type="Texture2D" uid="uid://2rk08fcqh5bq" path="res://Assets/SCROLL-kitchen/kitchen.png" id="2_losyq"]
@@ -14,11 +14,14 @@
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_u4wd2"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bs8bs"]
+size = Vector2(178.5, 474)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uhids"]
 size = Vector2(333, 686)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bs8bs"]
-size = Vector2(178.5, 474)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g275a"]
+size = Vector2(565, 842)
 
 [node name="Kitchen" type="Node2D"]
 script = ExtResource("1_g275a")
@@ -92,31 +95,10 @@ position = Vector2(654.2284, 276.36334)
 scale = Vector2(0.33293146, 0.29292902)
 texture = ExtResource("10_je4fj")
 
-[node name="InvisibleWall" type="StaticBody2D" parent="."]
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="InvisibleWall"]
-position = Vector2(22.5, 343)
-shape = SubResource("RectangleShape2D_uhids")
-
-[node name="ColorRect" type="ColorRect" parent="InvisibleWall"]
-offset_left = 1196.0
-offset_top = -3.0
-offset_right = 2393.0
-offset_bottom = 682.0
-mouse_filter = 2
-color = Color(0, 0, 0, 1)
-
-[node name="ColorRect2" type="ColorRect" parent="InvisibleWall"]
-offset_left = -286.0
-offset_right = 34.0
-offset_bottom = 685.0
-mouse_filter = 2
-color = Color(0, 0, 0, 1)
-
-[node name="HallwayEnterance" type="Area2D" parent="."]
+[node name="LivingRoomEnterance(K)" type="Area2D" parent="."]
 position = Vector2(-12, 0)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HallwayEnterance"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LivingRoomEnterance(K)"]
 position = Vector2(1310, 261)
 shape = SubResource("RectangleShape2D_bs8bs")
 
@@ -133,6 +115,23 @@ texture = ExtResource("11_kdeeo")
 [node name="UI_Layer_Kitchen" type="CanvasLayer" parent="."]
 layer = 10
 
-[connection signal="body_entered" from="HallwayEnterance" to="." method="_on_hallway_enterance_body_entered"]
+[node name="InvisibleWall" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="InvisibleWall"]
+position = Vector2(22.5, 343)
+shape = SubResource("RectangleShape2D_uhids")
+
+[node name="ColorRect2" type="ColorRect" parent="InvisibleWall"]
+offset_left = -286.0
+offset_right = 34.0
+offset_bottom = 685.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="InvisibleWall"]
+position = Vector2(1572.5, 350)
+shape = SubResource("RectangleShape2D_g275a")
+
+[connection signal="body_entered" from="LivingRoomEnterance(K)" to="." method="_on_living_room_enterance_k_body_entered"]
 
 [editable path="InteractivePainting"]

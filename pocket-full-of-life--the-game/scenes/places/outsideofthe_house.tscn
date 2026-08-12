@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://by2jn3d363x5j"]
 
-[ext_resource type="Script" uid="uid://2euipe2cql2n" path="res://outsideofthe_house.gd" id="1_flmow"]
+[ext_resource type="Script" uid="uid://2euipe2cql2n" path="res://scripts/outsideofthe_house.gd" id="1_flmow"]
 [ext_resource type="Texture2D" uid="uid://b0mpy2s4mycy7" path="res://Assets/Map/pixilart-layers (2)/pixil-layer-7.png" id="2_6vdgf"]
 [ext_resource type="Texture2D" uid="uid://22tx5mrsaqcc" path="res://Assets/Map/pixilart-layers (2)/pixil-layer-24.png" id="3_hlp0k"]
 [ext_resource type="PackedScene" uid="uid://cdtuwgwnvbhom" path="res://scenes/universal/pixel_tico.tscn" id="4_nqdgp"]

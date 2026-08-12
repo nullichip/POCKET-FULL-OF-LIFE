@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=3 uid="uid://bi4rmm05q50rq"]
 
-[ext_resource type="Script" uid="uid://dbys5kepc6ndu" path="res://unknown_area.gd" id="1_y3spg"]
+[ext_resource type="Script" uid="uid://dbys5kepc6ndu" path="res://scripts/unknown_area.gd" id="1_y3spg"]
 [ext_resource type="Texture2D" uid="uid://dj4lfgfsdvd7b" path="res://Assets/Map/pixilart-layers (2)/pixil-layer-2.png" id="2_b8o5p"]
 [ext_resource type="PackedScene" uid="uid://cdtuwgwnvbhom" path="res://scenes/universal/pixel_tico.tscn" id="3_6lxdg"]
 [ext_resource type="Texture2D" uid="uid://22tx5mrsaqcc" path="res://Assets/Map/pixilart-layers (2)/pixil-layer-24.png" id="3_rqh6n"]
@@ -158,7 +158,7 @@ scale = Vector2(4.040004, 4.040004)
 sprite_frames = SubResource("SpriteFrames_233td")
 animation = &"entity"
 autoplay = "entity"
-frame_progress = 0.90938115
+frame_progress = 0.41381583
 flip_h = true
 
 [node name="Glitch" type="AnimatedSprite2D" parent="."]
@@ -168,7 +168,7 @@ rotation = 3.1415927
 scale = Vector2(8.729188, 8.729188)
 sprite_frames = SubResource("SpriteFrames_4kl8o")
 autoplay = "default"
-frame_progress = 0.80894697
+frame_progress = 0.81782526
 
 [node name="ForeGround" type="Node2D" parent="."]
 

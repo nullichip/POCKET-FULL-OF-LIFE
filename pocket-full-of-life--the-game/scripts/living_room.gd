@@ -21,7 +21,7 @@ func _ready() -> void:
 		
 	print("--- DEBUG END ---")
 
-func _on_home_enterance_body_entered(body: Node2D) -> void:
+func _on_enter_kitchen_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		
 		body.is_interacting = true 
@@ -30,22 +30,10 @@ func _on_home_enterance_body_entered(body: Node2D) -> void:
 		else:
 			body.animated_sprite.play("idle_twd_right")
 			
-		GameManager.target_spawn_name = "FromInsidetheHouse"
-		await TransitionScreen.transition_to_scene("res://scenes/places/outsideofthe_house.tscn", 2.0)
+		await TransitionScreen.transition_to_scene("res://scenes/places/kitchen.tscn", 0.0)
 
-func _on_living_room_enterance_body_entered(body: Node2D) -> void:
-	if body.is_in_group("Player"):
-		
-		body.is_interacting = true 
-		if body.last_direction < 0:
-			body.animated_sprite.play("idle_twd_left")
-		else:
-			body.animated_sprite.play("idle_twd_right")
-			
-		GameManager.target_spawn_name = "HomeHallwaySpawn"
-		await TransitionScreen.transition_to_scene("res://scenes/places/living_room.tscn", 0.0)
 
-func _on_living_room_enterance_k_body_entered(body: Node2D) -> void:
+func _on_enter_home_hallway_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		
 		body.is_interacting = true 
@@ -54,5 +42,5 @@ func _on_living_room_enterance_k_body_entered(body: Node2D) -> void:
 		else:
 			body.animated_sprite.play("idle_twd_right")
 			
-		GameManager.target_spawn_name = "KitchenSpawn"
-		await TransitionScreen.transition_to_scene("res://scenes/places/living_room.tscn", 0.0)
+		GameManager.target_spawn_name = "LivingRoomSpawn"
+		await TransitionScreen.transition_to_scene("res://scenes/places/home.tscn", 0.0)
