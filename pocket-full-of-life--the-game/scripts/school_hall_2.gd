@@ -42,6 +42,7 @@ func _on_to_gym_body_entered(body: Node2D) -> void:
 		else:
 			body.animated_sprite.play("idle_twd_right")
 		
+		GameManager.target_spawn_name = "FromHall"
 		await TransitionScreen.transition_to_scene("res://scenes/places/gymnasium.tscn", 0.0)
 
 func _on_english_room_pressed() -> void:

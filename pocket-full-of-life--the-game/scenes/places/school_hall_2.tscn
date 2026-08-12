@@ -86,9 +86,11 @@ destination_scene_path = "res://scenes/places/classroom.tscn"
 [node name="GirlsLockerRoom" parent="BackGround" instance=ExtResource("7_xtf4b")]
 position = Vector2(1103, 270.00003)
 scale = Vector2(0.33497074, 0.33497074)
+destination_scene_path = "res://scenes/places/locker_room.tscn"
+target_spawn_node_name = "FromHall2"
 
 [node name="Tico" parent="." instance=ExtResource("6_220yv")]
-position = Vector2(-178, 477)
+position = Vector2(792, 477)
 
 [node name="Frame" type="ParallaxBackground" parent="."]
 
@@ -125,6 +127,9 @@ position = Vector2(792, 477)
 
 [node name="FromClassroom" type="Marker2D" parent="."]
 position = Vector2(-178, 477)
+
+[node name="FromLockerRoom" type="Marker2D" parent="."]
+position = Vector2(792, 477)
 
 [node name="BacktoHall1" type="Area2D" parent="."]
 

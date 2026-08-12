@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://hwqxvca1fiw8"]
+[gd_scene load_steps=18 format=3 uid="uid://hwqxvca1fiw8"]
 
 [ext_resource type="Script" uid="uid://bq6hsws5g1lg5" path="res://scripts/gymnasium.gd" id="1_pvasr"]
 [ext_resource type="Texture2D" uid="uid://dn4t6y60trhlw" path="res://Assets/SCROLL-Gym/wallpaper-gym.png" id="2_hsqul"]
@@ -8,8 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://6cp2vuenj0ek" path="res://Assets/universal/Frame.png" id="4_n0qo2"]
 [ext_resource type="Texture2D" uid="uid://cf38h6gqmenhh" path="res://Assets/SCROLL-Gym/vb cart 2.png" id="5_jceb3"]
 [ext_resource type="Texture2D" uid="uid://uyjvjsnng02q" path="res://Assets/SCROLL-Gym/vb.png" id="6_56em3"]
-[ext_resource type="Texture2D" uid="uid://w4iu4jhp34ss" path="res://Assets/SCROLL-Gym/whiteboard.png" id="7_xn06h"]
 [ext_resource type="Texture2D" uid="uid://ctepufx7vbd78" path="res://Assets/SCROLL-Gym/athletics office door.png" id="8_bkipu"]
+[ext_resource type="PackedScene" uid="uid://bmaxh8ysxfnko" path="res://scenes/interactive/white_board.tscn" id="8_jceb3"]
 [ext_resource type="Script" uid="uid://chgnoqmysvnih" path="res://scripts/onto_court.gd" id="11_jceb3"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_31umq"]
@@ -23,8 +23,11 @@ size = Vector2(615.5, 819)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jceb3"]
 size = Vector2(178, 507)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xn06h"]
+size = Vector2(237, 659)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_56em3"]
-size = Vector2(456, 324)
+size = Vector2(389, 324)
 
 [node name="Gymnasium" type="Node2D"]
 script = ExtResource("1_pvasr")
@@ -51,11 +54,6 @@ texture = SubResource("CompressedTexture2D_31umq")
 [node name="StorageRoom" parent="BackGround" instance=ExtResource("3_hsqul")]
 position = Vector2(523, 283)
 scale = Vector2(0.2327834, 0.2327834)
-
-[node name="Whiteboard" type="Sprite2D" parent="BackGround"]
-position = Vector2(311.00003, 250.00002)
-scale = Vector2(0.33501777, 0.29493165)
-texture = ExtResource("7_xn06h")
 
 [node name="Office" type="TextureButton" parent="BackGround"]
 offset_left = 48.000004
@@ -98,8 +96,12 @@ rotation = -1.2962724
 scale = Vector2(0.34455806, 0.34455806)
 texture = ExtResource("6_56em3")
 
+[node name="WhiteBoard" parent="BackGround" instance=ExtResource("8_jceb3")]
+position = Vector2(313, 239)
+scale = Vector2(0.26360804, 0.26360804)
+
 [node name="Tico" parent="." instance=ExtResource("3_1to4h")]
-position = Vector2(-198, 477)
+position = Vector2(784, 477)
 
 [node name="Frame" type="ParallaxBackground" parent="."]
 
@@ -125,7 +127,7 @@ mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="InvisibleWall"]
-position = Vector2(1592.75, 338.5)
+position = Vector2(1628, 334)
 shape = SubResource("RectangleShape2D_ghird")
 
 [node name="ColorRect3" type="ColorRect" parent="InvisibleWall"]
@@ -143,12 +145,25 @@ position = Vector2(1169, -42)
 position = Vector2(-1347, 329)
 shape = SubResource("RectangleShape2D_jceb3")
 
+[node name="ToLockers" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ToLockers"]
+position = Vector2(1358, 306)
+shape = SubResource("RectangleShape2D_xn06h")
+
 [node name="OntoCourt" type="Area2D" parent="."]
 script = ExtResource("11_jceb3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="OntoCourt"]
-position = Vector2(991, 239)
+position = Vector2(957.5, 239)
 shape = SubResource("RectangleShape2D_56em3")
+
+[node name="FromHall" type="Marker2D" parent="."]
+position = Vector2(-198, 477)
+
+[node name="FromLockerRoom" type="Marker2D" parent="."]
+position = Vector2(784, 477)
 
 [connection signal="pressed" from="BackGround/Office" to="." method="_on_office_pressed"]
 [connection signal="body_entered" from="BacktoHall2" to="." method="_on_backto_hall_2_body_entered"]
+[connection signal="body_entered" from="ToLockers" to="." method="_on_to_lockers_body_entered"]

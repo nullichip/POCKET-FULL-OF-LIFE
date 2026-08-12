@@ -57,6 +57,6 @@ offset_bottom = 284.0
 position = Vector2(0, -12.499979)
 scale = Vector2(1, 0.9742351)
 sprite_frames = SubResource("SpriteFrames_2jhrd")
-animation = &"closed_school_locker"
+animation = &"open_school_locker"
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

@@ -2,6 +2,7 @@ extends Area2D
 
 @export var prompt_text: String = "Example..."
 @export var destination_scene_path: String = ""
+@export var target_spawn_node_name: String = ""
 var is_player_near: bool = false
 
 @onready var door_sprite = get_node_or_null("AnimatedSprite2D")
@@ -44,7 +45,10 @@ func start_interaction() -> void:
 	
 	if player_said_yes:
 		if destination_scene_path != "":
-			await TransitionScreen.transition_to_scene(destination_scene_path)
+			if target_spawn_node_name != "":
+				GameManager.target_spawn_name = target_spawn_node_name
+			
+			await TransitionScreen.transition_to_scene(destination_scene_path, 0.0)
 		else:
 			print("Error: you forgot to set a destination point")
 	else:

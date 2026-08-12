@@ -1,0 +1,182 @@
+[gd_scene load_steps=17 format=3 uid="uid://fwhqnfvyyxot"]
+
+[ext_resource type="Script" uid="uid://dsr8uyolak83m" path="res://scripts/locker_room.gd" id="1_e0e6a"]
+[ext_resource type="Texture2D" uid="uid://c4nxfi7stwblp" path="res://Assets/school hall 1/school hallway and lockerroom.png" id="2_go8g3"]
+[ext_resource type="Texture2D" uid="uid://b8rldvvr1li7t" path="res://Assets/school hall 1/3 lockers.png" id="3_l5vk7"]
+[ext_resource type="PackedScene" uid="uid://b53r4vslu8q5n" path="res://scenes/universal/tico_walk_sports.tscn" id="3_rs18m"]
+[ext_resource type="Texture2D" uid="uid://6cp2vuenj0ek" path="res://Assets/universal/Frame.png" id="4_40i8o"]
+[ext_resource type="PackedScene" uid="uid://dyqmf8uwfas81" path="res://scenes/interactive/gym_locker.tscn" id="4_ahmrt"]
+[ext_resource type="Texture2D" uid="uid://cschb0dh3xwtm" path="res://Assets/locker room/bench 1.png" id="5_7xcwe"]
+[ext_resource type="Texture2D" uid="uid://dxb1k41htvlsr" path="res://Assets/locker room/bench 2.png" id="6_lx3hr"]
+[ext_resource type="Texture2D" uid="uid://voak6e403jis" path="res://Assets/locker room/towel.png" id="7_b77vr"]
+[ext_resource type="Texture2D" uid="uid://bo1oucmg0bk74" path="res://Assets/locker room/waterbottles.png" id="8_00lud"]
+[ext_resource type="Texture2D" uid="uid://c42spfwgobs6c" path="res://Assets/locker room/waterbottle.png" id="9_wu4o0"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ycs7b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e22dq"]
+size = Vector2(376.5, 788.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_enmcc"]
+size = Vector2(615.5, 819)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l5vk7"]
+size = Vector2(219, 580)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ahmrt"]
+size = Vector2(233, 538)
+
+[node name="LockerRoom" type="Node2D"]
+script = ExtResource("1_e0e6a")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(4.7683716e-07, -36)
+scale = Vector2(0.35104167, 0.2736111)
+texture = ExtResource("2_go8g3")
+centered = false
+flip_h = true
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(576, 323)
+scale = Vector2(0.3, 0.3)
+texture = SubResource("CompressedTexture2D_ycs7b")
+
+[node name="ColorRect" type="ColorRect" parent="ParallaxBackground/ParallaxLayer"]
+offset_left = -228.0
+offset_top = -3.0
+offset_right = 21.0
+offset_bottom = 445.0
+color = Color(0.3529412, 0.35686275, 0.29803923, 1)
+
+[node name="BackGround" type="Node2D" parent="."]
+position = Vector2(40, 0)
+
+[node name="3Lockers2" type="Sprite2D" parent="BackGround"]
+position = Vector2(529.0032, 280.50003)
+scale = Vector2(0.2246289, 0.31754386)
+texture = ExtResource("3_l5vk7")
+
+[node name="3Lockers3" type="Sprite2D" parent="BackGround"]
+position = Vector2(736.0032, 280.5)
+scale = Vector2(0.2246289, 0.31754386)
+texture = ExtResource("3_l5vk7")
+
+[node name="3Lockers4" type="Sprite2D" parent="BackGround"]
+position = Vector2(67, 282.00003)
+scale = Vector2(0.2246289, 0.31754386)
+texture = ExtResource("3_l5vk7")
+
+[node name="3Lockers5" type="Sprite2D" parent="BackGround"]
+position = Vector2(1042, 282)
+scale = Vector2(0.2246289, 0.31754386)
+texture = ExtResource("3_l5vk7")
+
+[node name="GymLocker" parent="BackGround" instance=ExtResource("4_ahmrt")]
+position = Vector2(667, 273)
+scale = Vector2(0.24000487, 0.32)
+
+[node name="Bench1" type="Sprite2D" parent="BackGround"]
+position = Vector2(296, 364)
+scale = Vector2(0.29944357, 0.29944357)
+texture = ExtResource("5_7xcwe")
+
+[node name="Bench2" type="Sprite2D" parent="BackGround"]
+position = Vector2(646, 350)
+scale = Vector2(0.39999998, 0.39999998)
+texture = ExtResource("6_lx3hr")
+
+[node name="Towel" type="Sprite2D" parent="BackGround"]
+position = Vector2(251.00002, 352)
+rotation = -0.019631512
+scale = Vector2(0.7759523, 0.50215596)
+texture = ExtResource("7_b77vr")
+
+[node name="Towel2" type="Sprite2D" parent="BackGround"]
+position = Vector2(500, 200.00003)
+rotation = -0.019631512
+scale = Vector2(0.6048673, 0.3308243)
+texture = ExtResource("7_b77vr")
+flip_h = true
+
+[node name="Towel3" type="Sprite2D" parent="BackGround"]
+position = Vector2(1057, 197)
+rotation = -0.019631512
+scale = Vector2(0.9778802, 0.4018752)
+texture = ExtResource("7_b77vr")
+flip_h = true
+
+[node name="Waterbottles" type="Sprite2D" parent="BackGround"]
+position = Vector2(363.99997, 326.99997)
+scale = Vector2(0.29385966, 0.29385966)
+texture = ExtResource("8_00lud")
+
+[node name="Waterbottles2" type="Sprite2D" parent="BackGround"]
+position = Vector2(847, 359)
+scale = Vector2(0.29385966, 0.29385966)
+texture = ExtResource("8_00lud")
+
+[node name="Waterbottles3" type="Sprite2D" parent="BackGround"]
+position = Vector2(960, 175)
+scale = Vector2(0.29385966, 0.29385966)
+texture = ExtResource("8_00lud")
+
+[node name="Waterbottle" type="Sprite2D" parent="BackGround"]
+position = Vector2(801, 182.00002)
+rotation = -1.5818737
+scale = Vector2(0.29053032, 0.29053032)
+texture = ExtResource("9_wu4o0")
+
+[node name="Waterbottle2" type="Sprite2D" parent="BackGround"]
+position = Vector2(164.00006, 372)
+rotation = -1.5818737
+scale = Vector2(0.29053032, 0.29053032)
+texture = ExtResource("9_wu4o0")
+
+[node name="Tico" parent="." instance=ExtResource("3_rs18m")]
+position = Vector2(790, 477)
+
+[node name="Frame" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Frame"]
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Frame/ParallaxLayer"]
+position = Vector2(489.99997, 286)
+scale = Vector2(0.3640625, 0.26759258)
+texture = ExtResource("4_40i8o")
+
+[node name="InvisibleWall" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="InvisibleWall"]
+position = Vector2(-368, 350)
+shape = SubResource("RectangleShape2D_e22dq")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="InvisibleWall"]
+position = Vector2(1599, 323)
+shape = SubResource("RectangleShape2D_enmcc")
+
+[node name="FromGym" type="Marker2D" parent="."]
+position = Vector2(790, 477)
+
+[node name="FromHall2" type="Marker2D" parent="."]
+position = Vector2(-198, 477)
+
+[node name="ToHall" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ToHall"]
+position = Vector2(-151, 294)
+shape = SubResource("RectangleShape2D_l5vk7")
+
+[node name="ToGym" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ToGym"]
+position = Vector2(1331, 271)
+shape = SubResource("RectangleShape2D_ahmrt")
+
+[connection signal="body_entered" from="ToHall" to="." method="_on_to_hall_body_entered"]
+[connection signal="body_entered" from="ToGym" to="." method="_on_to_gym_body_entered"]
