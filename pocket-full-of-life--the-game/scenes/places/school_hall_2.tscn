@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://ccjfxlmeqapkq"]
+[gd_scene load_steps=15 format=3 uid="uid://ccjfxlmeqapkq"]
 
 [ext_resource type="Script" uid="uid://dpmh80re8hpu6" path="res://scripts/school_hall_2.gd" id="1_mor2n"]
 [ext_resource type="Texture2D" uid="uid://c4nxfi7stwblp" path="res://Assets/school hall 1/school hallway and lockerroom.png" id="2_u3jq6"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b53r4vslu8q5n" path="res://scenes/universal/tico_walk_sports.tscn" id="6_220yv"]
 [ext_resource type="PackedScene" uid="uid://b0kbjlu2fbo77" path="res://scenes/interactive/class_room_enterance.tscn" id="6_u3jq6"]
 [ext_resource type="Texture2D" uid="uid://6cp2vuenj0ek" path="res://Assets/universal/Frame.png" id="7_0bwrx"]
+[ext_resource type="PackedScene" uid="uid://dyk6dp0lf145y" path="res://scenes/interactive/girls_locker_room.tscn" id="7_xtf4b"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nt0tv"]
 
@@ -52,37 +53,42 @@ color = Color(0.3529412, 0.35686275, 0.29803923, 1)
 [node name="BackGround" type="Node2D" parent="."]
 
 [node name="3Lockers2" type="Sprite2D" parent="BackGround"]
-position = Vector2(619.0032, 280.50003)
+position = Vector2(529.0032, 280.50003)
 scale = Vector2(0.2246289, 0.31754386)
 texture = ExtResource("3_xtf4b")
 
 [node name="3Lockers3" type="Sprite2D" parent="BackGround"]
-position = Vector2(826.0032, 280.5)
+position = Vector2(736.0032, 280.5)
 scale = Vector2(0.2246289, 0.31754386)
 texture = ExtResource("3_xtf4b")
 
 [node name="EnglishRoom" type="TextureButton" parent="BackGround"]
-offset_left = 311.0
+offset_left = 239.0
 offset_top = 190.0
-offset_right = 807.0
+offset_right = 735.0
 offset_bottom = 811.0
 scale = Vector2(0.33096653, 0.3113954)
 texture_normal = ExtResource("4_8q0u8")
 
 [node name="MathRoom" type="TextureButton" parent="BackGround"]
-offset_left = 991.0
-offset_top = 190.0
-offset_right = 1487.0
-offset_bottom = 812.0
+offset_left = 864.0
+offset_top = 187.99998
+offset_right = 1360.0
+offset_bottom = 810.0
 scale = Vector2(0.33096653, 0.3113954)
 texture_normal = ExtResource("5_1vv3d")
 
 [node name="ClassRoomEnterance" parent="BackGround" instance=ExtResource("6_u3jq6")]
 position = Vector2(140, 279)
 scale = Vector2(0.35999653, 0.31999654)
+destination_scene_path = "res://scenes/places/classroom.tscn"
+
+[node name="GirlsLockerRoom" parent="BackGround" instance=ExtResource("7_xtf4b")]
+position = Vector2(1102, 276)
+scale = Vector2(0.33497074, 0.33497074)
 
 [node name="Tico" parent="." instance=ExtResource("6_220yv")]
-position = Vector2(792, 477)
+position = Vector2(-178, 477)
 
 [node name="Frame" type="ParallaxBackground" parent="."]
 
@@ -116,6 +122,9 @@ position = Vector2(-242, 477)
 
 [node name="FromGym" type="Marker2D" parent="."]
 position = Vector2(792, 477)
+
+[node name="FromClassroom" type="Marker2D" parent="."]
+position = Vector2(-178, 477)
 
 [node name="BacktoHall1" type="Area2D" parent="."]
 

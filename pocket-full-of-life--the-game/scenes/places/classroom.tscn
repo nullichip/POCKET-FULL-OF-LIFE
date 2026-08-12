@@ -1,0 +1,256 @@
+[gd_scene load_steps=17 format=3 uid="uid://t6k3nma664ih"]
+
+[ext_resource type="Script" uid="uid://6kwuardtec3d" path="res://scripts/classroom.gd" id="1_8iccd"]
+[ext_resource type="Texture2D" uid="uid://cclc4huyo0vp6" path="res://Assets/classroom/wallpaper.png" id="2_5yn0l"]
+[ext_resource type="PackedScene" uid="uid://co1yixyigpx36" path="res://scenes/interactive/cabinet.tscn" id="3_5e7tn"]
+[ext_resource type="Texture2D" uid="uid://dndg65hcky80r" path="res://Assets/classroom/chair.png" id="3_mpp2m"]
+[ext_resource type="Texture2D" uid="uid://i32t7veckkko" path="res://Assets/classroom/desk.png" id="4_5e7tn"]
+[ext_resource type="Texture2D" uid="uid://q3lc32q5yvwj" path="res://Assets/classroom/podium.png" id="5_5yn0l"]
+[ext_resource type="PackedScene" uid="uid://b53r4vslu8q5n" path="res://scenes/universal/tico_walk_sports.tscn" id="5_eum4v"]
+[ext_resource type="Texture2D" uid="uid://6cp2vuenj0ek" path="res://Assets/universal/Frame.png" id="6_ne54q"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kiodk"]
+
+[sub_resource type="Animation" id="Animation_of14j"]
+resource_name = "pull_out_chair"
+length = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BackGround/Tico\'sDesk/TicosChair:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.23333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(339, 263), Vector2(294, 263.00003)]
+}
+
+[sub_resource type="Animation" id="Animation_ura8j"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BackGround/Tico\'sDesk/TicosChair:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(339, 263)]
+}
+
+[sub_resource type="Animation" id="Animation_lqq8t"]
+resource_name = "push_in_chair"
+length = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BackGround/Tico\'sDesk/TicosChair:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.23333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(294, 263.00003), Vector2(339, 263)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a7sev"]
+_data = {
+&"RESET": SubResource("Animation_ura8j"),
+&"pull_out_chair": SubResource("Animation_of14j"),
+&"push_in_chair": SubResource("Animation_lqq8t")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5yn0l"]
+size = Vector2(648.25, 788.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mpp2m"]
+size = Vector2(745, 842)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5e7tn"]
+size = Vector2(289, 655)
+
+[node name="Classroom" type="Node2D"]
+script = ExtResource("1_8iccd")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(3, -38.000004)
+scale = Vector2(0.3541667, 0.2736111)
+texture = ExtResource("2_5yn0l")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(576, 323)
+scale = Vector2(0.3, 0.3)
+texture = SubResource("CompressedTexture2D_kiodk")
+
+[node name="BackGround" type="Node2D" parent="."]
+
+[node name="Cabinet" parent="BackGround" instance=ExtResource("3_5e7tn")]
+position = Vector2(206, 273)
+scale = Vector2(0.239999, 0.239999)
+
+[node name="Chair2" type="TextureButton" parent="BackGround"]
+offset_left = 97.000015
+offset_top = 263.0
+offset_right = 399.0
+offset_bottom = 661.0
+scale = Vector2(0.3195363, 0.29867056)
+texture_normal = ExtResource("3_mpp2m")
+
+[node name="Desk2" type="Sprite2D" parent="BackGround"]
+position = Vector2(198.61288, 342.25)
+scale = Vector2(0.4550324, 0.30846775)
+texture = ExtResource("4_5e7tn")
+
+[node name="Chair3" type="TextureButton" parent="BackGround"]
+offset_left = 191.0
+offset_top = 263.0
+offset_right = 493.0
+offset_bottom = 661.0
+scale = Vector2(0.3195363, 0.29867056)
+texture_normal = ExtResource("3_mpp2m")
+
+[node name="Desk3" type="Sprite2D" parent="BackGround"]
+position = Vector2(292.61285, 342.25)
+scale = Vector2(0.4550324, 0.30846775)
+texture = ExtResource("4_5e7tn")
+
+[node name="Chair4" type="TextureButton" parent="BackGround"]
+offset_left = 483.99997
+offset_top = 263.0
+offset_right = 786.0
+offset_bottom = 661.0
+scale = Vector2(0.3195363, 0.29867056)
+texture_normal = ExtResource("3_mpp2m")
+
+[node name="Desk4" type="Sprite2D" parent="BackGround"]
+position = Vector2(585.61285, 342.25)
+scale = Vector2(0.4550324, 0.30846775)
+texture = ExtResource("4_5e7tn")
+
+[node name="Chair5" type="TextureButton" parent="BackGround"]
+offset_left = 614.0
+offset_top = 263.0
+offset_right = 916.0
+offset_bottom = 661.0
+scale = Vector2(0.3195363, 0.29867056)
+texture_normal = ExtResource("3_mpp2m")
+
+[node name="Desk5" type="Sprite2D" parent="BackGround"]
+position = Vector2(715.6129, 342.25)
+scale = Vector2(0.4550324, 0.30846775)
+texture = ExtResource("4_5e7tn")
+
+[node name="Chair6" type="TextureButton" parent="BackGround"]
+offset_left = 718.0
+offset_top = 263.0
+offset_right = 1020.0
+offset_bottom = 661.0
+scale = Vector2(0.3195363, 0.29867056)
+texture_normal = ExtResource("3_mpp2m")
+
+[node name="Desk6" type="Sprite2D" parent="BackGround"]
+position = Vector2(819.6129, 342.25)
+scale = Vector2(0.4550324, 0.30846775)
+texture = ExtResource("4_5e7tn")
+
+[node name="Chair7" type="TextureButton" parent="BackGround"]
+offset_left = 806.0
+offset_top = 263.0
+offset_right = 1108.0
+offset_bottom = 661.0
+scale = Vector2(0.3195363, 0.29867056)
+texture_normal = ExtResource("3_mpp2m")
+
+[node name="Desk7" type="Sprite2D" parent="BackGround"]
+position = Vector2(907.6129, 342.25)
+scale = Vector2(0.4550324, 0.30846775)
+texture = ExtResource("4_5e7tn")
+
+[node name="Podium" type="Sprite2D" parent="BackGround"]
+position = Vector2(1012, 305.94507)
+scale = Vector2(0.34126207, 0.2871269)
+texture = ExtResource("5_5yn0l")
+
+[node name="Tico\'sDesk" type="Node2D" parent="BackGround"]
+
+[node name="TicosChair" type="TextureButton" parent="BackGround/Tico\'sDesk"]
+offset_left = 339.0
+offset_top = 263.0
+offset_right = 641.0001
+offset_bottom = 661.0
+scale = Vector2(0.3195363, 0.29867056)
+texture_normal = ExtResource("3_mpp2m")
+
+[node name="Desk" type="Sprite2D" parent="BackGround/Tico\'sDesk"]
+position = Vector2(440.61288, 342.25)
+scale = Vector2(0.4550324, 0.30846775)
+texture = ExtResource("4_5e7tn")
+
+[node name="Tico" parent="." instance=ExtResource("5_eum4v")]
+position = Vector2(782, 477)
+
+[node name="Frame" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Frame"]
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Frame/ParallaxLayer"]
+position = Vector2(489.99997, 286)
+scale = Vector2(0.3640625, 0.26759258)
+texture = ExtResource("6_ne54q")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_a7sev")
+}
+
+[node name="InvisibleWall" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="InvisibleWall"]
+position = Vector2(-232.125, 350)
+shape = SubResource("RectangleShape2D_5yn0l")
+
+[node name="ColorRect2" type="ColorRect" parent="InvisibleWall"]
+offset_left = -440.0
+offset_right = 25.0
+offset_bottom = 685.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="InvisibleWall"]
+position = Vector2(1700, 350)
+shape = SubResource("RectangleShape2D_mpp2m")
+
+[node name="ColorRect3" type="ColorRect" parent="InvisibleWall"]
+offset_left = 1231.0
+offset_top = -38.0
+offset_right = 2032.0
+offset_bottom = 647.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="BackToHall2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BackToHall2"]
+position = Vector2(1363, 304)
+shape = SubResource("RectangleShape2D_5e7tn")
+
+[connection signal="pressed" from="BackGround/Chair2" to="." method="_on_chair_2_pressed"]
+[connection signal="pressed" from="BackGround/Chair3" to="." method="_on_chair_3_pressed"]
+[connection signal="pressed" from="BackGround/Chair4" to="." method="_on_chair_4_pressed"]
+[connection signal="pressed" from="BackGround/Chair5" to="." method="_on_chair_5_pressed"]
+[connection signal="pressed" from="BackGround/Chair6" to="." method="_on_chair_6_pressed"]
+[connection signal="pressed" from="BackGround/Chair7" to="." method="_on_chair_7_pressed"]
+[connection signal="pressed" from="BackGround/Tico\'sDesk/TicosChair" to="." method="_on_chair_pressed"]
+[connection signal="body_entered" from="BackToHall2" to="." method="_on_back_to_hall_2_body_entered"]
