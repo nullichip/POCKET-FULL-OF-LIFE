@@ -1,7 +1,14 @@
 extends Area2D
 
 @export var prompt_text: String = "Example..."
+@export var destination_scene_path: String = ""
 var is_player_near: bool = false
+
+@onready var door_sprite = get_node_or_null("AnimatedSprite2D")
+
+func _ready() -> void:
+	if door_sprite != null:
+		door_sprite.play("closed")
 
 func _process(delta: float) -> void:
 	if is_player_near and Input.is_action_just_pressed("interact"):
@@ -29,12 +36,22 @@ func start_interaction() -> void:
 		tico.animated_sprite.play("look_away_twd_right")
 	else:
 		tico.animated_sprite.play("look_away_twd_left")
-		
+	
+	if door_sprite != null:
+			door_sprite.play("open")
+			await door_sprite.animation_finished
 	var player_said_yes = await ConfirmationMenu.ask_question(prompt_text)
 	
 	if player_said_yes:
-		await TransitionScreen.transition_to_scene("res://scenes/places/nighttimebedroom.tscn")
+		if destination_scene_path != "":
+			await TransitionScreen.transition_to_scene(destination_scene_path)
+		else:
+			print("Error: you forgot to set a destination point")
 	else:
+		if door_sprite != null:
+			door_sprite.play("close")
+			await door_sprite.animation_finished
+		
 		print("unlocking Tico")
 		if tico.last_direction < 0:
 			tico.animated_sprite.play("idle_twd_left")

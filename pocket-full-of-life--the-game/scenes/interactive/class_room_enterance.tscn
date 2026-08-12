@@ -1,0 +1,65 @@
+[gd_scene load_steps=7 format=3 uid="uid://b0kbjlu2fbo77"]
+
+[ext_resource type="Script" uid="uid://deo4nliggyie5" path="res://scripts/doors.gd" id="1_0wg3u"]
+[ext_resource type="Texture2D" uid="uid://bdq71dhjoyoyt" path="res://Assets/school hall 2/HR3.png" id="1_pu3x3"]
+[ext_resource type="Texture2D" uid="uid://1swo66l1uqh2" path="res://Assets/school hall 2/HR2.png" id="2_0wg3u"]
+[ext_resource type="Texture2D" uid="uid://cccwvp3dsu0ti" path="res://Assets/school hall 2/HR1.png" id="3_qcjdx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0i3mf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_pu3x3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_0wg3u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_qcjdx")
+}],
+"loop": false,
+"name": &"close",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_qcjdx")
+}],
+"loop": false,
+"name": &"closed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_qcjdx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_0wg3u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_pu3x3")
+}],
+"loop": false,
+"name": &"open",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pu3x3"]
+size = Vector2(390, 604)
+
+[node name="ClassRoomEnterance" type="Area2D"]
+script = ExtResource("1_0wg3u")
+prompt_text = "Enter Classroom?"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-5.5, 6.75)
+scale = Vector2(0.9776423, 0.97919875)
+sprite_frames = SubResource("SpriteFrames_0i3mf")
+animation = &"open"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-45, 15)
+shape = SubResource("RectangleShape2D_pu3x3")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

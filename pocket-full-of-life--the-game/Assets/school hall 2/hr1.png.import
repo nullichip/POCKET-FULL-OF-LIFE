@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dltgnog5428io"
-path="res://.godot/imported/hr1.png-cf42d34cb9539d58f98885ede015b4fc.ctex"
+uid="uid://cccwvp3dsu0ti"
+path="res://.godot/imported/HR1.png-528d81c929b6f025c0d5c3c41b0ba452.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/school hall 2/hr1.png"
-dest_files=["res://.godot/imported/hr1.png-cf42d34cb9539d58f98885ede015b4fc.ctex"]
+source_file="res://Assets/school hall 2/HR1.png"
+dest_files=["res://.godot/imported/HR1.png-528d81c929b6f025c0d5c3c41b0ba452.ctex"]
 
 [params]
 
