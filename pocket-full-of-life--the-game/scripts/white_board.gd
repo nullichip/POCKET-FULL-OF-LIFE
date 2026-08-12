@@ -23,8 +23,6 @@ func _on_texture_button_pressed() -> void:
 		else:
 			tico.animated_sprite.play("look_away_twd_left")
 		
-		await board.animation_finished
-		
 		#spawned_UI_instance = BOARD_VIEW.instantiate()
 		#var ui_layer = get_tree().current_scene.get_node("UI_Layer_Board")
 		#ui_layer.add_child(spawned_UI_instance)

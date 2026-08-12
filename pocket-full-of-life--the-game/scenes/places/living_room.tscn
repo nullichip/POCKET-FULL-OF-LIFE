@@ -103,13 +103,13 @@ scale = Vector2(0.32456142, 0.3245614)
 texture = ExtResource("5_t6d6v")
 
 [node name="SingleSofa" type="Sprite2D" parent="BackGround"]
-position = Vector2(195.30408, 316.625)
-scale = Vector2(0.31128573, 0.2853261)
+position = Vector2(192.30408, 324.54605)
+scale = Vector2(0.31128573, 0.24585241)
 texture = ExtResource("2_sgxxa")
 
 [node name="DuoSofa" type="Sprite2D" parent="BackGround"]
-position = Vector2(503.30405, 317.625)
-scale = Vector2(0.28913048, 0.28913045)
+position = Vector2(500.30405, 325.54605)
+scale = Vector2(0.28913048, 0.24913046)
 texture = ExtResource("3_o0fen")
 
 [node name="Tico" parent="." instance=ExtResource("2_2jobk")]
@@ -118,8 +118,8 @@ position = Vector2(-208, 479)
 [node name="ForeGround" type="Node2D" parent="."]
 
 [node name="Tv" type="Sprite2D" parent="ForeGround"]
-position = Vector2(497.99997, 268)
-scale = Vector2(0.2780518, 0.2780518)
+position = Vector2(516.8082, 281.875)
+scale = Vector2(0.24810229, 0.24383478)
 texture = ExtResource("4_k7aew")
 
 [node name="EnterKitchen" type="Area2D" parent="."]
