@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=3 uid="uid://dyysc1lqwbxah"]
+
+[ext_resource type="Script" uid="uid://c3s1dxecrioj1" path="res://scripts/white_board_pop_up.gd" id="1_7k4t6"]
+[ext_resource type="Texture2D" uid="uid://ckckk0lygly0f" path="res://Assets/SCROLL-Gym/Board.png" id="2_tqofk"]
+[ext_resource type="Texture2D" uid="uid://8lkn2t4n1s4w" path="res://Assets/SCROLL-Gym/Board2.png" id="4_lwvfx"]
+[ext_resource type="Texture2D" uid="uid://bqqdofga7jnsr" path="res://Assets/SCROLL-Gym/Board3.png" id="5_gbfhm"]
+
+[node name="WhiteBoardPopUp" type="CanvasLayer"]
+script = ExtResource("1_7k4t6")
+
+[node name="Base" type="TextureRect" parent="."]
+offset_left = 15.0
+offset_top = 146.0
+offset_right = 95.5
+offset_bottom = 198.0
+scale = Vector2(7.7552247, 6.749168)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_tqofk")
+expand_mode = 1
+
+[node name="RedInkLayer" type="TextureRect" parent="."]
+offset_left = 47.0
+offset_top = 163.0
+offset_right = 1838.0
+offset_bottom = 1318.0
+scale = Vector2(0.31378806, 0.2730815)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+texture = ExtResource("4_lwvfx")
+stretch_mode = 2
+
+[node name="PracticeLayer" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.65000004)
+offset_left = 47.0
+offset_top = 163.0
+offset_right = 1839.0
+offset_bottom = 1320.0
+scale = Vector2(0.31378806, 0.2730815)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("5_gbfhm")
+stretch_mode = 2

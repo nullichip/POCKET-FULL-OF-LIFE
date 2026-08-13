@@ -48,3 +48,4 @@ func _on_texture_button_pressed() -> void:
 			tico.animated_sprite.play("idle_twd_left")
 		else:
 			tico.animated_sprite.play("idle_twd_right")
+		

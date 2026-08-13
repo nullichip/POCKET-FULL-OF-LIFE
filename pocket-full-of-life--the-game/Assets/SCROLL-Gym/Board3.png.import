@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://daxwp3wn4fy8g"
-path="res://.godot/imported/Board 3.png-eb851933ccc95140603ad0c28bb914de.ctex"
+uid="uid://bqqdofga7jnsr"
+path="res://.godot/imported/Board3.png-41dc0b8f9de2992c1075a03f450b537b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/SCROLL-Gym/Board 3.png"
-dest_files=["res://.godot/imported/Board 3.png-eb851933ccc95140603ad0c28bb914de.ctex"]
+source_file="res://Assets/SCROLL-Gym/Board3.png"
+dest_files=["res://.godot/imported/Board3.png-41dc0b8f9de2992c1075a03f450b537b.ctex"]
 
 [params]
 

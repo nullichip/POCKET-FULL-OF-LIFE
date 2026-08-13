@@ -26,6 +26,7 @@ func _physics_process(delta: float) -> void:
 		return
 	
 	if is_interacting == true:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
 		move_and_slide()
 		return
 		
