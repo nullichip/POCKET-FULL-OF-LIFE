@@ -82,6 +82,7 @@ texture_normal = ExtResource("5_1vv3d")
 position = Vector2(140, 279)
 scale = Vector2(0.35999653, 0.31999654)
 destination_scene_path = "res://scenes/places/classroom.tscn"
+target_spawn_node_name = "FromHall"
 
 [node name="GirlsLockerRoom" parent="BackGround" instance=ExtResource("7_xtf4b")]
 position = Vector2(1103, 270.00003)

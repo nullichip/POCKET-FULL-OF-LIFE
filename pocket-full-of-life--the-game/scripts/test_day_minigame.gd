@@ -193,8 +193,8 @@ func finish_test() -> void:
 	$Paper/ExitButton/AnimationPlayer.play("exit_fade_in")
 
 func _on_exit_button_pressed() -> void:
-	print("Pretending to go to the classroom")
-	TransitionScreen.transition_to_scene("")
+	GameManager.target_spawn_name = "FromDesk"
+	TransitionScreen.transition_to_scene("res://scenes/places/classroom.tscn")
 
 func _on_exit_button_mouse_entered() -> void:
 	var hover = create_tween()

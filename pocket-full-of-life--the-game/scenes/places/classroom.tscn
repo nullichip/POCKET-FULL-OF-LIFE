@@ -11,6 +11,21 @@
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kiodk"]
 
+[sub_resource type="Animation" id="Animation_ura8j"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BackGround/Tico\'sDesk/TicosChair:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(339, 263)]
+}
+
 [sub_resource type="Animation" id="Animation_of14j"]
 resource_name = "pull_out_chair"
 length = 0.25
@@ -25,21 +40,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(339, 263), Vector2(294, 263.00003)]
-}
-
-[sub_resource type="Animation" id="Animation_ura8j"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("BackGround/Tico\'sDesk/TicosChair:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(339, 263)]
 }
 
 [sub_resource type="Animation" id="Animation_lqq8t"]
@@ -198,7 +198,7 @@ scale = Vector2(0.4550324, 0.30846775)
 texture = ExtResource("4_5e7tn")
 
 [node name="Tico" parent="." instance=ExtResource("5_eum4v")]
-position = Vector2(782, 477)
+position = Vector2(154, 477)
 
 [node name="Frame" type="ParallaxBackground" parent="."]
 
@@ -245,6 +245,12 @@ color = Color(0, 0, 0, 1)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BackToHall2"]
 position = Vector2(1363, 304)
 shape = SubResource("RectangleShape2D_5e7tn")
+
+[node name="FromDesk" type="Marker2D" parent="."]
+position = Vector2(154, 477)
+
+[node name="FromHall" type="Marker2D" parent="."]
+position = Vector2(782, 477)
 
 [connection signal="pressed" from="BackGround/Chair2" to="." method="_on_chair_2_pressed"]
 [connection signal="pressed" from="BackGround/Chair3" to="." method="_on_chair_3_pressed"]

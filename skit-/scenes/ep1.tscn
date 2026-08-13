@@ -1,0 +1,301 @@
+[gd_scene load_steps=18 format=3 uid="uid://betf4j3q2m55b"]
+
+[ext_resource type="Texture2D" uid="uid://bff7fgmmewt0e" path="res://Art/ep. 1/pressure 1.png" id="1_nykkr"]
+[ext_resource type="Texture2D" uid="uid://ynnb0n2wpd8v" path="res://Art/ep. 1/pressure2.png" id="2_f3c25"]
+[ext_resource type="Texture2D" uid="uid://b1qgybk4b3826" path="res://Art/ep. 1/Shake1.png" id="3_3sxao"]
+[ext_resource type="Texture2D" uid="uid://cixt3v2i6ymo" path="res://Art/ep. 1/Shake2.png" id="4_tgvx1"]
+[ext_resource type="Texture2D" uid="uid://cop007kihuq1u" path="res://Art/ep. 1/pro1.png" id="5_3sxao"]
+[ext_resource type="Texture2D" uid="uid://m3nwiuar413x" path="res://Art/ep. 1/pro2.png" id="6_tgvx1"]
+[ext_resource type="Texture2D" uid="uid://cojbs828hh284" path="res://Art/ep. 1/7a411fa7f550952af7b6e84b2e0bc567.jpg" id="7_bwexg"]
+[ext_resource type="Texture2D" uid="uid://ceo5s4f3014a4" path="res://Art/ep. 1/vb.png" id="8_t7mhm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bwexg"]
+animations = [{
+"frames": [{
+"duration": 2.0,
+"texture": ExtResource("1_nykkr")
+}, {
+"duration": 2.0,
+"texture": ExtResource("2_f3c25")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t7mhm"]
+animations = [{
+"frames": [{
+"duration": 0.5,
+"texture": ExtResource("3_3sxao")
+}, {
+"duration": 0.5,
+"texture": ExtResource("4_tgvx1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_1gcut"]
+resource_name = "up"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("shaking head/nulli:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(593, 1000), Vector2(593, 332.99994)]
+}
+
+[sub_resource type="Animation" id="Animation_plm14"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("shaking head/nulli:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(593, 332.99994)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6bhyr"]
+_data = {
+&"RESET": SubResource("Animation_plm14"),
+&"up": SubResource("Animation_1gcut")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1gcut"]
+animations = [{
+"frames": [{
+"duration": 2.0,
+"texture": ExtResource("5_3sxao")
+}, {
+"duration": 2.0,
+"texture": ExtResource("6_tgvx1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_6bhyr"]
+resource_name = "flying_heart"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("cat:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6, 1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(779, 352), Vector2(-151, 333), Vector2(1138, 333), Vector2(233, 320)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Vb:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.6333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Vb:flip_h")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.6333333, 0.6833333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Label:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.6, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+
+[sub_resource type="Animation" id="Animation_oihb6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("cat:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(779, 352)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Vb:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Vb:flip_h")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Label:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_701t7"]
+_data = {
+&"RESET": SubResource("Animation_oihb6"),
+&"flying_heart": SubResource("Animation_6bhyr")
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="shaking head" type="Node2D" parent="."]
+visible = false
+
+[node name="black" type="ColorRect" parent="shaking head"]
+offset_left = -15.0
+offset_right = 1159.0
+offset_bottom = 651.0
+color = Color(0, 0, 0, 1)
+
+[node name="BG" type="AnimatedSprite2D" parent="shaking head"]
+position = Vector2(587, 325)
+scale = Vector2(0.29027775, 0.29027778)
+sprite_frames = SubResource("SpriteFrames_bwexg")
+autoplay = "default"
+frame_progress = 0.30002296
+
+[node name="nulli" type="Node2D" parent="shaking head"]
+position = Vector2(593, 332.99994)
+scale = Vector2(0.2835648, 0.2835648)
+
+[node name="sprite" type="AnimatedSprite2D" parent="shaking head/nulli"]
+scale = Vector2(1.0738083, 1.0738083)
+sprite_frames = SubResource("SpriteFrames_t7mhm")
+autoplay = "default"
+frame_progress = 0.64538085
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="shaking head"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_6bhyr")
+}
+autoplay = "up"
+
+[node name="pro" type="Node2D" parent="."]
+visible = false
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="pro"]
+position = Vector2(532, 333)
+scale = Vector2(0.5600002, 0.5600002)
+sprite_frames = SubResource("SpriteFrames_1gcut")
+autoplay = "default"
+frame_progress = 0.57679546
+
+[node name="luv too much" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="luv too much"]
+offset_left = -15.0
+offset_top = -32.0
+offset_right = 1372.0
+offset_bottom = 790.0
+
+[node name="cat" type="Sprite2D" parent="luv too much"]
+position = Vector2(883, 333)
+scale = Vector2(0.51766306, 0.51766306)
+texture = ExtResource("7_bwexg")
+
+[node name="Vb" type="Sprite2D" parent="luv too much"]
+visible = false
+position = Vector2(196, 379)
+scale = Vector2(0.6231884, 0.62318844)
+texture = ExtResource("8_t7mhm")
+flip_h = true
+
+[node name="Label" type="Label" parent="luv too much"]
+visible = false
+offset_left = 779.0
+offset_top = 352.0
+offset_right = 916.00024
+offset_bottom = 489.0
+theme_override_font_sizes/font_size = 100
+text = "💖"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="luv too much"]
+libraries = {
+&"": SubResource("AnimationLibrary_701t7")
+}
+autoplay = "flying_heart"
