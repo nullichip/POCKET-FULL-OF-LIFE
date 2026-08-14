@@ -1,19 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://bmaxh8ysxfnko"]
+[gd_scene load_steps=4 format=3 uid="uid://bmaxh8ysxfnko"]
 
 [ext_resource type="Script" uid="uid://qa417noty13l" path="res://scripts/white_board.gd" id="1_1v0ny"]
 [ext_resource type="Texture2D" uid="uid://w4iu4jhp34ss" path="res://Assets/SCROLL-Gym/whiteboard.png" id="2_lgnss"]
 
-[node name="WhiteBoard" type="Node2D"]
-script = ExtResource("1_1v0ny")
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1v0ny"]
+size = Vector2(462, 1042)
 
-[node name="TextureButton" type="TextureButton" parent="."]
-offset_left = -310.0
-offset_top = -139.0
-offset_right = 319.0
-offset_bottom = 143.0
+[node name="WhiteBoard" type="Area2D"]
+script = ExtResource("1_1v0ny")
 
 [node name="Board" type="Sprite2D" parent="."]
 scale = Vector2(1.223536, 1)
 texture = ExtResource("2_lgnss")
 
-[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 169)
+shape = SubResource("RectangleShape2D_1v0ny")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

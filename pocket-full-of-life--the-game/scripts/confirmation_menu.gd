@@ -42,3 +42,7 @@ func _on_yes_btn_mouse_exited() -> void:
 func _on_no_btn_mouse_exited() -> void:
 	var hover_out = create_tween()
 	hover_out.tween_property($Fader/NoBtn, "scale", Vector2(1.0, 1.0), 0.1)
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("ui_cancel"):
+		_on_no_btn_pressed()

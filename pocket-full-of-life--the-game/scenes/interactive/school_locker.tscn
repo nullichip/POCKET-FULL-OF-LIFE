@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dwneka4akdh7g"]
+[gd_scene load_steps=7 format=3 uid="uid://dwneka4akdh7g"]
 
 [ext_resource type="Script" uid="uid://7vr3qnm512er" path="res://scripts/school_locker.gd" id="1_5rfv7"]
 [ext_resource type="Texture2D" uid="uid://bq71quoxgo5ko" path="res://Assets/locker room/TL1.png" id="2_rpi6f"]
@@ -44,14 +44,11 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="SchoolLocker" type="Node2D"]
-script = ExtResource("1_5rfv7")
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5rfv7"]
+size = Vector2(188, 875)
 
-[node name="TextureButton" type="TextureButton" parent="."]
-offset_left = -156.0
-offset_top = -252.0
-offset_right = 157.0
-offset_bottom = 284.0
+[node name="SchoolLocker" type="Area2D"]
+script = ExtResource("1_5rfv7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -12.499979)
@@ -59,4 +56,9 @@ scale = Vector2(1, 0.9742351)
 sprite_frames = SubResource("SpriteFrames_2jhrd")
 animation = &"open_school_locker"
 
-[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(10, 45.5)
+shape = SubResource("RectangleShape2D_5rfv7")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

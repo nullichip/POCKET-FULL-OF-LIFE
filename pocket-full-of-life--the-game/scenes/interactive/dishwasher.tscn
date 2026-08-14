@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bi0t7iab7x5qc"]
+[gd_scene load_steps=6 format=3 uid="uid://bi0t7iab7x5qc"]
 
 [ext_resource type="Script" uid="uid://b4xbl61rey2iq" path="res://scripts/dishwasher.gd" id="1_owpgt"]
 [ext_resource type="Texture2D" uid="uid://cqtjjw10f3p0g" path="res://Assets/SCROLL-kitchen/disnwasher_Off.png" id="2_0nib5"]
@@ -61,19 +61,19 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Dishwasher" type="Node2D"]
-script = ExtResource("1_owpgt")
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2nsu3"]
+size = Vector2(237, 1300)
 
-[node name="TextureButton" type="TextureButton" parent="."]
-offset_left = -171.0
-offset_top = -162.0
-offset_right = 172.0
-offset_bottom = 166.0
-ignore_texture_size = true
-stretch_mode = 0
+[node name="Dishwasher" type="Area2D"]
+script = ExtResource("1_owpgt")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_d856a")
 animation = &"turn_off_dw"
 
-[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-5.5, 34)
+shape = SubResource("RectangleShape2D_2nsu3")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
