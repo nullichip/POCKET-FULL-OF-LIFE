@@ -17,7 +17,7 @@ func _on_bed_pressed() -> void:
 	var player_said_yes = await ConfirmationMenu.ask_question("GO TO SLEEP?")
 	
 	if player_said_yes:
-		await TransitionScreen.transition_to_scene("res://scenes/minigames/counting_volleyballs.tscn", 6.0)
+		await TransitionScreen.transition_to_scene("res://scenes/minigames/counting_volleyballs.tscn", 5.0)
 		
 		var counting_vbs_game = COUNTING_VBS_SCENE.instantiate()
 		add_child(counting_vbs_game)

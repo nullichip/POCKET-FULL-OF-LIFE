@@ -48,7 +48,7 @@ func start_interaction() -> void:
 			if target_spawn_node_name != "":
 				GameManager.target_spawn_name = target_spawn_node_name
 			
-			await TransitionScreen.transition_to_scene(destination_scene_path, 0.0)
+			await TransitionScreen.transition_to_scene(destination_scene_path)
 		else:
 			print("Error: you forgot to set a destination point")
 	else:

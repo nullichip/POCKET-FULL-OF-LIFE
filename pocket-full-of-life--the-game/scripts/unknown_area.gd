@@ -26,4 +26,4 @@ func _on_to_cross_path_body_entered(body: Node2D) -> void:
 		body.velocity = Vector2.ZERO
 		
 		GameManager.target_spawn_name = "From???"
-		await TransitionScreen.transition_to_scene("res://scenes/places/crosspath.tscn", 0.0)
+		await TransitionScreen.transition_to_scene("res://scenes/places/crosspath.tscn")

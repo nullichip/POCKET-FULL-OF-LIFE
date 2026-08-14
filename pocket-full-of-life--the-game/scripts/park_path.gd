@@ -26,11 +26,11 @@ func _on_cross_road_enterance_body_entered(body: Node2D) -> void:
 		body.velocity = Vector2.ZERO
 		
 		GameManager.target_spawn_name = "FromPark"
-		await TransitionScreen.transition_to_scene("res://scenes/places/crosspath.tscn", 0.0)
+		await TransitionScreen.transition_to_scene("res://scenes/places/crosspath.tscn")
 
 
 func _on_play_ground_enterance_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		body.velocity = Vector2.ZERO
 		
-		#await TransitionScreen.transition_to_scene("res://scenes/places/lockerhallway.tscn", 0.0)
+		#await TransitionScreen.transition_to_scene("res://scenes/places/lockerhallway.tscn")

@@ -22,7 +22,7 @@ size = Vector2(565, 842)
 size = Vector2(329, 608)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xtf4b"]
-size = Vector2(183, 600)
+size = Vector2(209.5, 600)
 
 [node name="SchoolHall2" type="Node2D"]
 script = ExtResource("1_mor2n")
@@ -141,7 +141,7 @@ shape = SubResource("RectangleShape2D_u3jq6")
 [node name="ToGym" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ToGym"]
-position = Vector2(1324, 279)
+position = Vector2(1310.75, 279)
 shape = SubResource("RectangleShape2D_xtf4b")
 
 [connection signal="pressed" from="BackGround/EnglishRoom" to="." method="_on_english_room_pressed"]

@@ -26,11 +26,11 @@ func _on_path_enterance_body_entered(body: Node2D) -> void:
 		body.velocity = Vector2.ZERO
 		
 		GameManager.target_spawn_name = "FromHouse"
-		await TransitionScreen.transition_to_scene("res://scenes/places/path.tscn", 0.0)
+		await TransitionScreen.transition_to_scene("res://scenes/places/path.tscn")
 
 func _on_home_enterance_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		body.velocity = Vector2.ZERO
 		
 		GameManager.target_spawn_name = "OutsideSpawn"
-		await TransitionScreen.transition_to_scene("res://scenes/places/home.tscn", 0.0)
+		await TransitionScreen.transition_to_scene("res://scenes/places/home.tscn", 2.0)

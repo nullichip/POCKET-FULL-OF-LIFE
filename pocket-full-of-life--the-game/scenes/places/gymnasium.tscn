@@ -21,10 +21,10 @@ size = Vector2(376.5, 788.5)
 size = Vector2(615.5, 819)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jceb3"]
-size = Vector2(178, 507)
+size = Vector2(214, 507)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xn06h"]
-size = Vector2(237, 659)
+size = Vector2(258.5, 659)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_56em3"]
 size = Vector2(389, 324)
@@ -145,13 +145,13 @@ color = Color(0, 0, 0, 1)
 position = Vector2(1169, -42)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BacktoHall2"]
-position = Vector2(-1347, 329)
+position = Vector2(-1329, 329)
 shape = SubResource("RectangleShape2D_jceb3")
 
 [node name="ToLockers" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ToLockers"]
-position = Vector2(1358, 306)
+position = Vector2(1347.25, 306)
 shape = SubResource("RectangleShape2D_xn06h")
 
 [node name="OntoCourt" type="Area2D" parent="."]

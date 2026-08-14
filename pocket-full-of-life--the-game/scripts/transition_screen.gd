@@ -2,7 +2,7 @@ extends CanvasLayer
 
 @onready var animation_player = $AnimationPlayer
 
-func transition_to_scene(target_scene_path: String, wait_time: float = 3.0) -> void:
+func transition_to_scene(target_scene_path: String, wait_time: float = 0.5) -> void:
 	animation_player.play("fade_to_black")
 	await animation_player.animation_finished
 	

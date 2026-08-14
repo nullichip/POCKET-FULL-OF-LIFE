@@ -25,7 +25,7 @@ func _on_back_outside_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		
 		GameManager.target_spawn_name = "FromInsideSchool"
-		await TransitionScreen.transition_to_scene("res://scenes/places/school_path.tscn", 0.0)
+		await TransitionScreen.transition_to_scene("res://scenes/places/school_path.tscn", 1.0)
 
 
 func _on_to_school_hall_2_body_entered(body: Node2D) -> void:
@@ -38,7 +38,7 @@ func _on_to_school_hall_2_body_entered(body: Node2D) -> void:
 			body.animated_sprite.play("idle_twd_right")
 			
 		GameManager.target_spawn_name = "FromSchoolHall1"
-		await TransitionScreen.transition_to_scene("res://scenes/places/school_hall_2.tscn", 0.0)
+		await TransitionScreen.transition_to_scene("res://scenes/places/school_hall_2.tscn")
 
 func _on_history_room_pressed() -> void:
 	shake_item($BackGround/HistoryRoom)

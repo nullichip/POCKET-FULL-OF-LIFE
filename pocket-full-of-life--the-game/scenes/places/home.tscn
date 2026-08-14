@@ -16,10 +16,10 @@
 size = Vector2(109.25, 313)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vc333"]
-size = Vector2(90.75, 360)
+size = Vector2(98.375, 360)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_22wlk"]
-size = Vector2(694, 942)
+size = Vector2(670, 942)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a7mac"]
 size = Vector2(1261, 1051)
@@ -127,7 +127,7 @@ mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LivingRoomEnterance"]
-position = Vector2(-113, 260)
+position = Vector2(-167, 260)
 shape = SubResource("RectangleShape2D_vc333")
 
 [node name="Frame" type="ParallaxBackground" parent="."]
@@ -143,7 +143,7 @@ texture = ExtResource("9_orh08")
 [node name="InvisibleWalls" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InvisibleWalls"]
-position = Vector2(-499, 342)
+position = Vector2(-511, 342)
 shape = SubResource("RectangleShape2D_22wlk")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="InvisibleWalls"]

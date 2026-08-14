@@ -26,25 +26,25 @@ func _on_school_path_enter_body_entered(body: Node2D) -> void:
 		body.velocity = Vector2.ZERO
 		
 		GameManager.target_spawn_name = "FromCrossRoad"
-		await TransitionScreen.transition_to_scene("res://scenes/places/school_path.tscn", 0.0)
+		await TransitionScreen.transition_to_scene("res://scenes/places/school_path.tscn")
 
 func _on_enter_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		body.velocity = Vector2.ZERO
 		
 		GameManager.target_spawn_name = "FromCrossPath"
-		await TransitionScreen.transition_to_scene("res://scenes/places/unknown_area.tscn", 0.0)
+		await TransitionScreen.transition_to_scene("res://scenes/places/unknown_area.tscn")
 	
 func _on_path_enter_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		body.velocity = Vector2.ZERO
 		
 		GameManager.target_spawn_name = "FromCrossPath"
-		await TransitionScreen.transition_to_scene("res://scenes/places/path.tscn", 0.0)
+		await TransitionScreen.transition_to_scene("res://scenes/places/path.tscn")
 
 func _on_park_enter_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		body.velocity = Vector2.ZERO
 		
 		GameManager.target_spawn_name = "FromCrossRoad"
-		await TransitionScreen.transition_to_scene("res://scenes/places/park_path.tscn", 0.0)
+		await TransitionScreen.transition_to_scene("res://scenes/places/park_path.tscn")

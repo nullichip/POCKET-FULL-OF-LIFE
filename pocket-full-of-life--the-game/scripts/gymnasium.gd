@@ -31,7 +31,7 @@ func _on_backto_hall_2_body_entered(body: Node2D) -> void:
 			body.animated_sprite.play("idle_twd_right")
 			
 		GameManager.target_spawn_name = "FromGym"
-		await TransitionScreen.transition_to_scene("res://scenes/places/school_hall_2.tscn", 0.0)
+		await TransitionScreen.transition_to_scene("res://scenes/places/school_hall_2.tscn", 2.0)
 
 func _on_to_lockers_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
@@ -43,7 +43,7 @@ func _on_to_lockers_body_entered(body: Node2D) -> void:
 			body.animated_sprite.play("idle_twd_right")
 			
 		GameManager.target_spawn_name = "FromGym"
-		await TransitionScreen.transition_to_scene("res://scenes/places/locker_room.tscn", 0.0)
+		await TransitionScreen.transition_to_scene("res://scenes/places/locker_room.tscn", 2.0)
 
 func _on_office_pressed() -> void:
 	shake_item($BackGround/Office)

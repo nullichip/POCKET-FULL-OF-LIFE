@@ -63,7 +63,7 @@ func _on_back_to_hall_2_body_entered(body: Node2D) -> void:
 			body.animated_sprite.play("idle_twd_right")
 			
 		GameManager.target_spawn_name = "FromClassroom"
-		await TransitionScreen.transition_to_scene("res://scenes/places/school_hall_2.tscn", 0.0)
+		await TransitionScreen.transition_to_scene("res://scenes/places/school_hall_2.tscn", 2.0)
 
 func _on_chair_2_pressed() -> void:
 	shake_item($BackGround/Chair2)

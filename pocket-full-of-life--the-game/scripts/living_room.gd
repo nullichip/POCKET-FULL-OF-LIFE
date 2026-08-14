@@ -30,7 +30,7 @@ func _on_enter_kitchen_body_entered(body: Node2D) -> void:
 		else:
 			body.animated_sprite.play("idle_twd_right")
 			
-		await TransitionScreen.transition_to_scene("res://scenes/places/kitchen.tscn", 0.0)
+		await TransitionScreen.transition_to_scene("res://scenes/places/kitchen.tscn")
 
 
 func _on_enter_home_hallway_body_entered(body: Node2D) -> void:
@@ -43,4 +43,4 @@ func _on_enter_home_hallway_body_entered(body: Node2D) -> void:
 			body.animated_sprite.play("idle_twd_right")
 			
 		GameManager.target_spawn_name = "LivingRoomSpawn"
-		await TransitionScreen.transition_to_scene("res://scenes/places/home.tscn", 0.0)
+		await TransitionScreen.transition_to_scene("res://scenes/places/home.tscn")
