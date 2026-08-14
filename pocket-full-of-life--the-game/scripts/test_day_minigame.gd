@@ -203,3 +203,8 @@ func _on_exit_button_mouse_entered() -> void:
 func _on_exit_button_mouse_exited() -> void:
 	var hover_out = create_tween()
 	hover_out.tween_property($Paper/ExitButton, "scale", Vector2(1.0, 1.0), 0.1)
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("ui_cancel"):
+		# This magically calls your physical button's code!
+		_on_exit_button_pressed()

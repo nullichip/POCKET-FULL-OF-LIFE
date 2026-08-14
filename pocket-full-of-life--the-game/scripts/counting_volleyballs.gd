@@ -225,3 +225,7 @@ func _on_exit_btn_mouse_exited() -> void:
 func _on_exit_btn_pressed() -> void:
 	print("loading to next day...")
 	#TransitionScreen.transition_to_scene("")
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("ui_cancel"):
+		_on_exit_btn_pressed()
