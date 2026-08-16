@@ -198,7 +198,7 @@ scale = Vector2(0.4550324, 0.30846775)
 texture = ExtResource("4_5e7tn")
 
 [node name="Tico" parent="." instance=ExtResource("5_eum4v")]
-position = Vector2(154, 477)
+position = Vector2(651, 477)
 
 [node name="Frame" type="ParallaxBackground" parent="."]
 
@@ -250,7 +250,7 @@ shape = SubResource("RectangleShape2D_5e7tn")
 position = Vector2(154, 477)
 
 [node name="FromHall" type="Marker2D" parent="."]
-position = Vector2(782, 477)
+position = Vector2(650, 477)
 
 [connection signal="pressed" from="BackGround/Chair2" to="." method="_on_chair_2_pressed"]
 [connection signal="pressed" from="BackGround/Chair3" to="." method="_on_chair_3_pressed"]

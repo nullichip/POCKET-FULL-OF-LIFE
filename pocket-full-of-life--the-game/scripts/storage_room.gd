@@ -15,8 +15,6 @@ func _process(_delta: float) -> void:
 	if is_player_near and Input.is_action_just_pressed("interact"):
 		if is_open == false:
 			open_interaction()
-		else:
-			close_interaction()
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):

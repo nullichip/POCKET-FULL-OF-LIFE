@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://fwhqnfvyyxot"]
+[gd_scene load_steps=18 format=3 uid="uid://fwhqnfvyyxot"]
 
 [ext_resource type="Script" uid="uid://dsr8uyolak83m" path="res://scripts/locker_room.gd" id="1_e0e6a"]
 [ext_resource type="Texture2D" uid="uid://c4nxfi7stwblp" path="res://Assets/school hall 1/school hallway and lockerroom.png" id="2_go8g3"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://voak6e403jis" path="res://Assets/locker room/towel.png" id="7_b77vr"]
 [ext_resource type="Texture2D" uid="uid://bo1oucmg0bk74" path="res://Assets/locker room/waterbottles.png" id="8_00lud"]
 [ext_resource type="Texture2D" uid="uid://c42spfwgobs6c" path="res://Assets/locker room/waterbottle.png" id="9_wu4o0"]
+[ext_resource type="Texture2D" uid="uid://fxs7y882e1ft" path="res://Assets/locker room/sign.png" id="10_ahmrt"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ycs7b"]
 
@@ -137,8 +138,13 @@ rotation = -1.5818737
 scale = Vector2(0.29053032, 0.29053032)
 texture = ExtResource("9_wu4o0")
 
+[node name="Sign" type="Sprite2D" parent="BackGround"]
+position = Vector2(886, 239.99998)
+scale = Vector2(0.17346944, 0.17346944)
+texture = ExtResource("10_ahmrt")
+
 [node name="Tico" parent="." instance=ExtResource("3_rs18m")]
-position = Vector2(790, 477)
+position = Vector2(273, 477)
 
 [node name="Frame" type="ParallaxBackground" parent="."]
 
@@ -161,10 +167,10 @@ position = Vector2(1599, 323)
 shape = SubResource("RectangleShape2D_enmcc")
 
 [node name="FromGym" type="Marker2D" parent="."]
-position = Vector2(790, 477)
+position = Vector2(712, 477)
 
 [node name="FromHall2" type="Marker2D" parent="."]
-position = Vector2(-198, 477)
+position = Vector2(-151, 477)
 
 [node name="ToHall" type="Area2D" parent="."]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://hwqxvca1fiw8"]
+[gd_scene load_steps=19 format=3 uid="uid://hwqxvca1fiw8"]
 
 [ext_resource type="Script" uid="uid://bq6hsws5g1lg5" path="res://scripts/gymnasium.gd" id="1_pvasr"]
 [ext_resource type="Texture2D" uid="uid://dn4t6y60trhlw" path="res://Assets/SCROLL-Gym/wallpaper-gym.png" id="2_hsqul"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://uyjvjsnng02q" path="res://Assets/SCROLL-Gym/vb.png" id="6_56em3"]
 [ext_resource type="Texture2D" uid="uid://ctepufx7vbd78" path="res://Assets/SCROLL-Gym/athletics office door.png" id="8_bkipu"]
 [ext_resource type="PackedScene" uid="uid://bmaxh8ysxfnko" path="res://scenes/interactive/white_board.tscn" id="8_jceb3"]
+[ext_resource type="Texture2D" uid="uid://dpupaklrf13ht" path="res://Assets/SCROLL-Gym/sign.png" id="9_56em3"]
 [ext_resource type="Script" uid="uid://chgnoqmysvnih" path="res://scripts/onto_court.gd" id="11_jceb3"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_31umq"]
@@ -63,6 +64,11 @@ offset_bottom = 970.29504
 scale = Vector2(0.2756998, 0.25939676)
 texture_normal = ExtResource("8_bkipu")
 
+[node name="Sign" type="Sprite2D" parent="BackGround"]
+position = Vector2(120, 155.00002)
+scale = Vector2(0.23737372, 0.23737374)
+texture = ExtResource("9_56em3")
+
 [node name="Net" type="Sprite2D" parent="BackGround"]
 position = Vector2(1092, 247)
 scale = Vector2(0.47999758, 0.47999758)
@@ -101,7 +107,7 @@ position = Vector2(313, 239)
 scale = Vector2(0.26360804, 0.26360804)
 
 [node name="Tico" parent="." instance=ExtResource("3_1to4h")]
-position = Vector2(784, 477)
+position = Vector2(-140, 477)
 
 [node name="Frame" type="ParallaxBackground" parent="."]
 
@@ -162,10 +168,10 @@ position = Vector2(957.5, 239)
 shape = SubResource("RectangleShape2D_56em3")
 
 [node name="FromHall" type="Marker2D" parent="."]
-position = Vector2(-198, 477)
+position = Vector2(-140, 477)
 
 [node name="FromLockerRoom" type="Marker2D" parent="."]
-position = Vector2(784, 477)
+position = Vector2(720, 477)
 
 [connection signal="pressed" from="BackGround/Office" to="." method="_on_office_pressed"]
 [connection signal="body_entered" from="BacktoHall2" to="." method="_on_backto_hall_2_body_entered"]

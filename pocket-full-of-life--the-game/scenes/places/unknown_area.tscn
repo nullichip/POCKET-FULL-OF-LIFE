@@ -149,7 +149,7 @@ scale = Vector2(8.71875, 8.71875)
 texture = ExtResource("4_nkpt5")
 
 [node name="PixelTico" parent="." instance=ExtResource("3_6lxdg")]
-position = Vector2(596, 33)
+position = Vector2(440, 33)
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
@@ -271,6 +271,6 @@ position = Vector2(1502.5, 352)
 shape = SubResource("RectangleShape2D_0hlqs")
 
 [node name="FromCrossPath" type="Marker2D" parent="."]
-position = Vector2(596, 33)
+position = Vector2(440, 33)
 
 [connection signal="body_entered" from="ToCrossPath" to="." method="_on_to_cross_path_body_entered"]

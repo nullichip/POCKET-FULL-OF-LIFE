@@ -29,7 +29,8 @@ func _on_enter_kitchen_body_entered(body: Node2D) -> void:
 			body.animated_sprite.play("idle_twd_left")
 		else:
 			body.animated_sprite.play("idle_twd_right")
-			
+		
+		GameManager.target_spawn_name = "FromLivingRoom"
 		await TransitionScreen.transition_to_scene("res://scenes/places/kitchen.tscn")
 
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://g0vott1x7on0"
-path="res://.godot/imported/yesbtn.png-da2f6a489dad153e4758a8ca6a975c67.ctex"
+uid="uid://coxpxl5qxoscx"
+path="res://.godot/imported/Slot for Confirmation Menu.png-9395a709ffe7f3cdab26ca6923920c3f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/universal/yesbtn.png"
-dest_files=["res://.godot/imported/yesbtn.png-da2f6a489dad153e4758a8ca6a975c67.ctex"]
+source_file="res://Assets/universal/Slot for Confirmation Menu.png"
+dest_files=["res://.godot/imported/Slot for Confirmation Menu.png-9395a709ffe7f3cdab26ca6923920c3f.ctex"]
 
 [params]
 

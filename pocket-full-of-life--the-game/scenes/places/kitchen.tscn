@@ -60,7 +60,7 @@ position = Vector2(744, 264.00003)
 scale = Vector2(0.3199994, 0.3199994)
 
 [node name="Tico" parent="." instance=ExtResource("7_eiwfd")]
-position = Vector2(724, 477)
+position = Vector2(701, 477)
 
 [node name="TableBG" type="Node2D" parent="."]
 position = Vector2(77, 4)
@@ -133,6 +133,9 @@ color = Color(0, 0, 0, 1)
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="InvisibleWall"]
 position = Vector2(1597, 343)
 shape = SubResource("RectangleShape2D_g275a")
+
+[node name="FromLivingRoom" type="Marker2D" parent="."]
+position = Vector2(701, 477)
 
 [connection signal="body_entered" from="LivingRoomEnterance(K)" to="." method="_on_living_room_enterance_k_body_entered"]
 

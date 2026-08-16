@@ -92,7 +92,7 @@ position = Vector2(314, 323)
 position = Vector2(-62, 18)
 
 [node name="Tico" parent="." instance=ExtResource("7_n2b61")]
-position = Vector2(568, 479)
+position = Vector2(-180, 479)
 
 [node name="HomeEnterance" type="Area2D" parent="."]
 position = Vector2(-62, 118)
@@ -154,10 +154,10 @@ shape = SubResource("RectangleShape2D_a7mac")
 position = Vector2(230, 481)
 
 [node name="OutsideSpawn" type="Marker2D" parent="."]
-position = Vector2(568, 481)
+position = Vector2(568, 479)
 
 [node name="LivingRoomSpawn" type="Marker2D" parent="."]
-position = Vector2(-261, 479)
+position = Vector2(-180, 479)
 
 [connection signal="body_entered" from="HomeEnterance" to="." method="_on_home_enterance_body_entered"]
 [connection signal="body_entered" from="LivingRoomEnterance" to="." method="_on_living_room_enterance_body_entered"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://ccjfxlmeqapkq"]
+[gd_scene load_steps=16 format=3 uid="uid://ccjfxlmeqapkq"]
 
 [ext_resource type="Script" uid="uid://dpmh80re8hpu6" path="res://scripts/school_hall_2.gd" id="1_mor2n"]
 [ext_resource type="Texture2D" uid="uid://c4nxfi7stwblp" path="res://Assets/school hall 1/school hallway and lockerroom.png" id="2_u3jq6"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://b0kbjlu2fbo77" path="res://scenes/interactive/class_room_enterance.tscn" id="6_u3jq6"]
 [ext_resource type="Texture2D" uid="uid://6cp2vuenj0ek" path="res://Assets/universal/Frame.png" id="7_0bwrx"]
 [ext_resource type="PackedScene" uid="uid://dyk6dp0lf145y" path="res://scenes/interactive/girls_locker_room.tscn" id="7_xtf4b"]
+[ext_resource type="Texture2D" uid="uid://rbci31hdqpok" path="res://Assets/school hall 2/sign2.png" id="8_8q0u8"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nt0tv"]
 
@@ -90,6 +91,11 @@ scale = Vector2(0.33497074, 0.33497074)
 destination_scene_path = "res://scenes/places/locker_room.tscn"
 target_spawn_node_name = "FromHall2"
 
+[node name="Sign2" type="Sprite2D" parent="BackGround"]
+position = Vector2(1103, 152)
+scale = Vector2(0.26500005, 0.26500005)
+texture = ExtResource("8_8q0u8")
+
 [node name="Tico" parent="." instance=ExtResource("6_220yv")]
 position = Vector2(792, 477)
 
@@ -121,10 +127,10 @@ position = Vector2(1618, 350)
 shape = SubResource("RectangleShape2D_xts81")
 
 [node name="FromSchoolHall1" type="Marker2D" parent="."]
-position = Vector2(-242, 477)
+position = Vector2(-149, 477)
 
 [node name="FromGym" type="Marker2D" parent="."]
-position = Vector2(792, 477)
+position = Vector2(676, 477)
 
 [node name="FromClassroom" type="Marker2D" parent="."]
 position = Vector2(-178, 477)

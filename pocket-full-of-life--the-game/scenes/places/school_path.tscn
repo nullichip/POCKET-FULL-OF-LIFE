@@ -153,7 +153,7 @@ scale = Vector2(9.603448, 7.8636365)
 texture = ExtResource("4_hl1yc")
 
 [node name="PixelTico" parent="." instance=ExtResource("5_cht8r")]
-position = Vector2(237.82742, 317.37106)
+position = Vector2(237.82745, -103.647766)
 scale = Vector2(0.71999955, 0.71999955)
 
 [node name="ForeGround" type="Node2D" parent="."]
@@ -223,10 +223,10 @@ scale = Vector2(0.9999996, 1)
 shape = SubResource("RectangleShape2D_0iiif")
 
 [node name="FromInsideSchool" type="Marker2D" parent="."]
-position = Vector2(245.05865, 317.37106)
+position = Vector2(224.97188, 306.92593)
 
 [node name="FromCrossRoad" type="Marker2D" parent="."]
-position = Vector2(237.82742, -118.91371)
+position = Vector2(237.82742, -103.647766)
 
 [connection signal="body_entered" from="SchoolEnterance" to="." method="_on_school_enterance_body_entered"]
 [connection signal="body_entered" from="CrossRoadEnterance" to="." method="_on_cross_road_enterance_body_entered"]

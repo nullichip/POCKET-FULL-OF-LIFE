@@ -59,14 +59,14 @@ scale = Vector2(8.299999, 8.3)
 texture = ExtResource("3_hlp0k")
 
 [node name="PixelTico" parent="." instance=ExtResource("4_nqdgp")]
-position = Vector2(354, 241)
+position = Vector2(91, -252)
 scale = Vector2(1.2000015, 1.2000015)
 
 [node name="FromPath" type="Marker2D" parent="."]
-position = Vector2(354, 241)
+position = Vector2(354, 143)
 
 [node name="FromInsidetheHouse" type="Marker2D" parent="."]
-position = Vector2(-21, -252)
+position = Vector2(91, -252)
 
 [node name="HomeEnterance" type="Area2D" parent="."]
 position = Vector2(16, 0)

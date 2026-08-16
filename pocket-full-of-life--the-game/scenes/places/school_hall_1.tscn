@@ -93,7 +93,7 @@ scale = Vector2(0.331, 0.3138871)
 texture_normal = ExtResource("7_i6ytv")
 
 [node name="Tico" parent="." instance=ExtResource("3_3u3hk")]
-position = Vector2(791, 477)
+position = Vector2(-120, 477)
 
 [node name="Frame" type="ParallaxBackground" parent="."]
 
@@ -106,10 +106,10 @@ scale = Vector2(0.3640625, 0.26759258)
 texture = ExtResource("4_i01yp")
 
 [node name="FromSchoolEnterance" type="Marker2D" parent="."]
-position = Vector2(-236, 477)
+position = Vector2(-120, 477)
 
 [node name="FromSchoolHall2" type="Marker2D" parent="."]
-position = Vector2(791, 477)
+position = Vector2(668, 477)
 
 [node name="InvisibleWall" type="StaticBody2D" parent="."]
 

@@ -113,7 +113,7 @@ scale = Vector2(0.28913048, 0.24913046)
 texture = ExtResource("3_o0fen")
 
 [node name="Tico" parent="." instance=ExtResource("2_2jobk")]
-position = Vector2(-208, 479)
+position = Vector2(-253, 479)
 
 [node name="ForeGround" type="Node2D" parent="."]
 
@@ -170,10 +170,10 @@ position = Vector2(1952, 326.5)
 shape = SubResource("RectangleShape2D_4vok2")
 
 [node name="HomeHallwaySpawn" type="Marker2D" parent="."]
-position = Vector2(764, 479)
+position = Vector2(633, 479)
 
 [node name="KitchenSpawn" type="Marker2D" parent="."]
-position = Vector2(-209, 479)
+position = Vector2(-253, 479)
 
 [connection signal="body_entered" from="EnterKitchen" to="." method="_on_enter_kitchen_body_entered"]
 [connection signal="body_entered" from="EnterHomeHallway" to="." method="_on_enter_home_hallway_body_entered"]

@@ -38,7 +38,7 @@ rotation = -1.5707964
 texture = ExtResource("1_sw6ft")
 
 [node name="PixelTico" parent="." instance=ExtResource("2_fqhut")]
-position = Vector2(-15, 85)
+position = Vector2(-15, 231)
 
 [node name="ForeGround" type="Node2D" parent="."]
 
@@ -227,11 +227,11 @@ position = Vector2(1100.75, 387)
 shape = SubResource("RectangleShape2D_iyx10")
 
 [node name="FromCrossPath" type="Marker2D" parent="."]
-position = Vector2(-15.0000305, 249)
+position = Vector2(-15, 211.99998)
 scale = Vector2(2.117188, 6.7309694)
 
 [node name="FromHouse" type="Marker2D" parent="."]
-position = Vector2(-15, -230)
+position = Vector2(-15, -160)
 
 [node name="HouseEnter" type="Area2D" parent="."]
 

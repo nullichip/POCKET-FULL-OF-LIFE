@@ -124,7 +124,7 @@ scale = Vector2(8.833321, 8.833321)
 texture = ExtResource("8_8ohnv")
 
 [node name="PixelTico" parent="." instance=ExtResource("9_urrwl")]
-position = Vector2(-133, -139)
+position = Vector2(-133, -170.00003)
 scale = Vector2(1.3760158, 1.4119606)
 
 [node name="ForeGround" type="Node2D" parent="."]
@@ -197,16 +197,16 @@ position = Vector2(1333.5, 289.5)
 shape = SubResource("RectangleShape2D_lghg4")
 
 [node name="FromPath" type="Marker2D" parent="."]
-position = Vector2(-149, -404)
+position = Vector2(-133, -369)
 
 [node name="From???" type="Marker2D" parent="."]
-position = Vector2(-741, -170)
+position = Vector2(-642, -170)
 
 [node name="FromPark" type="Marker2D" parent="."]
-position = Vector2(326, -170)
+position = Vector2(169, -170)
 
 [node name="FromSchool" type="Marker2D" parent="."]
-position = Vector2(-149, 128)
+position = Vector2(-133, 66)
 
 [node name="InvisibleWalls" type="StaticBody2D" parent="."]
 
