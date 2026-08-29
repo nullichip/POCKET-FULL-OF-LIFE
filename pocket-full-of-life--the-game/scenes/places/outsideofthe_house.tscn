@@ -1,108 +1,101 @@
-[gd_scene load_steps=11 format=3 uid="uid://by2jn3d363x5j"]
+[gd_scene load_steps=13 format=3 uid="uid://by2jn3d363x5j"]
 
 [ext_resource type="Script" uid="uid://2euipe2cql2n" path="res://scripts/outsideofthe_house.gd" id="1_flmow"]
-[ext_resource type="Texture2D" uid="uid://b0mpy2s4mycy7" path="res://Assets/Map/pixilart-layers (2)/pixil-layer-7.png" id="2_6vdgf"]
-[ext_resource type="Texture2D" uid="uid://22tx5mrsaqcc" path="res://Assets/Map/pixilart-layers (2)/pixil-layer-24.png" id="3_hlp0k"]
+[ext_resource type="Texture2D" uid="uid://cayi7flyqhnjm" path="res://Assets/Map/New Map/Full mAp.png" id="2_flmow"]
+[ext_resource type="Texture2D" uid="uid://i6lmdlhny8gj" path="res://Assets/Map/New Map/House.png" id="4_6vdgf"]
 [ext_resource type="PackedScene" uid="uid://cdtuwgwnvbhom" path="res://scenes/universal/pixel_tico.tscn" id="4_nqdgp"]
-[ext_resource type="Texture2D" uid="uid://ccxyp0e1nt1fj" path="res://Assets/Map/pixilart-layers (2)/house.png" id="5_miqli"]
+[ext_resource type="Texture2D" uid="uid://dlx4hcke3048k" path="res://Assets/Map/New Map/Foreground.png" id="5_hlp0k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_flmow"]
+size = Vector2(242, 338)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6vdgf"]
+size = Vector2(252, 335)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hlp0k"]
+size = Vector2(1054, 336)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nqdgp"]
+size = Vector2(226.5, 968.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_miqli"]
+size = Vector2(528, 1292)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d2p60"]
-size = Vector2(75, 171)
+size = Vector2(216, 349)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2bofp"]
-size = Vector2(420, 127)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5mnda"]
-size = Vector2(530.5, 578)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_y587g"]
-size = Vector2(784.5, 176.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ow6x8"]
-size = Vector2(352.5, 861)
+size = Vector2(258, 362)
 
 [node name="OutsideoftheHouse" type="Node2D"]
 script = ExtResource("1_flmow")
 
 [node name="BG" type="TextureRect" parent="."]
 texture_filter = 1
-offset_left = -72.0
-offset_top = -111.0
-offset_right = 1313.0
-offset_bottom = 767.0
-texture = ExtResource("2_6vdgf")
-
-[node name="BackGround" type="Node2D" parent="."]
-
-[node name="PixilLayer24" type="Sprite2D" parent="BackGround"]
-texture_filter = 1
-position = Vector2(1076, -110.99994)
-scale = Vector2(9.9, 9.9)
-texture = ExtResource("3_hlp0k")
-
-[node name="PixilLayer25" type="Sprite2D" parent="BackGround"]
-texture_filter = 1
-position = Vector2(932.875, -52.000004)
-scale = Vector2(6.95, 6.95)
-texture = ExtResource("3_hlp0k")
-
-[node name="PixilLayer26" type="Sprite2D" parent="BackGround"]
-texture_filter = 1
-position = Vector2(793, -86)
-scale = Vector2(8.299999, 8.3)
-texture = ExtResource("3_hlp0k")
-
-[node name="PixilLayer27" type="Sprite2D" parent="BackGround"]
-texture_filter = 1
-position = Vector2(855.00006, 407)
-scale = Vector2(8.299999, 8.3)
-texture = ExtResource("3_hlp0k")
+offset_left = -4134.0
+offset_top = -208.97592
+offset_right = -2683.0
+offset_bottom = 614.02405
+scale = Vector2(5.8393617, 5.8393617)
+texture = ExtResource("2_flmow")
 
 [node name="PixelTico" parent="." instance=ExtResource("4_nqdgp")]
-position = Vector2(91, -252)
-scale = Vector2(1.2000015, 1.2000015)
+position = Vector2(-281, -115.00001)
+scale = Vector2(1.1064095, 1.1125584)
 
-[node name="FromPath" type="Marker2D" parent="."]
-position = Vector2(354, 143)
-
-[node name="FromInsidetheHouse" type="Marker2D" parent="."]
-position = Vector2(91, -252)
-
-[node name="HomeEnterance" type="Area2D" parent="."]
-position = Vector2(16, 0)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HomeEnterance"]
-position = Vector2(586, 143)
-shape = SubResource("RectangleShape2D_d2p60")
-
-[node name="House" type="TextureRect" parent="."]
+[node name="House" type="Sprite2D" parent="."]
 texture_filter = 1
-offset_left = -72.0
-offset_top = -111.0
-offset_right = 1313.0
-offset_bottom = 767.0
-texture = ExtResource("5_miqli")
+position = Vector2(327, 1090.0001)
+scale = Vector2(4.3841577, 4.523743)
+texture = ExtResource("4_6vdgf")
 
-[node name="PathEnterance" type="Area2D" parent="."]
-position = Vector2(70, 0)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PathEnterance"]
-position = Vector2(1014, 790)
-shape = SubResource("RectangleShape2D_2bofp")
+[node name="Foreground" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(108, 2184.9988)
+scale = Vector2(9.709249, 8.925921)
+texture = ExtResource("5_hlp0k")
 
 [node name="InvisibleWalls" type="StaticBody2D" parent="."]
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InvisibleWalls"]
+position = Vector2(161, -73)
+shape = SubResource("RectangleShape2D_flmow")
+
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="InvisibleWalls"]
-position = Vector2(708.75, 504)
-shape = SubResource("RectangleShape2D_5mnda")
+position = Vector2(623, -72.5)
+shape = SubResource("RectangleShape2D_6vdgf")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="InvisibleWalls"]
-position = Vector2(927.75, -41.25)
-shape = SubResource("RectangleShape2D_y587g")
+position = Vector2(364, 862)
+shape = SubResource("RectangleShape2D_hlp0k")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="InvisibleWalls"]
-position = Vector2(1350.25, 412.5)
-shape = SubResource("RectangleShape2D_ow6x8")
+position = Vector2(1209.25, 247.75)
+shape = SubResource("RectangleShape2D_nqdgp")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="InvisibleWalls"]
+position = Vector2(-418, 387)
+shape = SubResource("RectangleShape2D_miqli")
+
+[node name="HomeEnterance" type="Area2D" parent="."]
+position = Vector2(-281, -37)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HomeEnterance"]
+position = Vector2(671, -28.5)
+shape = SubResource("RectangleShape2D_d2p60")
+
+[node name="PathEnterance" type="Area2D" parent="."]
+position = Vector2(-65, -73)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PathEnterance"]
+position = Vector2(1071, 1011)
+shape = SubResource("RectangleShape2D_2bofp")
+
+[node name="FromPath" type="Marker2D" parent="."]
+position = Vector2(327, -59)
+
+[node name="FromInsidetheHouse" type="Marker2D" parent="."]
+position = Vector2(-281, -115)
 
 [connection signal="body_entered" from="HomeEnterance" to="." method="_on_home_enterance_body_entered"]
 [connection signal="body_entered" from="PathEnterance" to="." method="_on_path_enterance_body_entered"]

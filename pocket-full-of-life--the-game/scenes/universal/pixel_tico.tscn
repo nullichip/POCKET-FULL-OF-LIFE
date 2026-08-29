@@ -128,9 +128,7 @@ texture_filter = 1
 position = Vector2(606, 318.1111)
 scale = Vector2(5.5555553, 5.555555)
 sprite_frames = SubResource("SpriteFrames_8hwur")
-animation = &"walk_right"
-frame = 1
-frame_progress = 0.60192555
+animation = &"idle_fwd"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(606, 318.1111)

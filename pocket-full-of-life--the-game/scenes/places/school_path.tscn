@@ -1,232 +1,184 @@
-[gd_scene load_steps=17 format=3 uid="uid://bsng68m6xwgqc"]
+[gd_scene load_steps=24 format=3 uid="uid://bsng68m6xwgqc"]
 
-[ext_resource type="Texture2D" uid="uid://bvkjkn8c01txx" path="res://Assets/Map/pixilart-layers (2)/ye.png" id="1_bp31p"]
 [ext_resource type="Script" uid="uid://d1cf8oujg4qch" path="res://scripts/school_path.gd" id="1_hl1yc"]
-[ext_resource type="Texture2D" uid="uid://bavs7auvtjxqm" path="res://Assets/Map/pixilart-layers (2)/pixil-layer-21.png" id="2_piud1"]
-[ext_resource type="Texture2D" uid="uid://dbhdjv7fgbv3i" path="res://Assets/Map/pixilart-layers (2)/pixil-layer-23.png" id="3_bp31p"]
-[ext_resource type="Texture2D" uid="uid://vlg8x5bhq2a5" path="res://Assets/Map/pixilart-layers (2)/pixil-layer-25.png" id="4_hl1yc"]
+[ext_resource type="Texture2D" uid="uid://cayi7flyqhnjm" path="res://Assets/Map/New Map/Full mAp.png" id="2_8y6xp"]
+[ext_resource type="Texture2D" uid="uid://8aslrkjh6mwp" path="res://Assets/Map/New Map/School.png" id="3_f8okd"]
 [ext_resource type="PackedScene" uid="uid://cdtuwgwnvbhom" path="res://scenes/universal/pixel_tico.tscn" id="5_cht8r"]
-[ext_resource type="Texture2D" uid="uid://sh0kaxyycx1p" path="res://Assets/Map/pixilart-layers (2)/flag.png" id="7_cht8r"]
+[ext_resource type="Texture2D" uid="uid://dlx4hcke3048k" path="res://Assets/Map/New Map/Foreground.png" id="5_ss2ff"]
+[ext_resource type="Texture2D" uid="uid://b16xs1fwxyply" path="res://Assets/Map/New Map/Lake1.png" id="6_4wwxc"]
+[ext_resource type="Texture2D" uid="uid://cpar4vmt2hhxm" path="res://Assets/Map/New Map/Lake2.png" id="7_cxnvm"]
+[ext_resource type="Texture2D" uid="uid://efwadwntkwft" path="res://Assets/Map/New Map/Lake3.png" id="8_5jtit"]
+[ext_resource type="Texture2D" uid="uid://di8ygnr68ntcp" path="res://Assets/Map/New Map/Flag1.png" id="9_aac7k"]
+[ext_resource type="Texture2D" uid="uid://cvei1blowvwqk" path="res://Assets/Map/New Map/Flag2.png" id="10_vcygu"]
+[ext_resource type="Texture2D" uid="uid://b4qr7rutrpkvp" path="res://Assets/Map/New Map/Flag3.png" id="11_csjw7"]
+[ext_resource type="Texture2D" uid="uid://oeqxkcsgr83l" path="res://Assets/Map/New Map/Flag4.png" id="12_e5ek6"]
+[ext_resource type="Texture2D" uid="uid://d2g0e2p74k8bd" path="res://Assets/Map/New Map/school building.png" id="13_uesng"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7nq82"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": ExtResource("6_4wwxc")
+}, {
+"duration": 3.0,
+"texture": ExtResource("7_cxnvm")
+}, {
+"duration": 3.0,
+"texture": ExtResource("8_5jtit")
+}],
+"loop": true,
+"name": &"flowing_lake",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iej8u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_aac7k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_vcygu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_csjw7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_e5ek6")
+}],
+"loop": true,
+"name": &"swaying_flag",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8y6xp"]
+size = Vector2(602.38074, 371.20367)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f8okd"]
+size = Vector2(654.0254, 337.45776)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ss2ff"]
+size = Vector2(94.98888, 729.91003)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4wwxc"]
+size = Vector2(702.2337, 712.2337)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cxnvm"]
+size = Vector2(29.728516, 93.20264)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5jtit"]
+size = Vector2(11.248581, 55.43949)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m4rvu"]
-size = Vector2(163.90808, 161.85608)
+size = Vector2(163.90808, 327.01276)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_spmqp"]
 size = Vector2(201.6712, 36.51455)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wohqy"]
-size = Vector2(582.3292, 306.968)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ytt2n"]
-size = Vector2(403.73444, 294.62332)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_e8s3p"]
-size = Vector2(375.5, 353.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_whvix"]
-size = Vector2(198, 393.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_80bh3"]
-size = Vector2(591.50073, 290.74945)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_cht8r"]
-size = Vector2(91.602066, 43.264687)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0iiif"]
-size = Vector2(350.15613, 265.97186)
-
 [node name="SchoolPath" type="Node2D"]
-position = Vector2(-73, -117)
+position = Vector2(-612, -127)
 scale = Vector2(1.2445999, 1.2445999)
 script = ExtResource("1_hl1yc")
 
 [node name="BG" type="TextureRect" parent="."]
 texture_filter = 1
-offset_left = -44.994373
-offset_top = -5.624297
-offset_right = 1107.0056
-offset_bottom = 641.37573
-scale = Vector2(1.0964167, 1.1606944)
-mouse_filter = 2
-texture = ExtResource("1_bp31p")
-metadata/_edit_use_anchors_ = true
+offset_left = -1191.4781
+offset_top = -990.05676
+offset_right = 259.52185
+offset_bottom = -167.05676
+scale = Vector2(2.061852, 2.061852)
+texture = ExtResource("2_8y6xp")
 
-[node name="Background" type="Node2D" parent="."]
-position = Vector2(-44.994373, -5.624297)
-scale = Vector2(1.0964167, 1.1606944)
-
-[node name="PixilLayer21" type="Sprite2D" parent="Background"]
+[node name="School" type="Sprite2D" parent="BG"]
 texture_filter = 1
-position = Vector2(423, 247)
-scale = Vector2(14.34028, 7.2013874)
-texture = ExtResource("2_piud1")
-flip_h = true
-
-[node name="PixilLayer22" type="Sprite2D" parent="Background"]
-texture_filter = 1
-position = Vector2(894, 253)
-scale = Vector2(14.34028, 7.2013874)
-texture = ExtResource("2_piud1")
-
-[node name="PixilLayer30" type="Sprite2D" parent="Background"]
-texture_filter = 1
-position = Vector2(1032, 167)
-scale = Vector2(3.6799965, 7.8189754)
-texture = ExtResource("3_bp31p")
-
-[node name="PixilLayer31" type="Sprite2D" parent="Background"]
-texture_filter = 1
-position = Vector2(1110, 167)
-scale = Vector2(3.6799965, 7.8189754)
-texture = ExtResource("3_bp31p")
-
-[node name="PixilLayer32" type="Sprite2D" parent="Background"]
-texture_filter = 1
-position = Vector2(853, 161)
-scale = Vector2(3.6799965, 7.8189754)
-texture = ExtResource("3_bp31p")
-
-[node name="PixilLayer33" type="Sprite2D" parent="Background"]
-texture_filter = 1
-position = Vector2(851, 36.000015)
-scale = Vector2(3.6799965, 7.8189754)
-texture = ExtResource("3_bp31p")
-
-[node name="PixilLayer34" type="Sprite2D" parent="Background"]
-texture_filter = 1
-position = Vector2(851, 36.000015)
-scale = Vector2(3.6799965, 7.8189754)
-texture = ExtResource("3_bp31p")
-
-[node name="PixilLayer35" type="Sprite2D" parent="Background"]
-texture_filter = 1
-position = Vector2(500.87994, 147.47)
-scale = Vector2(3.6799965, 7.8189754)
-texture = ExtResource("3_bp31p")
-
-[node name="PixilLayer36" type="Sprite2D" parent="Background"]
-texture_filter = 1
-position = Vector2(498.87994, 22.470016)
-scale = Vector2(3.6799965, 7.8189754)
-texture = ExtResource("3_bp31p")
-
-[node name="PixilLayer37" type="Sprite2D" parent="Background"]
-texture_filter = 1
-position = Vector2(317.00003, 175)
-scale = Vector2(3.6799965, 7.8189754)
-texture = ExtResource("3_bp31p")
-
-[node name="PixilLayer38" type="Sprite2D" parent="Background"]
-texture_filter = 1
-position = Vector2(206, 175.00002)
-scale = Vector2(3.6799965, 7.8189754)
-texture = ExtResource("3_bp31p")
-
-[node name="PixilLayer39" type="Sprite2D" parent="Background"]
-texture_filter = 1
-position = Vector2(96, 175.00002)
-scale = Vector2(3.6799965, 7.8189754)
-texture = ExtResource("3_bp31p")
-
-[node name="PixilLayer40" type="Sprite2D" parent="Background"]
-texture_filter = 1
-position = Vector2(7.6293945e-06, 175.00002)
-scale = Vector2(3.6799965, 7.8189754)
-texture = ExtResource("3_bp31p")
-
-[node name="PixilLayer41" type="Sprite2D" parent="Background"]
-texture_filter = 1
-position = Vector2(7.6293945e-06, 175.00002)
-scale = Vector2(3.6799965, 7.8189754)
-texture = ExtResource("3_bp31p")
-
-[node name="PixilLayer25" type="Sprite2D" parent="Background"]
-texture_filter = 1
-position = Vector2(973.00006, 287)
-scale = Vector2(9.603448, 7.8636365)
-texture = ExtResource("4_hl1yc")
-
-[node name="PixilLayer26" type="Sprite2D" parent="Background"]
-texture_filter = 1
-position = Vector2(206.00006, 284)
-scale = Vector2(9.603448, 7.8636365)
-texture = ExtResource("4_hl1yc")
+position = Vector2(791.025, 456.79733)
+scale = Vector2(0.9704029, 0.9704029)
+texture = ExtResource("3_f8okd")
 
 [node name="PixelTico" parent="." instance=ExtResource("5_cht8r")]
-position = Vector2(237.82745, -103.647766)
-scale = Vector2(0.71999955, 0.71999955)
+position = Vector2(658.0428, 249.07602)
+scale = Vector2(0.4732738, 0.4732738)
 
-[node name="ForeGround" type="Node2D" parent="."]
-position = Vector2(-44.994373, -5.624297)
-scale = Vector2(1.0964167, 1.1606944)
-
-[node name="Newer" type="Sprite2D" parent="ForeGround"]
+[node name="Foreground" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(677.1214, 306.65924)
-scale = Vector2(10.154726, 11.043919)
-texture = ExtResource("7_cht8r")
+position = Vector2(307.72937, -142.21434)
+scale = Vector2(3.4282923, 3.1517026)
+texture = ExtResource("5_ss2ff")
+
+[node name="Lake" type="AnimatedSprite2D" parent="Foreground"]
+texture_filter = 1
+position = Vector2(-89.55089, 104.1222)
+scale = Vector2(0.9047911, 0.86789775)
+sprite_frames = SubResource("SpriteFrames_7nq82")
+animation = &"flowing_lake"
+autoplay = "flowing_lake"
+
+[node name="Flag" type="AnimatedSprite2D" parent="Foreground"]
+texture_filter = 1
+position = Vector2(115.07312, 116.75901)
+scale = Vector2(0.7580323, 1.0333592)
+sprite_frames = SubResource("SpriteFrames_iej8u")
+animation = &"swaying_flag"
+autoplay = "swaying_flag"
+frame_progress = 0.74544
+
+[node name="SchoolBuilding" type="Sprite2D" parent="Foreground"]
+position = Vector2(-7.2630844, 234.2088)
+texture = ExtResource("13_uesng")
+
+[node name="InvisibleWalls" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InvisibleWalls"]
+position = Vector2(286.83917, 31.335342)
+shape = SubResource("RectangleShape2D_8y6xp")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="InvisibleWalls"]
+position = Vector2(980.2346, 31.33537)
+shape = SubResource("RectangleShape2D_8y6xp")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="InvisibleWalls"]
+position = Vector2(233.81004, 646.7941)
+shape = SubResource("RectangleShape2D_f8okd")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="InvisibleWalls"]
+position = Vector2(1031.6567, 646.7942)
+shape = SubResource("RectangleShape2D_f8okd")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="InvisibleWalls"]
+position = Vector2(1312.0682, 400.93204)
+shape = SubResource("RectangleShape2D_ss2ff")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="InvisibleWalls"]
+position = Vector2(114.092865, 354.33072)
+shape = SubResource("RectangleShape2D_4wwxc")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="InvisibleWalls"]
+position = Vector2(1204.8048, 237.02396)
+shape = SubResource("RectangleShape2D_cxnvm")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="InvisibleWalls"]
+position = Vector2(630.72473, 322.59363)
+shape = SubResource("RectangleShape2D_5jtit")
 
 [node name="SchoolEnterance" type="Area2D" parent="."]
+position = Vector2(-26.514545, -135.7866)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SchoolEnterance"]
-position = Vector2(656.43585, 691.20764)
+position = Vector2(656.4357, 770.9305)
 shape = SubResource("RectangleShape2D_m4rvu")
 
 [node name="CrossRoadEnterance" type="Area2D" parent="."]
+position = Vector2(-46.601326, -20.890244)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CrossRoadEnterance"]
 position = Vector2(683.35205, 12.632973)
 shape = SubResource("RectangleShape2D_spmqp")
 
-[node name="SchoolDoorOverlay" type="ColorRect" parent="."]
-offset_left = 568.8575
-offset_top = 625.10046
-offset_right = 748.835
-offset_bottom = 934.43677
-color = Color(0, 0, 0, 1)
-
-[node name="InvisibleWalls" type="StaticBody2D" parent="."]
-position = Vector2(-44.99438, -5.624298)
-scale = Vector2(1.0964167, 1.1606944)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="InvisibleWalls"]
-position = Vector2(281.16434, 143.48398)
-scale = Vector2(0.9999994, 1)
-shape = SubResource("RectangleShape2D_wohqy")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="InvisibleWalls"]
-position = Vector2(958.1326, 135.81165)
-scale = Vector2(0.9999998, 1)
-shape = SubResource("RectangleShape2D_ytt2n")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="InvisibleWalls"]
-position = Vector2(169.25, 495.25)
-shape = SubResource("RectangleShape2D_e8s3p")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="InvisibleWalls"]
-position = Vector2(1078, 461.75)
-shape = SubResource("RectangleShape2D_whvix")
-
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="InvisibleWalls"]
-position = Vector2(269.25034, 675.6253)
-scale = Vector2(0.99999964, 1)
-shape = SubResource("RectangleShape2D_80bh3")
-
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="InvisibleWalls"]
-position = Vector2(656.969, 408.93665)
-scale = Vector2(0.99999815, 1)
-shape = SubResource("RectangleShape2D_cht8r")
-
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="InvisibleWalls"]
-position = Vector2(888.8401, 661.85205)
-scale = Vector2(0.9999996, 1)
-shape = SubResource("RectangleShape2D_0iiif")
-
 [node name="FromInsideSchool" type="Marker2D" parent="."]
-position = Vector2(224.97188, 306.92593)
+position = Vector2(347.90295, 282.01834)
 
 [node name="FromCrossRoad" type="Marker2D" parent="."]
-position = Vector2(237.82742, -103.647766)
+position = Vector2(347.90298, 16.06942)
 
 [connection signal="body_entered" from="SchoolEnterance" to="." method="_on_school_enterance_body_entered"]
 [connection signal="body_entered" from="CrossRoadEnterance" to="." method="_on_cross_road_enterance_body_entered"]
