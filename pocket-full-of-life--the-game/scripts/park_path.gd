@@ -33,4 +33,5 @@ func _on_play_ground_enterance_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		body.velocity = Vector2.ZERO
 		
-		#await TransitionScreen.transition_to_scene("res://scenes/places/lockerhallway.tscn")
+		GameManager.target_spawn_name = "FromPath"
+		await TransitionScreen.transition_to_scene("res://scenes/places/park.tscn")

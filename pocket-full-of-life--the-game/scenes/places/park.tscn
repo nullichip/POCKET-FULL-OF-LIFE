@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=3 uid="uid://bungjine0ifmo"]
+
+[ext_resource type="Script" uid="uid://cgne6bdc4rou6" path="res://scripts/park.gd" id="1_rlg1e"]
+[ext_resource type="Texture2D" uid="uid://dlucmgd55yq8h" path="res://Assets/Park/Park/nighttime park.png" id="2_68ux5"]
+[ext_resource type="PackedScene" uid="uid://b53r4vslu8q5n" path="res://scenes/universal/tico_walk_sports.tscn" id="3_d2856"]
+[ext_resource type="PackedScene" uid="uid://d12x2w3dx57k7" path="res://scenes/interactive/seesaw.tscn" id="4_rlg1e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_68ux5"]
+size = Vector2(141, 398)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r005h"]
+size = Vector2(464, 623)
+
+[node name="Park" type="Node2D"]
+script = ExtResource("1_rlg1e")
+
+[node name="Background" type="Node2D" parent="."]
+position = Vector2(-70, 0)
+
+[node name="NighttimePark" type="TextureRect" parent="Background"]
+offset_left = 60.000004
+offset_top = 151.0
+offset_right = 3900.0
+offset_bottom = 2311.0
+rotation = -0.016814612
+scale = Vector2(0.20834883, 0.20834883)
+texture = ExtResource("2_68ux5")
+
+[node name="Tico" parent="." instance=ExtResource("3_d2856")]
+position = Vector2(-263, 631.99994)
+scale = Vector2(1.0872259, 1.0872259)
+
+[node name="Seesaw" parent="." instance=ExtResource("4_rlg1e")]
+position = Vector2(-133, 320.00003)
+scale = Vector2(0.6985778, 0.6985778)
+
+[node name="ToPath" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ToPath"]
+position = Vector2(-198, 396)
+shape = SubResource("RectangleShape2D_68ux5")
+
+[node name="InvisibleWalls" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InvisibleWalls"]
+position = Vector2(963, 395)
+shape = SubResource("RectangleShape2D_r005h")
+
+[node name="FromPath" type="Marker2D" parent="."]
+position = Vector2(-294, 620)
+
+[connection signal="body_entered" from="ToPath" to="." method="_on_to_path_body_entered"]
