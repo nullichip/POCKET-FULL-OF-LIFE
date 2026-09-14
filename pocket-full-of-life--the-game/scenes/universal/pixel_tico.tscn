@@ -121,6 +121,7 @@ animations = [{
 size = Vector2(100, 122)
 
 [node name="PixelTico" type="CharacterBody2D" groups=["Player"]]
+collision_mask = 3
 script = ExtResource("1_14f4j")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
