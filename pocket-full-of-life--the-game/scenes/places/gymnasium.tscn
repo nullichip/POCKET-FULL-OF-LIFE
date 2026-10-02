@@ -107,7 +107,7 @@ position = Vector2(313, 239)
 scale = Vector2(0.26360804, 0.26360804)
 
 [node name="Tico" parent="." instance=ExtResource("3_1to4h")]
-position = Vector2(-140, 477)
+position = Vector2(747, 477)
 
 [node name="Frame" type="ParallaxBackground" parent="."]
 
@@ -168,10 +168,10 @@ position = Vector2(957.5, 239)
 shape = SubResource("RectangleShape2D_56em3")
 
 [node name="FromHall" type="Marker2D" parent="."]
-position = Vector2(-140, 477)
+position = Vector2(-218, 477)
 
 [node name="FromLockerRoom" type="Marker2D" parent="."]
-position = Vector2(720, 477)
+position = Vector2(747, 477)
 
 [connection signal="pressed" from="BackGround/Office" to="." method="_on_office_pressed"]
 [connection signal="body_entered" from="BacktoHall2" to="." method="_on_backto_hall_2_body_entered"]

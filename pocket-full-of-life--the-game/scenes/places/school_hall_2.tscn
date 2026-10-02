@@ -97,7 +97,7 @@ scale = Vector2(0.26500005, 0.26500005)
 texture = ExtResource("8_8q0u8")
 
 [node name="Tico" parent="." instance=ExtResource("6_220yv")]
-position = Vector2(792, 477)
+position = Vector2(-340, 477)
 
 [node name="Frame" type="ParallaxBackground" parent="."]
 
@@ -127,16 +127,16 @@ position = Vector2(1618, 350)
 shape = SubResource("RectangleShape2D_xts81")
 
 [node name="FromSchoolHall1" type="Marker2D" parent="."]
-position = Vector2(-149, 477)
+position = Vector2(-340, 477)
 
 [node name="FromGym" type="Marker2D" parent="."]
-position = Vector2(676, 477)
+position = Vector2(792, 477)
 
 [node name="FromClassroom" type="Marker2D" parent="."]
-position = Vector2(-178, 477)
+position = Vector2(-120, 477)
 
 [node name="FromLockerRoom" type="Marker2D" parent="."]
-position = Vector2(792, 477)
+position = Vector2(735, 477)
 
 [node name="BacktoHall1" type="Area2D" parent="."]
 

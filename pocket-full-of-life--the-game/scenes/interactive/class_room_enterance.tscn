@@ -50,6 +50,7 @@ size = Vector2(390, 604)
 [node name="ClassRoomEnterance" type="Area2D"]
 script = ExtResource("1_0wg3u")
 prompt_text = "Enter Classroom?"
+override_entry_direction = -1
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-5.5, 6.75)

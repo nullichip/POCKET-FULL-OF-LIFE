@@ -3,6 +3,9 @@ extends Area2D
 @export var prompt_text: String = "Example..."
 @export var destination_scene_path: String = ""
 @export var target_spawn_node_name: String = ""
+
+@export var override_entry_direction: int = 0
+
 var is_player_near: bool = false
 
 @onready var door_sprite = get_node_or_null("AnimatedSprite2D")
@@ -27,8 +30,13 @@ func start_interaction() -> void:
 	var tico = get_tree().get_nodes_in_group("Player")[0]
 	
 	if tico.is_interacting:
-		return 
-		
+		return
+	
+	if override_entry_direction != 0:
+		GameManager.last_known_direction = override_entry_direction
+	else:
+		GameManager.last_known_direction = int(tico.last_direction)
+	
 	tico.is_interacting = true
 	
 	tico.velocity = Vector2.ZERO

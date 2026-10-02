@@ -6,8 +6,14 @@ const SPEED = 250.0
 @onready var animated_sprite = $AnimatedSprite2D
 var is_interacting = false
 var last_direction = 1
+var is_entering_room: bool = false
 
 func _physics_process(delta: float) -> void:
+	if is_entering_room == true:
+		velocity.x = last_direction * SPEED
+		move_and_slide()
+		return
+	
 	if Input.is_action_just_pressed("ui_up"):
 		if is_interacting == false:
 			face_door()
@@ -57,3 +63,21 @@ func face_door() -> void:
 		animated_sprite.play("look_away_twd_left")
 	else:
 		animated_sprite.play("look_away_twd_right")
+
+func walk_into_room(saved_direction: int) -> void:
+	is_entering_room = true
+	last_direction = saved_direction
+	
+	if last_direction < 0:
+		animated_sprite.play("walk_twd_left")
+	else:
+		animated_sprite.play("walk_twd_right")
+	
+	await get_tree().create_timer(0.5).timeout
+	
+	is_entering_room = false
+	velocity.x = 0
+	if last_direction < 0:
+		animated_sprite.play("idle_twd_left")
+	else:
+		animated_sprite.play("idle_twd_right")

@@ -50,6 +50,7 @@ size = Vector2(394, 594)
 [node name="GirlsLockerRoom" type="Area2D"]
 script = ExtResource("1_es73n")
 prompt_text = "Enter Locker Room?"
+override_entry_direction = 1
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, 5.4999933)
