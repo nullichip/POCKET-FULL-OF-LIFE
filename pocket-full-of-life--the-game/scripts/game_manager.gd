@@ -2,6 +2,7 @@ extends Node
 
 var target_spawn_name: String = ""
 var current_save_data: Dictionary = {}
+var last_known_direction: int = 1
 
 func save_game(slot_id: int) -> void:
 	var tico = get_tree().get_first_node_in_group("Player")

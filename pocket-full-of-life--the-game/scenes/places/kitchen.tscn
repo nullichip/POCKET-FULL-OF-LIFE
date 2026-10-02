@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://be4bxst4bsx51"]
 
-[ext_resource type="Script" uid="uid://co2lfdp5hmoht" path="res://scripts/home.gd" id="1_g275a"]
+[ext_resource type="Script" uid="uid://c2knvyj58fjjt" path="res://scripts/kitchen.gd" id="1_g275a"]
 [ext_resource type="Texture2D" uid="uid://2rk08fcqh5bq" path="res://Assets/SCROLL-kitchen/kitchen.png" id="2_losyq"]
 [ext_resource type="PackedScene" uid="uid://b43uktunge7qc" path="res://scenes/interactive/interactive_items.tscn" id="3_ekv3l"]
 [ext_resource type="Texture2D" uid="uid://dmxxgu40i4jc8" path="res://Assets/SCROLL-kitchen/3 paintings.png" id="4_ubdrg"]
