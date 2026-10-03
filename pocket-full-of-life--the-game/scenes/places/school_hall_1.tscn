@@ -13,7 +13,7 @@
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_k04nh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_40hpo"]
-size = Vector2(376.5, 788.5)
+size = Vector2(291.25, 788.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gkssq"]
 size = Vector2(565, 842)
@@ -93,7 +93,7 @@ scale = Vector2(0.331, 0.3138871)
 texture_normal = ExtResource("7_i6ytv")
 
 [node name="Tico" parent="." instance=ExtResource("3_3u3hk")]
-position = Vector2(692, 477)
+position = Vector2(-262, 477)
 
 [node name="Frame" type="ParallaxBackground" parent="."]
 
@@ -106,7 +106,7 @@ scale = Vector2(0.3640625, 0.26759258)
 texture = ExtResource("4_i01yp")
 
 [node name="FromSchoolEnterance" type="Marker2D" parent="."]
-position = Vector2(-120, 477)
+position = Vector2(-262, 477)
 
 [node name="FromSchoolHall2" type="Marker2D" parent="."]
 position = Vector2(692, 477)
@@ -114,7 +114,7 @@ position = Vector2(692, 477)
 [node name="InvisibleWall" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="InvisibleWall"]
-position = Vector2(-340, 350)
+position = Vector2(-382.625, 350)
 shape = SubResource("RectangleShape2D_40hpo")
 
 [node name="ColorRect2" type="ColorRect" parent="InvisibleWall"]

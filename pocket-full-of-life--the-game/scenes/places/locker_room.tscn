@@ -16,16 +16,16 @@
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ycs7b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e22dq"]
-size = Vector2(376.5, 788.5)
+size = Vector2(322.25, 788.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_enmcc"]
-size = Vector2(615.5, 819)
+size = Vector2(494.75, 819)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l5vk7"]
-size = Vector2(219, 580)
+size = Vector2(154.5, 580)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ahmrt"]
-size = Vector2(233, 538)
+size = Vector2(141.5, 538)
 
 [node name="LockerRoom" type="Node2D"]
 script = ExtResource("1_e0e6a")
@@ -159,11 +159,11 @@ texture = ExtResource("4_40i8o")
 [node name="InvisibleWall" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="InvisibleWall"]
-position = Vector2(-368, 350)
+position = Vector2(-395.125, 350)
 shape = SubResource("RectangleShape2D_e22dq")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="InvisibleWall"]
-position = Vector2(1599, 323)
+position = Vector2(1659.375, 323)
 shape = SubResource("RectangleShape2D_enmcc")
 
 [node name="FromGym" type="Marker2D" parent="."]
@@ -175,13 +175,13 @@ position = Vector2(-209, 477)
 [node name="ToHall" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ToHall"]
-position = Vector2(-151, 294)
+position = Vector2(-183.25, 294)
 shape = SubResource("RectangleShape2D_l5vk7")
 
 [node name="ToGym" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ToGym"]
-position = Vector2(1331, 271)
+position = Vector2(1376.75, 271)
 shape = SubResource("RectangleShape2D_ahmrt")
 
 [connection signal="body_entered" from="ToHall" to="." method="_on_to_hall_body_entered"]

@@ -50,7 +50,7 @@ scale = Vector2(3.3789892, 3.3789892)
 texture = ExtResource("2_syneh")
 
 [node name="PixelTico" parent="." instance=ExtResource("2_fqhut")]
-position = Vector2(135, -160)
+position = Vector2(135, 0)
 scale = Vector2(0.77560693, 0.77560693)
 
 [node name="Foreground" type="Sprite2D" parent="."]
@@ -93,11 +93,11 @@ position = Vector2(591, 721)
 shape = SubResource("RectangleShape2D_sfkl2")
 
 [node name="FromCrossPath" type="Marker2D" parent="."]
-position = Vector2(135, 326)
+position = Vector2(135, 389.99997)
 scale = Vector2(2.117188, 6.7309694)
 
 [node name="FromHouse" type="Marker2D" parent="."]
-position = Vector2(135, -160)
+position = Vector2(135, 0)
 
 [connection signal="body_entered" from="HouseEnter" to="." method="_on_house_enter_body_entered"]
 [connection signal="body_entered" from="CrossPathEnter" to="." method="_on_cross_path_enter_body_entered"]

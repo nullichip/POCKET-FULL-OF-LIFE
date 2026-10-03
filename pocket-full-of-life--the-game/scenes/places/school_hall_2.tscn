@@ -17,13 +17,13 @@
 size = Vector2(376.5, 788.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xts81"]
-size = Vector2(565, 842)
+size = Vector2(530.5, 842)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u3jq6"]
 size = Vector2(329, 608)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xtf4b"]
-size = Vector2(209.5, 600)
+size = Vector2(145.5, 600)
 
 [node name="SchoolHall2" type="Node2D"]
 script = ExtResource("1_mor2n")
@@ -123,7 +123,7 @@ mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="InvisibleWall"]
-position = Vector2(1618, 350)
+position = Vector2(1635.25, 350)
 shape = SubResource("RectangleShape2D_xts81")
 
 [node name="FromSchoolHall1" type="Marker2D" parent="."]
@@ -147,7 +147,7 @@ shape = SubResource("RectangleShape2D_u3jq6")
 [node name="ToGym" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ToGym"]
-position = Vector2(1310.75, 279)
+position = Vector2(1342.75, 279)
 shape = SubResource("RectangleShape2D_xtf4b")
 
 [connection signal="pressed" from="BackGround/EnglishRoom" to="." method="_on_english_room_pressed"]

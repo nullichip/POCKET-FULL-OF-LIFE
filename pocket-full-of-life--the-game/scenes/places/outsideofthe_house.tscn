@@ -40,7 +40,7 @@ scale = Vector2(5.8393617, 5.8393617)
 texture = ExtResource("2_flmow")
 
 [node name="PixelTico" parent="." instance=ExtResource("4_nqdgp")]
-position = Vector2(-281, -115.00001)
+position = Vector2(-281, -131)
 scale = Vector2(1.1064095, 1.1125584)
 
 [node name="House" type="Sprite2D" parent="."]
@@ -92,10 +92,10 @@ position = Vector2(1071, 1011)
 shape = SubResource("RectangleShape2D_2bofp")
 
 [node name="FromPath" type="Marker2D" parent="."]
-position = Vector2(327, -59)
+position = Vector2(327, -37)
 
 [node name="FromInsidetheHouse" type="Marker2D" parent="."]
-position = Vector2(-281, -115)
+position = Vector2(-281, -131)
 
-[connection signal="body_entered" from="HomeEnterance" to="." method="_on_home_enterance_body_entered"]
+[connection signal="body_entered" from="HomeEnterance" to="." method="_on_enter_house_body_entered"]
 [connection signal="body_entered" from="PathEnterance" to="." method="_on_path_enterance_body_entered"]

@@ -96,7 +96,7 @@ scale = Vector2(0.9704029, 0.9704029)
 texture = ExtResource("3_f8okd")
 
 [node name="PixelTico" parent="." instance=ExtResource("5_cht8r")]
-position = Vector2(658.0428, 249.07602)
+position = Vector2(347.90295, 282.01828)
 scale = Vector2(0.4732738, 0.4732738)
 
 [node name="Foreground" type="Sprite2D" parent="."]
@@ -178,7 +178,7 @@ shape = SubResource("RectangleShape2D_spmqp")
 position = Vector2(347.90295, 282.01834)
 
 [node name="FromCrossRoad" type="Marker2D" parent="."]
-position = Vector2(347.90298, 16.06942)
+position = Vector2(347.90295, -59.456856)
 
 [connection signal="body_entered" from="SchoolEnterance" to="." method="_on_school_enterance_body_entered"]
 [connection signal="body_entered" from="CrossRoadEnterance" to="." method="_on_cross_road_enterance_body_entered"]

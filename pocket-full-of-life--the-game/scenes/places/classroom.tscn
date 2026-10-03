@@ -72,7 +72,7 @@ size = Vector2(648.25, 788.5)
 size = Vector2(745, 842)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5e7tn"]
-size = Vector2(289, 655)
+size = Vector2(221.5, 655)
 
 [node name="Classroom" type="Node2D"]
 script = ExtResource("1_8iccd")
@@ -243,7 +243,7 @@ color = Color(0, 0, 0, 1)
 [node name="BackToHall2" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BackToHall2"]
-position = Vector2(1363, 304)
+position = Vector2(1396.75, 304)
 shape = SubResource("RectangleShape2D_5e7tn")
 
 [node name="FromDesk" type="Marker2D" parent="."]

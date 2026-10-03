@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const SPEED = 250.0
+const SPEED = 200.0
 
 @onready var animated_sprite = $AnimatedSprite2D
 var is_interacting = false
