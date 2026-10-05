@@ -7,10 +7,12 @@ func _ready() -> void:
 		if spawn_marker:
 			$PixelTico.global_position = spawn_marker.global_position
 			
-			if GameManager.target_spawn_name == "FromHouse":
-				$PixelTico.walk_to_newpath("forward")
+			if GameManager.target_spawn_name == "FromInsideSchool":
+				$PixelTico.walk_to_newpath("backward")
+			elif GameManager.target_spawn_name == "FromCrossRoad":
+				$PixelTico.walk_to_newpath("backward")
 			else:
-				$PixelTico.walk_to_newpath("forward")
+				$PixelTico.walk_to_newpath("backward")
 				
 		else:
 			print("ERROR: Godot could not find a node named ", GameManager.target_spawn_name)
@@ -21,7 +23,7 @@ func _on_school_enterance_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		body.velocity = Vector2.ZERO
 		
-		GameManager.last_known_direction = int(body.last_direction) * -1
+		GameManager.last_known_direction = 1 
 		
 		GameManager.target_spawn_name = "FromSchoolEnterance"
 		await TransitionScreen.transition_to_scene("res://scenes/places/school_hall_1.tscn", 2.0)
