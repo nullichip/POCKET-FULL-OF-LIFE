@@ -72,6 +72,7 @@ offset_top = 113.461464
 offset_right = 1228.4678
 offset_bottom = 518.4615
 scale = Vector2(0.5501878, 0.5501878)
+mouse_filter = 0
 texture = ExtResource("2_8xgp6")
 expand_mode = 1
 

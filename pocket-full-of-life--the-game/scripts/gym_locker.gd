@@ -14,10 +14,15 @@ var spawned_UI_instance: Node = null
 func _ready() -> void:
 	locker.play("closed_locker")
 
-func _process(_delta: float) -> void:
-	if is_player_near and Input.is_action_just_pressed("interact"):
+func _unhandled_input(event: InputEvent) -> void:
+	if is_player_near and event.is_action_pressed("interact"):
 		if is_open == false:
 			open_interaction()
+		else:
+			close_interaction()
+			
+	if is_open and event.is_action_pressed("ui_cancel"):
+		close_interaction()
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):

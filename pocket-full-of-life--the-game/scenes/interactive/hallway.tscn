@@ -9,8 +9,16 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("2_u7i40")
 }],
-"loop": true,
-"name": &"default",
+"loop": false,
+"name": &"close",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_u7i40")
+}],
+"loop": false,
+"name": &"open",
 "speed": 5.0
 }]
 
@@ -26,6 +34,7 @@ destination_scene_path = "res://scenes/places/nighttimebedroom.tscn"
 position = Vector2(592.875, 240.94824)
 scale = Vector2(0.25942287, 0.27553418)
 sprite_frames = SubResource("SpriteFrames_h7jur")
+animation = &"open"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(594, 242.25)

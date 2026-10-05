@@ -15,10 +15,15 @@ var is_player_near: bool = false
 func _ready() -> void:
 	fridge.play("closed")
 
-func _process(_delta: float) -> void:
-	if is_player_near and Input.is_action_just_pressed("interact"):
+func _unhandled_input(event: InputEvent) -> void:
+	if is_player_near and event.is_action_pressed("interact"):
 		if is_open == false:
 			open_interaction()
+		else:
+			close_interaction()
+			
+	if is_open and event.is_action_pressed("ui_cancel"):
+		close_interaction()
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
@@ -51,7 +56,7 @@ func open_interaction() -> void:
 	spawned_UI_instance = INNER_FRIDGE_VIEW.instantiate()
 	var ui_layer = get_tree().current_scene.get_node("UI_Layer_Kitchen")
 	ui_layer.add_child(spawned_UI_instance)
-
+	
 func _input(event: InputEvent) -> void:
 	if is_open and event.is_action_pressed("ui_cancel"):
 		close_interaction()
