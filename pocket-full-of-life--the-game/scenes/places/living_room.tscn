@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://c1046gq04og7q"]
+[gd_scene load_steps=19 format=3 uid="uid://c1046gq04og7q"]
 
 [ext_resource type="Texture2D" uid="uid://cqf7mbnrabq1k" path="res://Assets/livingroom/livingroom.png" id="1_uwxnc"]
 [ext_resource type="Script" uid="uid://co2hg68w4ac0x" path="res://scripts/living_room.gd" id="1_w3m53"]
@@ -13,6 +13,12 @@
 [ext_resource type="Texture2D" uid="uid://ciilstaqx6ihj" path="res://Assets/livingroom/trashcan.png" id="5_t6d6v"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mmkfe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_67mi6"]
+size = Vector2(36.250153, 90.000496)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gswb6"]
+size = Vector2(53.750214, 81.25038)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7hjpx"]
 size = Vector2(450, 671)
@@ -57,7 +63,8 @@ position = Vector2(314, 131.00002)
 texture = ExtResource("3_w3m53")
 
 [node name="CollisionShape2D" parent="BackGround/InteractivePainting3" index="1"]
-position = Vector2(314, 323)
+position = Vector2(314.37646, 131.2507)
+shape = SubResource("RectangleShape2D_67mi6")
 
 [node name="InteractivePainting4" parent="BackGround" instance=ExtResource("2_t6d6v")]
 position = Vector2(826.00006, 145)
@@ -69,7 +76,7 @@ position = Vector2(314, 131.00002)
 texture = ExtResource("3_w3m53")
 
 [node name="CollisionShape2D" parent="BackGround/InteractivePainting4" index="1"]
-position = Vector2(314, 323)
+position = Vector2(314.3766, 130.62569)
 
 [node name="InteractivePainting" parent="BackGround" instance=ExtResource("2_t6d6v")]
 position = Vector2(-303.00006, 153)
@@ -80,7 +87,8 @@ dialogue_text = "kinda spooky?"
 position = Vector2(711.99994, 82.000015)
 
 [node name="CollisionShape2D" parent="BackGround/InteractivePainting" index="1"]
-position = Vector2(712, 323)
+position = Vector2(711.87866, 83.12544)
+shape = SubResource("RectangleShape2D_gswb6")
 
 [node name="InteractivePainting2" parent="BackGround" instance=ExtResource("2_t6d6v")]
 position = Vector2(86, 150.00002)
@@ -91,7 +99,7 @@ dialogue_text = "I should ask dad what this means..."
 position = Vector2(711.99994, 82.000015)
 
 [node name="CollisionShape2D" parent="BackGround/InteractivePainting2" index="1"]
-position = Vector2(712, 323)
+position = Vector2(713.12866, 81.56288)
 
 [node name="Cabinet" parent="BackGround" instance=ExtResource("2_o0fen")]
 position = Vector2(876, 255)

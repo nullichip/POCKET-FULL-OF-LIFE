@@ -1,6 +1,10 @@
 extends Area2D
 
 @onready var board = $Board
+
+var normal_color = Color(1.0, 1.0, 1.0, 1.0)
+var highlight_color = Color(2.394, 2.24, 0.0, 1.0)
+
 const BOARD_VIEW = preload("res://scenes/interactive/white_board_pop_up.tscn")
 
 var is_open: bool = false
@@ -61,3 +65,9 @@ func close_interaction() -> void:
 			tico.animated_sprite.play("idle_twd_left")
 		else:
 			tico.animated_sprite.play("idle_twd_right")
+
+func _on_mouse_entered() -> void:
+	board.modulate = highlight_color
+
+func _on_mouse_exited() -> void:
+	board.modulate = normal_color

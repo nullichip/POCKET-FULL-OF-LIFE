@@ -22,7 +22,7 @@ func _ready() -> void:
 func _on_back_outside_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		
-		GameManager.last_known_direction = int(body.last_direction)
+		GameManager.last_known_direction = int(body.last_direction) * -1
 		
 		GameManager.target_spawn_name = "FromInsideSchool"
 		await TransitionScreen.transition_to_scene("res://scenes/places/school_path.tscn", 1.0)

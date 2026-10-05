@@ -62,7 +62,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2nsu3"]
-size = Vector2(237, 1300)
+size = Vector2(335, 320)
 
 [node name="Dishwasher" type="Area2D"]
 script = ExtResource("1_owpgt")
@@ -72,8 +72,10 @@ sprite_frames = SubResource("SpriteFrames_d856a")
 animation = &"turn_off_dw"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-5.5, 34)
+position = Vector2(-2.5, 2)
 shape = SubResource("RectangleShape2D_2nsu3")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

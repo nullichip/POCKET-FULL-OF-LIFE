@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://w4iu4jhp34ss" path="res://Assets/SCROLL-Gym/whiteboard.png" id="2_lgnss"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1v0ny"]
-size = Vector2(462, 1042)
+size = Vector2(700, 375)
 
 [node name="WhiteBoard" type="Area2D"]
 script = ExtResource("1_1v0ny")
@@ -14,8 +14,10 @@ scale = Vector2(1.223536, 1)
 texture = ExtResource("2_lgnss")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, 169)
+position = Vector2(-1, -1.5)
 shape = SubResource("RectangleShape2D_1v0ny")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

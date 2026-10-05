@@ -1,6 +1,10 @@
 extends Area2D
 
 @onready var locker = $AnimatedSprite2D
+
+var normal_color = Color(1.0, 1.0, 1.0, 1.0)
+var highlight_color = Color(2.394, 2.24, 0.0, 1.0)
+
 #const INNER_SCHOOL_LOCKER_VIEW = preload("res://scenes/interactive/inner_school_locker.tscn")
 
 var is_open: bool = false
@@ -70,3 +74,9 @@ func close_interaction() -> void:
 			tico.animated_sprite.play("idle_twd_left")
 		else:
 			tico.animated_sprite.play("idle_twd_right")
+
+func _on_mouse_entered() -> void:
+	locker.modulate = highlight_color
+
+func _on_mouse_exited() -> void:
+	locker.modulate = normal_color

@@ -2,6 +2,9 @@ extends Area2D
 
 @onready var dishwasher = $AnimatedSprite2D
 
+var normal_color = Color(1.0, 1.0, 1.0, 1.0)
+var highlight_color = Color(2.394, 2.24, 0.0, 1.0)
+
 var is_open: bool = false
 var is_player_near: bool = false
 
@@ -60,3 +63,9 @@ func close_interaction() -> void:
 			tico.animated_sprite.play("idle_twd_left")
 		else:
 			tico.animated_sprite.play("idle_twd_right")
+
+func _on_mouse_entered() -> void:
+	dishwasher.modulate = highlight_color
+
+func _on_mouse_exited() -> void:
+	dishwasher.modulate = normal_color

@@ -3,6 +3,11 @@ extends Area2D
 @export var dialogue_text: String = "Default text."
 var is_player_near: bool = false
 
+@onready var item = $Sprite2D
+
+var normal_color = Color(1.0, 1.0, 1.0, 1.0)
+var highlight_color = Color(2.394, 2.24, 0.0, 1.0)
+
 func _process(delta: float) -> void:
 	if is_player_near and Input.is_action_just_pressed("interact"):
 		start_interaction()
@@ -36,3 +41,10 @@ func start_interaction() -> void:
 		tico.animated_sprite.play("idle_twd_left")
 	else:
 		tico.animated_sprite.play("idle_twd_right")
+
+
+func _on_mouse_entered() -> void:
+	item.modulate = highlight_color
+
+func _on_mouse_exited() -> void:
+	item.modulate = normal_color

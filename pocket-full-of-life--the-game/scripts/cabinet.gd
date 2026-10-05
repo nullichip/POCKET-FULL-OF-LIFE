@@ -2,11 +2,16 @@ extends Area2D
 
 @onready var cabinet = $AnimatedSprite2D
 
+var normal_color = Color(1.0, 1.0, 1.0, 1.0)
+var highlight_color = Color(2.394, 2.24, 0.0, 1.0)
+
 var is_open: bool = false
 var is_player_near: bool = false
 
 func _ready() -> void:
 	cabinet.play("closed_cabinet")
+	
+	cabinet.modulate = normal_color
 
 func _process(_delta: float) -> void:
 	if is_player_near and Input.is_action_just_pressed("interact"):
@@ -60,3 +65,9 @@ func close_interaction() -> void:
 			tico.animated_sprite.play("idle_twd_left")
 		else:
 			tico.animated_sprite.play("idle_twd_right")
+
+func _on_mouse_entered() -> void:
+	cabinet.modulate = highlight_color
+
+func _on_mouse_exited() -> void:
+	cabinet.modulate = normal_color

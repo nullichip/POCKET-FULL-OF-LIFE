@@ -43,7 +43,7 @@ scale = Vector2(0.3, 0.3)
 texture = SubResource("CompressedTexture2D_u4wd2")
 
 [node name="InteractivePainting" parent="." instance=ExtResource("3_ekv3l")]
-position = Vector2(219, 106)
+position = Vector2(936, 265)
 dialogue_text = "I...I can't see the letters..."
 
 [node name="Sprite2D" parent="InteractivePainting" index="0"]

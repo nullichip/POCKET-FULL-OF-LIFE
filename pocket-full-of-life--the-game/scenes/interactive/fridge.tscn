@@ -45,7 +45,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6wkt0"]
-size = Vector2(359, 1063)
+size = Vector2(408, 719)
 
 [node name="Fridge" type="Area2D"]
 script = ExtResource("1_husjh")
@@ -57,8 +57,10 @@ frame = 2
 frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-69.5, -47.5)
+position = Vector2(-67, 2.5)
 shape = SubResource("RectangleShape2D_6wkt0")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

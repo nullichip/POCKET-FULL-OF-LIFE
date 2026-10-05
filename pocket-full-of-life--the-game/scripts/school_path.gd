@@ -21,6 +21,8 @@ func _on_school_enterance_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		body.velocity = Vector2.ZERO
 		
+		GameManager.last_known_direction = int(body.last_direction) * -1
+		
 		GameManager.target_spawn_name = "FromSchoolEnterance"
 		await TransitionScreen.transition_to_scene("res://scenes/places/school_hall_1.tscn", 2.0)
 

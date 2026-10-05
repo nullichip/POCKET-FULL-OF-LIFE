@@ -3,20 +3,23 @@
 [ext_resource type="Script" uid="uid://o8bou81g5v0n" path="res://scripts/interactive_features.gd" id="1_pvngq"]
 [ext_resource type="Texture2D" uid="uid://car4kpeydlank" path="res://Assets/SCROLL-Home Enterance/Painting.png" id="2_0n517"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6wkqi"]
-size = Vector2(34, 855)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0l12d"]
+size = Vector2(53.750305, 79.37543)
 
 [node name="InteractivePainting" type="Area2D"]
+position = Vector2(8, -3)
 script = ExtResource("1_pvngq")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(677.99994, 129)
+position = Vector2(-27, -40.999996)
 scale = Vector2(0.29475975, 0.30784315)
 texture = ExtResource("2_0n517")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(679, 326.5)
-shape = SubResource("RectangleShape2D_6wkqi")
+position = Vector2(-27, -41)
+shape = SubResource("RectangleShape2D_0l12d")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

@@ -1,6 +1,10 @@
 extends Area2D
 
 @onready var storage = $AnimatedSprite2D
+
+var normal_color = Color(1.0, 1.0, 1.0, 1.0)
+var highlight_color = Color(2.394, 2.24, 0.0, 1.0)
+
 const INNER_STORAGE_VIEW = preload("res://scenes/interactive/inner_storage_room.tscn")
 
 var is_open: bool = false
@@ -71,3 +75,9 @@ func close_interaction() -> void:
 			tico.animated_sprite.play("idle_twd_left")
 		else:
 			tico.animated_sprite.play("idle_twd_right")
+
+func _on_mouse_entered() -> void:
+	storage.modulate = highlight_color
+
+func _on_mouse_exited() -> void:
+	storage.modulate = normal_color

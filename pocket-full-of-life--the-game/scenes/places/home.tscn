@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bnlp07k066m0h"]
+[gd_scene load_steps=18 format=3 uid="uid://bnlp07k066m0h"]
 
 [ext_resource type="Script" uid="uid://co2lfdp5hmoht" path="res://scripts/home.gd" id="1_22wlk"]
 [ext_resource type="Texture2D" uid="uid://drxptv3e701nt" path="res://Assets/SCROLL-Home Enterance/Home.png" id="2_a7mac"]
@@ -11,6 +11,15 @@
 [ext_resource type="Texture2D" uid="uid://6cp2vuenj0ek" path="res://Assets/universal/Frame.png" id="9_orh08"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_u4wd2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n55ij"]
+size = Vector2(52, 79)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_otpjv"]
+size = Vector2(34, 92)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0fbcy"]
+size = Vector2(37, 93)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_reixx"]
 size = Vector2(109.25, 313)
@@ -53,7 +62,8 @@ dialogue_text = "I never knew what this painting meant..."
 position = Vector2(711.99994, 82.000015)
 
 [node name="CollisionShape2D" parent="BackGround/InteractivePainting" index="1"]
-position = Vector2(712, 323)
+position = Vector2(712, 81.5)
+shape = SubResource("RectangleShape2D_n55ij")
 
 [node name="InteractivePainting2" parent="BackGround" instance=ExtResource("3_n55ij")]
 position = Vector2(25, 110)
@@ -64,7 +74,7 @@ position = Vector2(314, 131.00002)
 texture = ExtResource("4_otpjv")
 
 [node name="CollisionShape2D" parent="BackGround/InteractivePainting2" index="1"]
-position = Vector2(314, 323)
+position = Vector2(313.5, 131)
 
 [node name="InteractivePainting3" parent="BackGround" instance=ExtResource("3_n55ij")]
 position = Vector2(-167, 110)
@@ -75,7 +85,8 @@ position = Vector2(314, 131.00002)
 texture = ExtResource("5_0fbcy")
 
 [node name="CollisionShape2D" parent="BackGround/InteractivePainting3" index="1"]
-position = Vector2(314, 323)
+position = Vector2(314, 130)
+shape = SubResource("RectangleShape2D_otpjv")
 
 [node name="InteractivePainting4" parent="BackGround" instance=ExtResource("3_n55ij")]
 position = Vector2(-113, 110)
@@ -86,7 +97,8 @@ position = Vector2(314, 131.00002)
 texture = ExtResource("5_0fbcy")
 
 [node name="CollisionShape2D" parent="BackGround/InteractivePainting4" index="1"]
-position = Vector2(314, 323)
+position = Vector2(314.5, 130.5)
+shape = SubResource("RectangleShape2D_0fbcy")
 
 [node name="Hallway" parent="." instance=ExtResource("6_8vvuq")]
 position = Vector2(-62, 18)

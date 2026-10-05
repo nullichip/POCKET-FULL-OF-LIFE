@@ -45,7 +45,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5rfv7"]
-size = Vector2(188, 875)
+size = Vector2(301, 552)
 
 [node name="SchoolLocker" type="Area2D"]
 script = ExtResource("1_5rfv7")
@@ -57,8 +57,10 @@ sprite_frames = SubResource("SpriteFrames_2jhrd")
 animation = &"open_school_locker"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(10, 45.5)
+position = Vector2(0.5, 14)
 shape = SubResource("RectangleShape2D_5rfv7")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
